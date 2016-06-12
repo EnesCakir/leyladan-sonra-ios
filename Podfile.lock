@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (3.4.0)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
+  - ContextMenu.iOS (1.1.0)
+  - FlatUIKit (1.6.2)
+  - MXParallaxHeader (0.5.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - AlamofireImage (~> 2.0)
+  - ContextMenu.iOS (~> 1.1.0)
+  - FlatUIKit
+  - MXParallaxHeader
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  ContextMenu.iOS: 7f3b63915e660f51aada2c4285c40a837b2c9737
+  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
+  MXParallaxHeader: c7dfdf8d769a8eb868a431ec3aeaf994a147b8bc
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 24db54fbf54d42713404ba1c06602772205a6b88
+
+COCOAPODS: 1.0.0
