@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -116,14 +117,450 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="gBh-Yo-z8K"/>
+                    <navigationItem key="navigationItem" id="gBh-Yo-z8K">
+                        <barButtonItem key="rightBarButtonItem" image="menuIcon" id="AUO-7S-sHi">
+                            <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                            <connections>
+                                <action selector="showMenu:" destination="4Ff-wn-np0" id="Uvn-z6-7C9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Kou-Nx-K6r" id="Pgh-7V-axC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iX9-BK-1RT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2670" y="356"/>
+            <point key="canvasLocation" x="2626" y="-252"/>
+        </scene>
+        <!--Leyla Kimdir?-->
+        <scene sceneID="UJG-rF-J2f">
+            <objects>
+                <viewController storyboardIdentifier="LeylaViewController" title="Leyla Kimdir?" id="78N-lc-EPh" customClass="LeylaViewController" customModule="LS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ME-4v-kce"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3D-QB-RYx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NHf-Rx-OPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-vw-W41">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-9f-chO">
+                                        <rect key="frame" x="20" y="8" width="560" height="983"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Biz kimiz? Şimdilik 3 kişiden oluşan tıbbiyeli bir ekibiz. Okulumuzun onkoloji servisini ziyaretlerimiz sırasında çocukların en büyük isteklerinin bile bizimkilere kıyasla ne denli küçük olduğunu gördük ve ‘1 çocuk 1 dilek’ temalı bir proje başlatmak istedik. Yani Latince deyimiyle mottomuz da olan ‘Unus puer Unum desiderum’ Amacımız asla bağış toplamak değil. Yalnızca bir çocuğa sorulduğunda ağzından ilk çıkan, son zamanlarda en çok düşlediği şeyin gerçekleşebilmesi için aracı olmak. Biz onları ziyaret ettikçe yenileniyoruz, öğreniyoruz, vermekten çok alıyoruz esasen. İstedik ki borcumuzu ödeyelim küçük arkadaşlarımıza. Bir fotoğrafla birlikte ufak da bir tıbbi hikaye ve o miniğin tek dileğini paylaşacağız sizinle. Mutluluğunu bizzat görmek isterseniz İstanbul Üniversitesi İstanbul (Çapa) Tıp Fakültesi’nde kendisini bulabileceğiniz yeri tarif edeceğiz size, böyle bir imkan yoksa da bize kargolamak isterseniz biz ulaştıracağız.
+
+Olay bu kadar basit ve bir o kadar değerli iken biz isim, konsept vb hususları tartışarak o kadar vakit kaybettik ki! Bugün odamı toplarken bir yerlerden Leyla’nın annesinin telefonu çıktı karşıma. İçim ‘cız’ etti, korkarak aradım ve yine korka korka ‘Peki ya Leyla’yı sorsam?’ dedim. Titreyen bir ses ‘Ben de kandil diye Leyla’nın ruhuna irmik kavuruyordum şimdi’ cevabını verdi. Ve o anda kafamdan geçen, günlerdir peşinde koşturduklarım oldu. Fatoş Abla’ya mutlaka bir çayını içme sözü verip, ölüme dair birkaç beylik laf edip, aslında söylediklerimle kendimi bile teskin edemeyip 17 aylık yeğenime koşup sarıldım.
+
+Ve bu kez çok kısa süren bir toplantının ardından ‘Daha fazla beklemek yok’ dedik. Daha fazla gözyaşı ve pişmanlık kalmamalı geride. Çünkü Leyla’nın bizden beklediği yalnızca bir bisikletti, camdan hergün annesine gösterdiği, evine kısacık gidebildiği zamanlarda da olsa sürmek istediği.. 6.5 aylıkken tanısı konan hastalığı oldukça kötü huylu bir tümördü, nefes borusuna yakın olması sebebiyle de oldukça kritikti. Kendisini koca koca ameliyatların beklediğinden habersiz ve öyle masumdu ki Leyla.
+
+Ve şimdi o yok. Arkada teslimiyetli bir anne, kimbilir küçük dünyalarında neler hisseden abileri ve bir de fazlasıyla mahcup biz üç koca abla var işte. Gittiğin yerde ennnn güzel bisiklet senin olsun tamam mı minik melek?
+
+Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca bir kere. Bir yüze tebessüm kondurabilmekse sanılanın aksine öyle kolay ki! Ve işte bu yüzden kullanılmamış umutlar biriktiyoruz biz. Fazla umudunuz varsa eğer:</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F76-TD-EC1" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="999" width="560" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xyw-3J-hRA"/>
+                                        </constraints>
+                                        <state key="normal" title="Hediye bekleyen minikleriniz"/>
+                                        <connections>
+                                            <action selector="showChildren:" destination="78N-lc-EPh" eventType="touchUpInside" id="SDx-0w-3Rw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="F76-TD-EC1" firstAttribute="trailing" secondItem="fm8-9f-chO" secondAttribute="trailing" id="Lcq-t6-RrA"/>
+                                    <constraint firstItem="fm8-9f-chO" firstAttribute="top" secondItem="xaH-vw-W41" secondAttribute="topMargin" id="PUy-WD-0CD"/>
+                                    <constraint firstAttribute="bottom" secondItem="F76-TD-EC1" secondAttribute="bottom" constant="8" id="XKX-cL-Kuc"/>
+                                    <constraint firstItem="F76-TD-EC1" firstAttribute="leading" secondItem="fm8-9f-chO" secondAttribute="leading" id="cXP-6d-HB1"/>
+                                    <constraint firstItem="fm8-9f-chO" firstAttribute="bottom" secondItem="xaH-vw-W41" secondAttribute="bottomMargin" id="pfb-8Q-0jd"/>
+                                    <constraint firstItem="F76-TD-EC1" firstAttribute="top" secondItem="fm8-9f-chO" secondAttribute="bottom" constant="8" id="pvW-aP-fGJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pfb-8Q-0jd"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fm8-9f-chO" firstAttribute="leading" secondItem="NHf-Rx-OPQ" secondAttribute="leadingMargin" id="1YM-rB-isS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fm8-9f-chO" secondAttribute="trailing" id="fH1-TP-UMr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xaH-vw-W41" secondAttribute="trailing" constant="-20" id="gd8-fa-jYX"/>
+                            <constraint firstItem="xaH-vw-W41" firstAttribute="leading" secondItem="NHf-Rx-OPQ" secondAttribute="leadingMargin" constant="-20" id="hx7-5j-JNQ"/>
+                            <constraint firstItem="xaH-vw-W41" firstAttribute="top" secondItem="1ME-4v-kce" secondAttribute="bottom" constant="-20" id="kbL-0b-brD"/>
+                            <constraint firstItem="O3D-QB-RYx" firstAttribute="top" secondItem="xaH-vw-W41" secondAttribute="bottom" id="x0q-hu-HXW"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1200"/>
+                    <connections>
+                        <outlet property="scrollView" destination="xaH-vw-W41" id="FpT-5Q-1GW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kpi-Nd-300" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="730"/>
+        </scene>
+        <!--Biz Kimiz?-->
+        <scene sceneID="9g5-Ho-uSJ">
+            <objects>
+                <viewController storyboardIdentifier="UsViewController" title="Biz Kimiz?" id="stY-ut-eE7" customClass="UsViewController" customModule="LS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fqs-BB-3Mt"/>
+                        <viewControllerLayoutGuide type="bottom" id="K3P-As-r0A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yx7-Go-qJR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmH-LS-a7x">
+                                <rect key="frame" x="20" y="20" width="560" height="1180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-bx-ylz" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="999" width="560" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gmg-da-x9u"/>
+                                        </constraints>
+                                        <state key="normal" title="Hediye bekleyen minikleriniz"/>
+                                        <connections>
+                                            <action selector="showChildren:" destination="stY-ut-eE7" eventType="touchUpInside" id="sHX-fJ-pnm"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-Zk-dk1">
+                                        <rect key="frame" x="0.0" y="8" width="560" height="983"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">HİKÂYEMİZ
+Onkoloji servisi ziyaretlerinden birinde tanıştıkları Leyla'nın minicik dileğini gerçekleştirmek ve daha nice çocuğun tebessümüne aracı olmak parolasıyla yola çıkan üç tıp öğrencisinin temel adımlarını attığı, Leyla’nın vefatıyla arkalarında daha fazla pişmanlık bırakmamak adına süreci hızlandırarak kurduğu, şimdi ise Türkiye’nin birçok yerindeki tıp fakültelerinde aktif olarak ziyaret yapan, kronik hastalıklı çocuklarla kaliteli vakit geçiren ve dileklerinin gerçekleşmesine aracı olmaya çalışan tıp öğrencilerinden oluşan bir ekibiz.
+Projemiz İstanbul (Çapa) Tıp Fakültesi'nde başlamış olup şu an 33 fakültede aktif olarak ilerlemekte, 22 tıp fakültesinde ise başlaması için çalışmalar devam etmektedir. Çocuklarımızın bizler için belki çok küçük ama onlara bir hayal dünyası ifade eden en büyük dileklerini öğrenip, bu dileklerini gerçekleştirmek isteyen gönüllülerimizle beraber miniklerimizin tebessümü için çalışmaktayız.
+
+SÜREÇ NASIL İŞLİYOR?
+Tıp öğrencilerinden oluşan iki – üç kişilik ekipler oluşturuyor, düzenli olarak servislere gidip çocuklarımızı ziyaret ediyoruz. Sohbet ederken en sevdiği renk, izlediği filmler, hayalindeki meslek gibi çocuğumuzu daha iyi tanımamızı sağlayan sorularla arkadaşlığımızı ilerletmeyi ihmal etmiyoruz. Muhabbet sırasında hayatta gerçekleşmesini en çok istediği dileğini öğreniyoruz. Bu çok istenen bir oyuncak, öğrenme hayalleri kurulan bir enstruman ya da okunmayı bekleyen bir kitap olabildiği gibi bir ünlüyle tanışıp imzasını almak, bir gezi, bazen de sadece patates kızartması yemek gibi minik bir istek olabiliyor. Çocuğumuzu tanıtan ufak bir hikayeyle birlikte dileğini internet sitemiz ve sosyal medya hesaplarımız aracılığıyla, tabii ki cocuklarımız ve ailelerinden onay alarak yayımlıyoruz.
+
+Bu hayali gerçekleştirmeye istekli gönüllülerimiz paylaşılan yazıların altında belirtilen mail adresimize yazarak bizimle iletişime geçiyor. Arkadaşımızın dileğini bizzat ziyarete gelirken getirerek, ya da dileğine yolculuğunda ona eşlik ederek veya kargo yoluyla oyuncak, kitap ya da enstrümanını göndererek gerçekleştiriyor.
+
+Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişimimiz sona ermiyor. Çocuğumuzla duygusal bir bağ kurmuş olup her fırsatta onu ziyaret ediyoruz. Birlikte oyun oynuyor, sohbet ediyor, doğum günleri gibi özel günlerini unutmuyor; onlara abi, abla veya arkadaş oluyoruz. Onların gözlerindeki mutluluğa şahit olmak ve bu iyilik halkasının bir parçası haline gelmek isterseniz sizleri de aramıza bekliyoruz.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="F2S-bx-ylz" firstAttribute="leading" secondItem="gEt-Zk-dk1" secondAttribute="leading" id="9P1-NR-ZBv"/>
+                                    <constraint firstItem="F2S-bx-ylz" firstAttribute="trailing" secondItem="gEt-Zk-dk1" secondAttribute="trailing" id="KnG-Tc-WzJ"/>
+                                    <constraint firstItem="F2S-bx-ylz" firstAttribute="top" secondItem="gEt-Zk-dk1" secondAttribute="bottom" constant="8" id="UJ5-xB-RcV"/>
+                                    <constraint firstItem="gEt-Zk-dk1" firstAttribute="top" secondItem="UmH-LS-a7x" secondAttribute="topMargin" id="V7f-Lj-Cky"/>
+                                    <constraint firstAttribute="bottom" secondItem="F2S-bx-ylz" secondAttribute="bottom" constant="8" id="ikE-bE-M9v"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gEt-Zk-dk1" secondAttribute="trailing" id="4PX-e6-irc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UmH-LS-a7x" secondAttribute="trailing" id="6X2-gY-E4p"/>
+                            <constraint firstItem="UmH-LS-a7x" firstAttribute="leading" secondItem="yx7-Go-qJR" secondAttribute="leadingMargin" id="Ugl-De-GnS"/>
+                            <constraint firstItem="UmH-LS-a7x" firstAttribute="top" secondItem="Fqs-BB-3Mt" secondAttribute="bottom" id="oVo-9v-bQf"/>
+                            <constraint firstItem="gEt-Zk-dk1" firstAttribute="leading" secondItem="yx7-Go-qJR" secondAttribute="leadingMargin" id="q02-k3-v5M"/>
+                            <constraint firstItem="K3P-As-r0A" firstAttribute="top" secondItem="UmH-LS-a7x" secondAttribute="bottom" id="t5B-5P-e4P"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1200"/>
+                    <connections>
+                        <outlet property="scrollView" destination="UmH-LS-a7x" id="AU1-wT-hm1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FvP-PZ-Xlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2591" y="759"/>
+        </scene>
+        <!--Ayarlar-->
+        <scene sceneID="dHb-Ha-jhO">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" title="Ayarlar" id="DDY-uc-ONg" customClass="SettingsViewController" customModule="LS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KwQ-wx-Txo"/>
+                        <viewControllerLayoutGuide type="bottom" id="AII-DH-Obi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uGA-W0-UIB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDn-w9-MTB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Çocuk Bildirimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsT-0c-5Cy">
+                                        <rect key="frame" x="40" y="70" width="200" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Y8t-TH-9gx"/>
+                                            <constraint firstAttribute="width" constant="200" id="wTx-7I-Lbd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-Xo-9KO">
+                                        <rect key="frame" x="511" y="67" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uygulama Ayarları" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w1-Dw-8o0">
+                                        <rect key="frame" x="40" y="30" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Kxz-rU-rnG"/>
+                                            <constraint firstAttribute="height" constant="30" id="ugm-iv-VdV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yapımcıdan Mesaj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qO-Gm-ht6">
+                                        <rect key="frame" x="40" y="371" width="520" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kişisel Bilgiler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA8-1S-p3z">
+                                        <rect key="frame" x="40" y="115" width="200" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Bu bilgiler gönderdiğiniz en son mesaja göre doldurulmuştur." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqR-QG-IZk">
+                                        <rect key="frame" x="40" y="343" width="520" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="420" id="vxt-eW-ZUT"/>
+                                            <constraint firstAttribute="height" constant="20" id="zot-HC-FOE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="vxt-eW-ZUT"/>
+                                                <exclude reference="zot-HC-FOE"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZr-En-hK7" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="40" y="153" width="255" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="gx0-zQ-keE"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ad"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Ad"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ad"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="XQL-HD-6vD"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-Aw-kZu" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="40" y="201" width="520" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="E-posta"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="E-posta"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="E-posta"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="rcP-BZ-6wl"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-7j-nm9" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="40" y="249" width="520" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Telefon"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Telefon"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Telefon"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="5IL-4f-sDQ"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3g-Br-HCO" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="40" y="297" width="520" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Şehir"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Şehir"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Şehir"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="glB-fp-OOz"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHN-Yu-UtC" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="305" y="153" width="255" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Soyad"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Soyad"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Soyad"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="keG-AO-T4a"/>
+                                        </connections>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-vV-lqo">
+                                        <rect key="frame" x="40" y="403" width="520" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Uygulamayı indirdiniz için çok teşekkür ederim. İyilikle Kalın!
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Enes Çakır ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="HelveticaNeue-MediumItalic"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="CTO">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="11" name="HelveticaNeue-LightItalic"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-ah-UMp">
+                                        <rect key="frame" x="60" y="460" width="480" height="255"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2h6-ah-UMp" secondAttribute="height" multiplier="32:17" id="pPk-CX-KFh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="enescakir_logo"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gsT-0c-5Cy" firstAttribute="leading" secondItem="1w1-Dw-8o0" secondAttribute="leading" id="05Y-Ww-IpC"/>
+                                    <constraint firstItem="VRK-7j-nm9" firstAttribute="trailing" secondItem="Duj-Aw-kZu" secondAttribute="trailing" id="1vH-HH-5Tv"/>
+                                    <constraint firstItem="VRK-7j-nm9" firstAttribute="height" secondItem="Duj-Aw-kZu" secondAttribute="height" id="2aO-gH-hyZ"/>
+                                    <constraint firstItem="4qO-Gm-ht6" firstAttribute="trailing" secondItem="aqR-QG-IZk" secondAttribute="trailing" id="4qe-3i-fvG"/>
+                                    <constraint firstItem="aqR-QG-IZk" firstAttribute="leading" secondItem="K3g-Br-HCO" secondAttribute="leading" id="686-a5-CpP"/>
+                                    <constraint firstItem="VRK-7j-nm9" firstAttribute="leading" secondItem="Duj-Aw-kZu" secondAttribute="leading" id="9Po-ZJ-avV"/>
+                                    <constraint firstItem="4qO-Gm-ht6" firstAttribute="leading" secondItem="aqR-QG-IZk" secondAttribute="leading" id="CUD-rY-kA2"/>
+                                    <constraint firstItem="K3g-Br-HCO" firstAttribute="top" secondItem="VRK-7j-nm9" secondAttribute="bottom" constant="8" id="Dqh-kJ-EX9"/>
+                                    <constraint firstItem="K3g-Br-HCO" firstAttribute="trailing" secondItem="VRK-7j-nm9" secondAttribute="trailing" id="GGF-Ec-bK6"/>
+                                    <constraint firstItem="Duj-Aw-kZu" firstAttribute="leading" secondItem="DZr-En-hK7" secondAttribute="leading" id="I1X-f0-zhE"/>
+                                    <constraint firstItem="aqR-QG-IZk" firstAttribute="top" secondItem="K3g-Br-HCO" secondAttribute="bottom" constant="6" id="JaV-a0-owy"/>
+                                    <constraint firstItem="aqR-QG-IZk" firstAttribute="trailing" secondItem="K3g-Br-HCO" secondAttribute="trailing" id="Jsl-Ji-IIO"/>
+                                    <constraint firstItem="DZr-En-hK7" firstAttribute="leading" secondItem="tA8-1S-p3z" secondAttribute="leading" id="QxH-7l-CI2"/>
+                                    <constraint firstItem="lHN-Yu-UtC" firstAttribute="width" secondItem="DZr-En-hK7" secondAttribute="width" id="RfZ-rQ-we6"/>
+                                    <constraint firstItem="Duj-Aw-kZu" firstAttribute="height" secondItem="DZr-En-hK7" secondAttribute="height" id="SMF-OH-cNg"/>
+                                    <constraint firstItem="lHN-Yu-UtC" firstAttribute="height" secondItem="DZr-En-hK7" secondAttribute="height" id="SjC-NH-Hmu"/>
+                                    <constraint firstItem="1w1-Dw-8o0" firstAttribute="top" secondItem="QDn-w9-MTB" secondAttribute="top" constant="30" id="TXB-VP-BTc"/>
+                                    <constraint firstItem="XMg-vV-lqo" firstAttribute="trailing" secondItem="4qO-Gm-ht6" secondAttribute="trailing" id="U1i-eN-ltw"/>
+                                    <constraint firstItem="4qO-Gm-ht6" firstAttribute="top" secondItem="aqR-QG-IZk" secondAttribute="bottom" constant="12" id="U2s-v8-ah3"/>
+                                    <constraint firstItem="tA8-1S-p3z" firstAttribute="leading" secondItem="1w1-Dw-8o0" secondAttribute="leading" id="Vdf-h7-OKd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y0a-Xo-9KO" secondAttribute="trailing" constant="40" id="W1J-gV-kOG"/>
+                                    <constraint firstItem="2h6-ah-UMp" firstAttribute="leading" secondItem="XMg-vV-lqo" secondAttribute="leading" constant="20" id="W97-er-MDW"/>
+                                    <constraint firstAttribute="bottom" secondItem="XMg-vV-lqo" secondAttribute="bottom" constant="84" id="Wsr-Kq-uXH"/>
+                                    <constraint firstItem="lHN-Yu-UtC" firstAttribute="trailing" secondItem="Y0a-Xo-9KO" secondAttribute="trailing" id="Xhd-Yk-Lyc"/>
+                                    <constraint firstItem="2h6-ah-UMp" firstAttribute="top" secondItem="XMg-vV-lqo" secondAttribute="bottom" constant="10" id="YZ9-Ut-vsi"/>
+                                    <constraint firstItem="K3g-Br-HCO" firstAttribute="height" secondItem="VRK-7j-nm9" secondAttribute="height" id="Yw5-Xt-7eE"/>
+                                    <constraint firstItem="XMg-vV-lqo" firstAttribute="top" secondItem="4qO-Gm-ht6" secondAttribute="bottom" constant="8" id="ZTv-Hc-bpa"/>
+                                    <constraint firstItem="Y0a-Xo-9KO" firstAttribute="centerY" secondItem="gsT-0c-5Cy" secondAttribute="centerY" id="bk3-fc-4PH"/>
+                                    <constraint firstItem="lHN-Yu-UtC" firstAttribute="centerY" secondItem="DZr-En-hK7" secondAttribute="centerY" id="cA2-5z-ZnJ"/>
+                                    <constraint firstItem="XMg-vV-lqo" firstAttribute="leading" secondItem="4qO-Gm-ht6" secondAttribute="leading" id="cDS-9f-raf"/>
+                                    <constraint firstItem="XMg-vV-lqo" firstAttribute="top" secondItem="4qO-Gm-ht6" secondAttribute="bottom" constant="8" id="cVl-Vb-LKb"/>
+                                    <constraint firstItem="1w1-Dw-8o0" firstAttribute="leading" secondItem="QDn-w9-MTB" secondAttribute="leading" constant="40" id="cXL-YF-sYh"/>
+                                    <constraint firstItem="VRK-7j-nm9" firstAttribute="top" secondItem="Duj-Aw-kZu" secondAttribute="bottom" constant="8" id="hk9-gj-oer"/>
+                                    <constraint firstItem="tA8-1S-p3z" firstAttribute="top" secondItem="gsT-0c-5Cy" secondAttribute="bottom" constant="20" id="lYc-kA-7El"/>
+                                    <constraint firstItem="Duj-Aw-kZu" firstAttribute="top" secondItem="DZr-En-hK7" secondAttribute="bottom" constant="8" id="oQX-ub-vXJ"/>
+                                    <constraint firstItem="DZr-En-hK7" firstAttribute="top" secondItem="tA8-1S-p3z" secondAttribute="bottom" constant="8" id="ops-oY-2mw"/>
+                                    <constraint firstItem="Duj-Aw-kZu" firstAttribute="trailing" secondItem="lHN-Yu-UtC" secondAttribute="trailing" id="pdq-UD-V1I"/>
+                                    <constraint firstItem="2h6-ah-UMp" firstAttribute="trailing" secondItem="XMg-vV-lqo" secondAttribute="trailing" constant="-20" id="q8W-hC-uJw"/>
+                                    <constraint firstAttribute="bottom" secondItem="2h6-ah-UMp" secondAttribute="bottom" constant="10" id="qNy-Go-IBb"/>
+                                    <constraint firstItem="tA8-1S-p3z" firstAttribute="width" secondItem="1w1-Dw-8o0" secondAttribute="width" id="rra-pT-Go3"/>
+                                    <constraint firstItem="K3g-Br-HCO" firstAttribute="leading" secondItem="VRK-7j-nm9" secondAttribute="leading" id="voY-AQ-jXr"/>
+                                    <constraint firstItem="gsT-0c-5Cy" firstAttribute="top" secondItem="1w1-Dw-8o0" secondAttribute="bottom" constant="10" id="wU5-KD-Ayr"/>
+                                    <constraint firstItem="lHN-Yu-UtC" firstAttribute="leading" secondItem="DZr-En-hK7" secondAttribute="trailing" constant="10" id="wWa-bh-iTm"/>
+                                    <constraint firstItem="tA8-1S-p3z" firstAttribute="height" secondItem="1w1-Dw-8o0" secondAttribute="height" id="wbf-FO-XJA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cXL-YF-sYh"/>
+                                        <exclude reference="Wsr-Kq-uXH"/>
+                                        <exclude reference="ZTv-Hc-bpa"/>
+                                        <exclude reference="W1J-gV-kOG"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0a-Xo-9KO" secondAttribute="trailing" constant="20" id="bMg-U8-ehS"/>
+                            <constraint firstItem="QDn-w9-MTB" firstAttribute="leading" secondItem="uGA-W0-UIB" secondAttribute="leadingMargin" constant="-20" id="fLw-7b-g3i"/>
+                            <constraint firstItem="AII-DH-Obi" firstAttribute="top" secondItem="QDn-w9-MTB" secondAttribute="bottom" id="hLB-3t-0jw"/>
+                            <constraint firstItem="QDn-w9-MTB" firstAttribute="top" secondItem="KwQ-wx-Txo" secondAttribute="bottom" constant="-20" id="he2-dJ-8aq"/>
+                            <constraint firstItem="1w1-Dw-8o0" firstAttribute="leading" secondItem="uGA-W0-UIB" secondAttribute="leadingMargin" constant="20" id="tCZ-nH-w9i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QDn-w9-MTB" secondAttribute="trailing" constant="-20" id="x7Z-E8-bCP"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YC2-zf-C94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3301" y="670"/>
+        </scene>
+        <!--Görseller-->
+        <scene sceneID="GT5-hN-OVs">
+            <objects>
+                <viewController storyboardIdentifier="MediaViewController" title="Görseller" id="YGT-dg-EXJ" customClass="MediaViewController" customModule="LS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1px-VR-rLM"/>
+                        <viewControllerLayoutGuide type="bottom" id="VwV-Bx-N64"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jWL-CO-eYz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13l-RP-x8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3942" y="587"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="90R-Dz-mXk">
@@ -140,7 +577,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOn-u3-xyS">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NM-W5-Fc5" customClass="FUIButton">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NM-W5-Fc5" customClass="LSButton" customModule="LS" customModuleProvider="target">
                                         <rect key="frame" x="262" y="442" width="77" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fCx-lt-zt4"/>
@@ -207,7 +644,303 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haO-43-zSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3427" y="356"/>
+            <point key="canvasLocation" x="3407" y="-252"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="fZV-BE-QOR">
+            <objects>
+                <viewController storyboardIdentifier="FormViewController" id="TQh-v0-bwq" customClass="FormViewController" customModule="LS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x0z-yF-G1g"/>
+                        <viewControllerLayoutGuide type="bottom" id="YCN-dr-FiL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tCN-Ti-HvS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzk-8i-YDa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2d-Zh-wOX">
+                                <rect key="frame" x="40" y="60" width="520" height="520"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-eH-9FH">
+                                        <rect key="frame" x="0.0" y="0.0" width="520" height="60"/>
+                                        <color key="backgroundColor" red="0.20784313730000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="a8W-kp-oNt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hediye Başvuru Formu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWz-So-ehj">
+                                        <rect key="frame" x="10" y="10" width="500" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Pm9-3P-DE8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Pm9-3P-DE8"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet'in hediyesini almak mı istiyorsun? Formu doldurunuz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXq-qm-Iu1">
+                                        <rect key="frame" x="20" y="68" width="480" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Wl8-fQ-zJ0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vHk-Nc-SyH">
+                                        <rect key="frame" x="170" y="438" width="180" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-Qs-vSl" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Vah-Ml-CRc"/>
+                                                    <constraint firstAttribute="width" constant="80" id="ok8-IV-kYj"/>
+                                                </constraints>
+                                                <state key="normal" title="Vazgeç"/>
+                                                <connections>
+                                                    <action selector="cancel:" destination="TQh-v0-bwq" eventType="touchUpInside" id="Vcm-0A-L6x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyf-tB-Iyn" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="BQo-2X-zYb"/>
+                                                    <constraint firstAttribute="height" constant="40" id="T1x-VI-IV9"/>
+                                                </constraints>
+                                                <state key="normal" title="Gönder"/>
+                                                <connections>
+                                                    <action selector="checkValidation:" destination="TQh-v0-bwq" eventType="touchDown" id="uPz-dU-M02"/>
+                                                    <action selector="send:" destination="TQh-v0-bwq" eventType="touchUpInside" id="JgW-Oc-s1y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmH-ce-u5v" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="20" y="122" width="230" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nlK-Rm-ycR"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ad"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Ad"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ad"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="Mzt-0o-76Q"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzy-Se-DGe" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="20" y="170" width="480" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="E-posta"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="E-posta"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="E-posta"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="5bW-0r-JCO"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwh-2H-pvb" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="20" y="218" width="480" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Telefon"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Telefon"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Telefon"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="eta-Zi-zZe"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhZ-Vz-C26" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="20" y="266" width="480" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Şehir"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Şehir"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Şehir"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="dqV-yd-o1o"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zae-7H-bB5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="20" y="314" width="480" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="zsU-3X-N3N"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mesaj"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Mesaj"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Mesaj"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="6" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TXl-4e-T4M">
+                                        <rect key="frame" x="20" y="334" width="480" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="WAI-A6-vkf"/>
+                                        </connections>
+                                    </textView>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpB-u0-Fgt" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="270" y="122" width="230" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Soyad"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Soyad"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Soyad"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TQh-v0-bwq" id="yvM-1W-FVl"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jhZ-Vz-C26" firstAttribute="height" secondItem="iwh-2H-pvb" secondAttribute="height" id="23L-KH-ja0"/>
+                                    <constraint firstItem="jhZ-Vz-C26" firstAttribute="trailing" secondItem="jzy-Se-DGe" secondAttribute="trailing" id="4Em-4c-gg2"/>
+                                    <constraint firstItem="mmH-ce-u5v" firstAttribute="centerY" secondItem="EpB-u0-Fgt" secondAttribute="centerY" id="4Lh-eX-N0x"/>
+                                    <constraint firstItem="jzy-Se-DGe" firstAttribute="top" secondItem="EpB-u0-Fgt" secondAttribute="bottom" constant="4" id="5zr-IM-v5L"/>
+                                    <constraint firstAttribute="trailing" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="8" id="87O-f2-54a"/>
+                                    <constraint firstItem="vHk-Nc-SyH" firstAttribute="centerX" secondItem="n2d-Zh-wOX" secondAttribute="centerX" id="8hM-Bf-xgG"/>
+                                    <constraint firstItem="vHk-Nc-SyH" firstAttribute="top" secondItem="zae-7H-bB5" secondAttribute="bottom" constant="4" id="AmW-J1-QL9"/>
+                                    <constraint firstItem="TXl-4e-T4M" firstAttribute="bottom" secondItem="zae-7H-bB5" secondAttribute="bottom" id="CXM-Kn-I9z"/>
+                                    <constraint firstItem="EpB-u0-Fgt" firstAttribute="width" secondItem="mmH-ce-u5v" secondAttribute="width" id="DM9-eE-lz0"/>
+                                    <constraint firstItem="iwh-2H-pvb" firstAttribute="top" secondItem="jzy-Se-DGe" secondAttribute="bottom" constant="8" id="E0r-Tn-Fts"/>
+                                    <constraint firstItem="zae-7H-bB5" firstAttribute="trailing" secondItem="jhZ-Vz-C26" secondAttribute="trailing" id="Ewc-SS-PCi"/>
+                                    <constraint firstItem="EpB-u0-Fgt" firstAttribute="leading" secondItem="mmH-ce-u5v" secondAttribute="leading" id="H3z-kS-Kq1"/>
+                                    <constraint firstItem="iwh-2H-pvb" firstAttribute="leading" secondItem="jzy-Se-DGe" secondAttribute="leading" id="If6-jE-t7N"/>
+                                    <constraint firstItem="jhZ-Vz-C26" firstAttribute="top" secondItem="iwh-2H-pvb" secondAttribute="bottom" constant="8" id="KHx-Fy-UXU"/>
+                                    <constraint firstItem="EpB-u0-Fgt" firstAttribute="trailing" secondItem="mmH-ce-u5v" secondAttribute="trailing" id="LyD-Cp-zrL"/>
+                                    <constraint firstItem="jhZ-Vz-C26" firstAttribute="leading" secondItem="iwh-2H-pvb" secondAttribute="leading" id="N13-uT-Sa9"/>
+                                    <constraint firstItem="fWz-So-ehj" firstAttribute="leading" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="-520" id="N86-p3-7Yn"/>
+                                    <constraint firstItem="fWz-So-ehj" firstAttribute="centerY" secondItem="g9B-eH-9FH" secondAttribute="centerY" id="O4u-ZG-PYm"/>
+                                    <constraint firstItem="EpB-u0-Fgt" firstAttribute="trailing" secondItem="xXq-qm-Iu1" secondAttribute="trailing" id="Rho-pN-b5X"/>
+                                    <constraint firstItem="TXl-4e-T4M" firstAttribute="trailing" secondItem="zae-7H-bB5" secondAttribute="trailing" id="STT-38-ieN"/>
+                                    <constraint firstItem="fWz-So-ehj" firstAttribute="height" secondItem="g9B-eH-9FH" secondAttribute="height" constant="-20" id="Th3-Q8-1G6"/>
+                                    <constraint firstItem="EpB-u0-Fgt" firstAttribute="height" secondItem="mmH-ce-u5v" secondAttribute="height" id="V3u-Rh-xvX"/>
+                                    <constraint firstItem="jzy-Se-DGe" firstAttribute="top" secondItem="mmH-ce-u5v" secondAttribute="bottom" constant="8" id="Vnq-ph-GWh"/>
+                                    <constraint firstItem="jzy-Se-DGe" firstAttribute="trailing" secondItem="EpB-u0-Fgt" secondAttribute="trailing" id="WM7-lr-P2t"/>
+                                    <constraint firstItem="mmH-ce-u5v" firstAttribute="leading" secondItem="xXq-qm-Iu1" secondAttribute="leading" id="Zwt-4I-j9C"/>
+                                    <constraint firstItem="jzy-Se-DGe" firstAttribute="height" secondItem="EpB-u0-Fgt" secondAttribute="height" id="aAf-yh-8Gs"/>
+                                    <constraint firstItem="mmH-ce-u5v" firstAttribute="top" secondItem="xXq-qm-Iu1" secondAttribute="bottom" constant="4" id="bx0-1J-GWJ"/>
+                                    <constraint firstItem="TXl-4e-T4M" firstAttribute="leading" secondItem="zae-7H-bB5" secondAttribute="leading" id="cW2-VL-31J"/>
+                                    <constraint firstItem="fWz-So-ehj" firstAttribute="centerX" secondItem="g9B-eH-9FH" secondAttribute="centerX" id="dwt-Pq-kSU"/>
+                                    <constraint firstItem="xXq-qm-Iu1" firstAttribute="top" secondItem="g9B-eH-9FH" secondAttribute="bottom" constant="8" id="eGf-i8-l2P"/>
+                                    <constraint firstItem="xXq-qm-Iu1" firstAttribute="trailing" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="-20" id="evy-7i-ubW"/>
+                                    <constraint firstItem="jhZ-Vz-C26" firstAttribute="top" secondItem="jzy-Se-DGe" secondAttribute="bottom" constant="26" id="f7c-wa-xkG"/>
+                                    <constraint firstItem="jzy-Se-DGe" firstAttribute="leading" secondItem="mmH-ce-u5v" secondAttribute="leading" id="gHm-3Q-TWe"/>
+                                    <constraint firstItem="g9B-eH-9FH" firstAttribute="leading" secondItem="n2d-Zh-wOX" secondAttribute="leading" constant="8" id="iS9-dt-A3J"/>
+                                    <constraint firstItem="zae-7H-bB5" firstAttribute="leading" secondItem="jhZ-Vz-C26" secondAttribute="leading" id="ieS-Kl-tdm"/>
+                                    <constraint firstItem="xXq-qm-Iu1" firstAttribute="leading" secondItem="g9B-eH-9FH" secondAttribute="leading" constant="20" id="kTr-23-Lvn"/>
+                                    <constraint firstItem="g9B-eH-9FH" firstAttribute="top" secondItem="n2d-Zh-wOX" secondAttribute="top" id="niJ-1E-OHK"/>
+                                    <constraint firstItem="mmH-ce-u5v" firstAttribute="trailing" secondItem="xXq-qm-Iu1" secondAttribute="trailing" id="shx-Z7-YCU"/>
+                                    <constraint firstItem="jzy-Se-DGe" firstAttribute="leading" secondItem="EpB-u0-Fgt" secondAttribute="leading" id="t6X-hj-sSJ"/>
+                                    <constraint firstItem="EpB-u0-Fgt" firstAttribute="leading" secondItem="mmH-ce-u5v" secondAttribute="trailing" constant="20" id="tPS-Ph-sli"/>
+                                    <constraint firstItem="jhZ-Vz-C26" firstAttribute="trailing" secondItem="iwh-2H-pvb" secondAttribute="trailing" id="tYp-tu-kjy"/>
+                                    <constraint firstItem="zae-7H-bB5" firstAttribute="top" secondItem="jhZ-Vz-C26" secondAttribute="bottom" constant="8" id="uK4-b0-jHA"/>
+                                    <constraint firstAttribute="bottom" secondItem="vHk-Nc-SyH" secondAttribute="bottom" constant="8" id="uNX-tG-4eC"/>
+                                    <constraint firstItem="iwh-2H-pvb" firstAttribute="leading" secondItem="jzy-Se-DGe" secondAttribute="leading" id="wYw-Ab-1pW"/>
+                                    <constraint firstItem="jzy-Se-DGe" firstAttribute="trailing" secondItem="EpB-u0-Fgt" secondAttribute="trailing" id="wnQ-4j-rdO"/>
+                                    <constraint firstItem="iwh-2H-pvb" firstAttribute="trailing" secondItem="jzy-Se-DGe" secondAttribute="trailing" id="xzL-Kx-7wa"/>
+                                    <constraint firstItem="iwh-2H-pvb" firstAttribute="height" secondItem="jzy-Se-DGe" secondAttribute="height" id="yBX-Ee-1YL"/>
+                                    <constraint firstItem="EpB-u0-Fgt" firstAttribute="top" secondItem="mmH-ce-u5v" secondAttribute="bottom" constant="4" id="zkf-bd-nBk"/>
+                                    <constraint firstItem="TXl-4e-T4M" firstAttribute="top" secondItem="zae-7H-bB5" secondAttribute="top" constant="20" id="zw9-dl-x9W"/>
+                                    <constraint firstItem="fWz-So-ehj" firstAttribute="width" secondItem="g9B-eH-9FH" secondAttribute="width" constant="-20" id="zzY-v1-QBt"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="87O-f2-54a"/>
+                                        <exclude reference="iS9-dt-A3J"/>
+                                        <exclude reference="N86-p3-7Yn"/>
+                                        <exclude reference="shx-Z7-YCU"/>
+                                        <exclude reference="5zr-IM-v5L"/>
+                                        <exclude reference="WM7-lr-P2t"/>
+                                        <exclude reference="t6X-hj-sSJ"/>
+                                        <exclude reference="wYw-Ab-1pW"/>
+                                        <exclude reference="4Em-4c-gg2"/>
+                                        <exclude reference="f7c-wa-xkG"/>
+                                        <exclude reference="H3z-kS-Kq1"/>
+                                        <exclude reference="LyD-Cp-zrL"/>
+                                        <exclude reference="zkf-bd-nBk"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n2d-Zh-wOX" firstAttribute="top" secondItem="x0z-yF-G1g" secondAttribute="bottom" constant="40" id="73B-Ce-EYX"/>
+                            <constraint firstItem="kzk-8i-YDa" firstAttribute="top" secondItem="x0z-yF-G1g" secondAttribute="bottom" constant="-20" id="AXR-dO-Zco"/>
+                            <constraint firstItem="g9B-eH-9FH" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" constant="20" id="DAH-i9-3ot"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kzk-8i-YDa" secondAttribute="trailing" constant="-20" id="QEt-mK-wtX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n2d-Zh-wOX" secondAttribute="trailing" constant="20" id="QW7-02-PMG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="20" id="QcZ-YQ-QwR"/>
+                            <constraint firstItem="YCN-dr-FiL" firstAttribute="top" secondItem="n2d-Zh-wOX" secondAttribute="bottom" constant="20" id="bbf-CZ-gjz"/>
+                            <constraint firstItem="YCN-dr-FiL" firstAttribute="top" secondItem="kzk-8i-YDa" secondAttribute="bottom" id="iJV-g1-9WE"/>
+                            <constraint firstItem="n2d-Zh-wOX" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" constant="20" id="k1I-UR-YHd"/>
+                            <constraint firstItem="kzk-8i-YDa" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" constant="-20" id="tdv-zh-H9b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="kzk-8i-YDa" id="tu4-zY-hem"/>
+                        <outlet property="cityTF" destination="jhZ-Vz-C26" id="ZfZ-Gx-QWs"/>
+                        <outlet property="emailTF" destination="jzy-Se-DGe" id="ABh-Ao-6Ef"/>
+                        <outlet property="firstnameTF" destination="mmH-ce-u5v" id="FnR-SD-YfH"/>
+                        <outlet property="lastnameTF" destination="EpB-u0-Fgt" id="iTL-c3-dq4"/>
+                        <outlet property="messageTF" destination="zae-7H-bB5" id="ZDB-rn-eUf"/>
+                        <outlet property="messageTV" destination="TXl-4e-T4M" id="qvy-ZZ-UFD"/>
+                        <outlet property="mobileTF" destination="iwh-2H-pvb" id="5xe-La-cvc"/>
+                        <outlet property="scrollBottomConstraint" destination="bbf-CZ-gjz" id="tUr-se-BgK"/>
+                        <outlet property="scrollView" destination="n2d-Zh-wOX" id="Wpo-Se-jhd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdJ-Fv-d5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4048" y="-252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wZH-J2-TYc">
@@ -225,7 +958,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rlr-Tf-H3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="356"/>
+            <point key="canvasLocation" x="1846" y="-252"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GhA-iZ-ror">
@@ -245,4 +978,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="enescakir_logo" width="500" height="255"/>
+        <image name="menuIcon" width="32" height="32"/>
+    </resources>
 </document>

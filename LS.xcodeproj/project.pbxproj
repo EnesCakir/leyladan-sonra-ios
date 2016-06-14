@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C4CF0472BEED64F097F72A7 /* Pods_LS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C5B2BE8FE9B604BF47C72F /* Pods_LS.framework */; };
+		4F0BD9C51D0ECD07009B6C50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BD9C41D0ECD07009B6C50 /* Constants.swift */; };
+		4F0BD9C71D0ECD33009B6C50 /* LSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BD9C61D0ECD33009B6C50 /* LSButton.swift */; };
+		4F0BD9C91D0ED107009B6C50 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BD9C81D0ED107009B6C50 /* FormViewController.swift */; };
+		4F14DEA21D0F7E1F00465299 /* LSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F14DEA11D0F7E1F00465299 /* LSTextField.swift */; };
 		4F23F5191D0DBE680053B72B /* StoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23F5171D0DBE680053B72B /* StoryboardExtensions.swift */; };
 		4F23F51A1D0DBE680053B72B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23F5181D0DBE680053B72B /* UIColorExtensions.swift */; };
 		4F23F51D1D0DEB3F0053B72B /* ChildDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F23F51B1D0DEB3F0053B72B /* ChildDetailHeader.xib */; };
@@ -25,6 +29,16 @@
 		4F6211AB1D0D95BF00FB4CDF /* LSLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */; };
 		4FA5B9ED1CEA52DA002D16D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */; };
 		4FAA1F931D0DF85C00BF8FAA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAA1F921D0DF85C00BF8FAA /* StringExtension.swift */; };
+		4FEAE2AC1D0E1D4F00677344 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2AA1D0E1D4F00677344 /* MenuCell.swift */; };
+		4FEAE2AD1D0E1D4F00677344 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEAE2AB1D0E1D4F00677344 /* MenuCell.xib */; };
+		4FEAE2B51D0E218400677344 /* UIView+YALConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2B11D0E218400677344 /* UIView+YALConstraints.m */; };
+		4FEAE2B61D0E218400677344 /* YALContextMenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2B41D0E218400677344 /* YALContextMenuTableView.m */; };
+		4FEAE2B91D0EACBA00677344 /* LeylaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2B81D0EACBA00677344 /* LeylaViewController.swift */; };
+		4FEAE2BB1D0EACCE00677344 /* UsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2BA1D0EACCE00677344 /* UsViewController.swift */; };
+		4FEAE2BD1D0EACDE00677344 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2BC1D0EACDE00677344 /* SettingsViewController.swift */; };
+		4FEAE2BF1D0EAD0D00677344 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2BE1D0EAD0D00677344 /* MediaViewController.swift */; };
+		4FEAE2C21D0EB48200677344 /* LeylaHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2C01D0EB48200677344 /* LeylaHeader.swift */; };
+		4FEAE2C51D0EB86500677344 /* LeylaHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEAE2C41D0EB86500677344 /* LeylaHeader.xib */; };
 		5F306CD89700C14FB2FE71DF /* Pods_LSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E19746855CA6FC2760D2CE /* Pods_LSUITests.framework */; };
 		9C99393B64740F31F9225CFC /* Pods_LSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55988A5AD7AA38BEA2692A78 /* Pods_LSTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +64,10 @@
 		1321A7F15715BD5CB24105D1 /* Pods-LSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSTests/Pods-LSTests.release.xcconfig"; sourceTree = "<group>"; };
 		1472AD17D0B508888A1501EB /* Pods-LS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LS/Pods-LS.release.xcconfig"; sourceTree = "<group>"; };
 		34E19746855CA6FC2760D2CE /* Pods_LSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0BD9C41D0ECD07009B6C50 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4F0BD9C61D0ECD33009B6C50 /* LSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSButton.swift; sourceTree = "<group>"; };
+		4F0BD9C81D0ED107009B6C50 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		4F14DEA11D0F7E1F00465299 /* LSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTextField.swift; sourceTree = "<group>"; };
 		4F23F5171D0DBE680053B72B /* StoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtensions.swift; sourceTree = "<group>"; };
 		4F23F5181D0DBE680053B72B /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		4F23F51B1D0DEB3F0053B72B /* ChildDetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildDetailHeader.xib; sourceTree = "<group>"; };
@@ -73,6 +91,20 @@
 		4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSLayout.swift; sourceTree = "<group>"; };
 		4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4FAA1F921D0DF85C00BF8FAA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4FEAE2AA1D0E1D4F00677344 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		4FEAE2AB1D0E1D4F00677344 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		4FEAE2B01D0E218400677344 /* UIView+YALConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YALConstraints.h"; sourceTree = "<group>"; };
+		4FEAE2B11D0E218400677344 /* UIView+YALConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YALConstraints.m"; sourceTree = "<group>"; };
+		4FEAE2B21D0E218400677344 /* YALContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALContextMenuCell.h; sourceTree = "<group>"; };
+		4FEAE2B31D0E218400677344 /* YALContextMenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALContextMenuTableView.h; sourceTree = "<group>"; };
+		4FEAE2B41D0E218400677344 /* YALContextMenuTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALContextMenuTableView.m; sourceTree = "<group>"; };
+		4FEAE2B71D0E21B100677344 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		4FEAE2B81D0EACBA00677344 /* LeylaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeylaViewController.swift; sourceTree = "<group>"; };
+		4FEAE2BA1D0EACCE00677344 /* UsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsViewController.swift; sourceTree = "<group>"; };
+		4FEAE2BC1D0EACDE00677344 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4FEAE2BE1D0EAD0D00677344 /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		4FEAE2C01D0EB48200677344 /* LeylaHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeylaHeader.swift; sourceTree = "<group>"; };
+		4FEAE2C41D0EB86500677344 /* LeylaHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeylaHeader.xib; sourceTree = "<group>"; };
 		55988A5AD7AA38BEA2692A78 /* Pods_LSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A313A51CBE6E4717D0F4B3 /* Pods-LSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSUITests/Pods-LSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B0FDBD3BE096113CC4402484 /* Pods-LSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSUITests/Pods-LSUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +161,7 @@
 		4F0D8E271D0B1D5C0013FDA7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4F0BD9C41D0ECD07009B6C50 /* Constants.swift */,
 				4F0D8E291D0B1D6E0013FDA7 /* Extensions */,
 				4F0D8E281D0B1D650013FDA7 /* Subclasses */,
 			);
@@ -138,7 +171,9 @@
 		4F0D8E281D0B1D650013FDA7 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				4F0BD9C61D0ECD33009B6C50 /* LSButton.swift */,
 				4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */,
+				4F14DEA11D0F7E1F00465299 /* LSTextField.swift */,
 			);
 			name = Subclasses;
 			sourceTree = "<group>";
@@ -165,7 +200,6 @@
 		4F0D8E2B1D0B1D840013FDA7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				4F23F51B1D0DEB3F0053B72B /* ChildDetailHeader.xib */,
 				4F32DEAC1CE9DA33007FE938 /* LaunchScreen.storyboard */,
 				4F32DEA71CE9DA33007FE938 /* Main.storyboard */,
 			);
@@ -178,6 +212,11 @@
 				4F0D8E2D1D0B1D980013FDA7 /* Partials */,
 				4F32DED11CE9DA48007FE938 /* ChildrenViewController.swift */,
 				4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */,
+				4FEAE2B81D0EACBA00677344 /* LeylaViewController.swift */,
+				4FEAE2BA1D0EACCE00677344 /* UsViewController.swift */,
+				4FEAE2BC1D0EACDE00677344 /* SettingsViewController.swift */,
+				4FEAE2BE1D0EAD0D00677344 /* MediaViewController.swift */,
+				4F0BD9C81D0ED107009B6C50 /* FormViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -185,8 +224,13 @@
 		4F0D8E2D1D0B1D980013FDA7 /* Partials */ = {
 			isa = PBXGroup;
 			children = (
-				4F6211A81D0D87B200FB4CDF /* ChildCollectionViewCell.swift */,
+				4F23F51B1D0DEB3F0053B72B /* ChildDetailHeader.xib */,
 				4F23F51F1D0DEC160053B72B /* ChildDetailHeader.swift */,
+				4F6211A81D0D87B200FB4CDF /* ChildCollectionViewCell.swift */,
+				4FEAE2AA1D0E1D4F00677344 /* MenuCell.swift */,
+				4FEAE2AB1D0E1D4F00677344 /* MenuCell.xib */,
+				4FEAE2C01D0EB48200677344 /* LeylaHeader.swift */,
+				4FEAE2C41D0EB86500677344 /* LeylaHeader.xib */,
 			);
 			name = Partials;
 			sourceTree = "<group>";
@@ -202,7 +246,9 @@
 		4F0D8E2F1D0B1DAB0013FDA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FEAE2AF1D0E218400677344 /* YALContextMenu */,
 				4F32DEAF1CE9DA33007FE938 /* Info.plist */,
+				4FEAE2B71D0E21B100677344 /* Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -260,6 +306,18 @@
 				4F32DEC51CE9DA33007FE938 /* Info.plist */,
 			);
 			path = LSUITests;
+			sourceTree = "<group>";
+		};
+		4FEAE2AF1D0E218400677344 /* YALContextMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4FEAE2B01D0E218400677344 /* UIView+YALConstraints.h */,
+				4FEAE2B11D0E218400677344 /* UIView+YALConstraints.m */,
+				4FEAE2B21D0E218400677344 /* YALContextMenuCell.h */,
+				4FEAE2B31D0E218400677344 /* YALContextMenuTableView.h */,
+				4FEAE2B41D0E218400677344 /* YALContextMenuTableView.m */,
+			);
+			path = YALContextMenu;
 			sourceTree = "<group>";
 		};
 		C4B3EE2923BB8DA6BB682123 /* Pods */ = {
@@ -351,6 +409,12 @@
 				TargetAttributes = {
 					4F32DE9F1CE9DA33007FE938 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = CU9SUZ54RA;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					4F32DEB31CE9DA33007FE938 = {
 						CreatedOnToolsVersion = 7.3;
@@ -387,8 +451,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FEAE2C51D0EB86500677344 /* LeylaHeader.xib in Resources */,
 				4F32DEAE1CE9DA33007FE938 /* LaunchScreen.storyboard in Resources */,
 				4F23F51D1D0DEB3F0053B72B /* ChildDetailHeader.xib in Resources */,
+				4FEAE2AD1D0E1D4F00677344 /* MenuCell.xib in Resources */,
 				4F32DEAB1CE9DA33007FE938 /* Assets.xcassets in Resources */,
 				4F32DEA91CE9DA33007FE938 /* Main.storyboard in Resources */,
 			);
@@ -539,13 +605,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F23F51A1D0DBE680053B72B /* UIColorExtensions.swift in Sources */,
+				4FEAE2B61D0E218400677344 /* YALContextMenuTableView.m in Sources */,
 				4F32DED21CE9DA48007FE938 /* ChildrenViewController.swift in Sources */,
+				4FEAE2AC1D0E1D4F00677344 /* MenuCell.swift in Sources */,
+				4FEAE2B91D0EACBA00677344 /* LeylaViewController.swift in Sources */,
 				4F6211A91D0D87B200FB4CDF /* ChildCollectionViewCell.swift in Sources */,
 				4F32DEA41CE9DA33007FE938 /* AppDelegate.swift in Sources */,
+				4FEAE2BF1D0EAD0D00677344 /* MediaViewController.swift in Sources */,
 				4F23F5201D0DEC160053B72B /* ChildDetailHeader.swift in Sources */,
+				4FEAE2BB1D0EACCE00677344 /* UsViewController.swift in Sources */,
 				4F6211A11D0D847900FB4CDF /* Child.swift in Sources */,
+				4F14DEA21D0F7E1F00465299 /* LSTextField.swift in Sources */,
 				4FA5B9ED1CEA52DA002D16D1 /* DetailViewController.swift in Sources */,
+				4F0BD9C91D0ED107009B6C50 /* FormViewController.swift in Sources */,
 				4F6211AB1D0D95BF00FB4CDF /* LSLayout.swift in Sources */,
+				4FEAE2BD1D0EACDE00677344 /* SettingsViewController.swift in Sources */,
+				4FEAE2B51D0E218400677344 /* UIView+YALConstraints.m in Sources */,
+				4F0BD9C51D0ECD07009B6C50 /* Constants.swift in Sources */,
+				4F0BD9C71D0ECD33009B6C50 /* LSButton.swift in Sources */,
+				4FEAE2C21D0EB48200677344 /* LeylaHeader.swift in Sources */,
 				4F23F5191D0DBE680053B72B /* StoryboardExtensions.swift in Sources */,
 				4FAA1F931D0DF85C00BF8FAA /* StringExtension.swift in Sources */,
 				4F6211A31D0D848F00FB4CDF /* Form.swift in Sources */,
@@ -695,6 +773,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EnesCakir.LS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LS/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -707,6 +786,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EnesCakir.LS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LS/Bridging-Header.h";
 			};
 			name = Release;
 		};

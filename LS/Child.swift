@@ -20,7 +20,6 @@ class Child {
     var name:String
     var faculty:String
     var post:String
-    var slug:String
     var image:Image
     var url:String
     
@@ -31,17 +30,15 @@ class Child {
         name = ""
         faculty = ""
         post = ""
-        slug = ""
         url = ""
         image = Image(URL: "", ratio: "")
     }
     
-    init(id:Int, name:String, faculty:String, post:String, slug:String, url:String, imageURL:String, imageRatio:String){
+    init(id:Int, name:String, faculty:String, post:String, url:String, imageURL:String, imageRatio:String){
         self.id = id;
         self.name = name;
         self.faculty = faculty;
         self.post = post;
-        self.slug = slug;
         self.url = url;
         self.image = Image(URL: imageURL, ratio: imageRatio)
     }

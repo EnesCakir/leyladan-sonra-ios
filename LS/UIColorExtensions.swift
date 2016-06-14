@@ -16,19 +16,19 @@ extension UIColor
     {
         return UIColor(red: 51/255, green: 153/255, blue: 153/255, alpha: 1.0)
     }
-
-    class func accentBlueColor() -> UIColor
+    
+    class func primaryShadowColor() -> UIColor
     {
-        return UIColor(red: 150/255, green: 215/255, blue: 233/255, alpha: 1.0)
+        return UIColor(red: 21/255, green: 100/255, blue: 100/255, alpha: 1.0)
     }
     
-    class func accentOrangeColor() -> UIColor
+    class func lightGreyColor() -> UIColor
     {
-        return UIColor(red: 251/255, green: 178/255, blue: 86/255, alpha: 1.0)
+        return UIColor(red: 197/255, green: 205/255, blue: 205/255, alpha: 1.0)
     }
     
-    class func primaryDarkColor() -> UIColor
+    class func darkGreyColor() -> UIColor
     {
-        return UIColor(red: 72/255, green: 72/255, blue: 72/255, alpha: 1.0)
+        return UIColor(red: 52/255, green: 42/255, blue: 61/255, alpha: 1.0)
     }
 }

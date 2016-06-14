@@ -4,7 +4,9 @@ PODS:
     - Alamofire (~> 3.3)
   - ContextMenu.iOS (1.1.0)
   - FlatUIKit (1.6.2)
+  - FontAwesome.swift (0.7.3)
   - MXParallaxHeader (0.5.0)
+  - SkyFloatingLabelTextField (1.2.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -12,7 +14,9 @@ DEPENDENCIES:
   - AlamofireImage (~> 2.0)
   - ContextMenu.iOS (~> 1.1.0)
   - FlatUIKit
+  - FontAwesome.swift
   - MXParallaxHeader
+  - SkyFloatingLabelTextField (~> 1.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -20,9 +24,11 @@ SPEC CHECKSUMS:
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   ContextMenu.iOS: 7f3b63915e660f51aada2c4285c40a837b2c9737
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
+  FontAwesome.swift: f694fe0f667d6d3390b5919cdb0556a27b75d427
   MXParallaxHeader: c7dfdf8d769a8eb868a431ec3aeaf994a147b8bc
+  SkyFloatingLabelTextField: 3f6610aded18e778df5cfab3b9e12a11b3e014e9
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 24db54fbf54d42713404ba1c06602772205a6b88
+PODFILE CHECKSUM: 351b419d236a3ea371db2b38e046d9c1ca699a73
 
 COCOAPODS: 1.0.0

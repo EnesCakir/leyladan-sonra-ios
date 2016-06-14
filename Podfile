@@ -10,6 +10,8 @@ target 'LS' do
 	pod 'MXParallaxHeader'
 	pod 'FlatUIKit'
 	pod 'ContextMenu.iOS', '~> 1.1.0'
+	pod 'SkyFloatingLabelTextField', '~> 1.0'
+	pod 'FontAwesome.swift'
   # Pods for LS
 
   target 'LSTests' do

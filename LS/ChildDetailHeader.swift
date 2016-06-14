@@ -10,14 +10,10 @@ import UIKit
 import MXParallaxHeader
 import AlamofireImage
 
-protocol LSDetailHeaderDelegate {
-    func photoUrlForHeader() -> NSURL
-}
 
 
 class ChildDetailHeader: UIView, MXParallaxHeaderProtocol {
     
-    var delegate: LSDetailHeaderDelegate!
     @IBOutlet weak var childPhoto: UIImageView!
     @IBOutlet weak var childName: UILabel!
     
