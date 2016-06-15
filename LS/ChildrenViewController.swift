@@ -11,8 +11,10 @@ import Alamofire
 import AlamofireImage
 import SwiftyJSON
 import FlatUIKit
+import MBProgressHUD
+import NVActivityIndicatorView
 
-class ChildrenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, LSLayoutDelegate, YALContextMenuTableViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, LSLayoutDelegate, YALContextMenuTableViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var children:[Child] = []
     var menuItems = Constants.Menu.Items
@@ -101,7 +103,10 @@ class ChildrenViewController: UIViewController, UICollectionViewDelegate, UIColl
         case 4:
             self.navigationController?.pushViewController(UIStoryboard.mediaViewController(), animated: true)
         case 5:
-            print("Share")
+            let textToShare = "Bu gönderi @leyladansonra'nın iOS uygulamasıyla paylaşılmıştır. Siz de çocuklardan anında haberdar olmak için uygulamayı indirin."
+            let objectsToShare = [textToShare, UIImage(named:"imageToShare")!]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            self.presentViewController(activityVC, animated: true, completion: nil)
         case 6:
             self.navigationController?.pushViewController(UIStoryboard.settingsViewController(), animated: true)
         default:
@@ -135,17 +140,8 @@ class ChildrenViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     // MARK: Helpers
     func loadData() {
-        var indicator = UIActivityIndicatorView()
-        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 75, 75))
-        indicator.transform = CGAffineTransformMakeScale(3, 3);
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        indicator.center = self.view.center
-        self.view.addSubview(indicator)
-        print("Starting Download")
-        indicator.startAnimating()
-        indicator.backgroundColor = UIColor.whiteColor()
+        self.showHUD("Miniklerimiz yükleniyor")
         Alamofire.request(.GET, Constants.BaseURL + "/children").validate().responseJSON { response in
-
             switch response.result {
             case .Success:
                 if let value = response.result.value {
@@ -161,16 +157,13 @@ class ChildrenViewController: UIViewController, UICollectionViewDelegate, UIColl
                         self.children.append(child)
 
                     }
-                    indicator.stopAnimating()
-                    indicator.hidesWhenStopped = true
-                    
-                    print("Ending Download")
 //                    self.waitGeneralChild.text = json["waitGeneralChild"].stringValue
 //                    self.roadGeneralChild.text = json["roadGeneralChild"].stringValue
 //                    self.reachGeneralChild.text = json["reachGeneralChild"].stringValue
 //                    self.deliveredGeneralChild.text = json["deliveredGeneralChild"].stringValue
 //                    self.totalChild.text = json["totalChild"].stringValue
                     self.collectionView.reloadData()
+                    self.hideHUD()
                 }
             case .Failure(let error):
                 let alertController = UIAlertController(title: error.localizedFailureReason, message: error.localizedDescription , preferredStyle: UIAlertControllerStyle.Alert)

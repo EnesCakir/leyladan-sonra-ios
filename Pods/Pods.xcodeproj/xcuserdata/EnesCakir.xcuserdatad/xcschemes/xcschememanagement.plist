@@ -24,17 +24,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FontAwesome.swift.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>MXParallaxHeader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,17 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1088253F42C36418734CF3D95E31B8AA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1229BF37AC91CDA7E02DE520DF75BA19</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1ED8EA71E2D32D08F6606A21F1BD5236</key>
+		<key>23D283A41AF8E6E8E01D511660CA1442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,16 +87,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93979404A5977C1954A508A8C9B53407</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9E64D3E3A7AD1A87C822114B7473AE1E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9F7735D15B26400CB6CA005C3FC36E52</key>
 		<dict>
 			<key>primary</key>
@@ -117,7 +97,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>AD8817CE75B308CCBE0F9F9832027B17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>AE58340C183B963C900C9FF91F7C3E95</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB5A75C228948EA324F976139988FC36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDDC4DBF7654960710F7FF7B28F35033</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>

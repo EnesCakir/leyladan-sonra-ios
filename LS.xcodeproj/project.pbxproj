@@ -29,6 +29,8 @@
 		4F6211AB1D0D95BF00FB4CDF /* LSLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */; };
 		4FA5B9ED1CEA52DA002D16D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */; };
 		4FAA1F931D0DF85C00BF8FAA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAA1F921D0DF85C00BF8FAA /* StringExtension.swift */; };
+		4FAE13711D10B1090069FFF8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE13701D10B1090069FFF8 /* BaseViewController.swift */; };
+		4FAE13731D10B3E80069FFF8 /* SkyFloatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE13721D10B3E80069FFF8 /* SkyFloatingExtension.swift */; };
 		4FEAE2AC1D0E1D4F00677344 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2AA1D0E1D4F00677344 /* MenuCell.swift */; };
 		4FEAE2AD1D0E1D4F00677344 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEAE2AB1D0E1D4F00677344 /* MenuCell.xib */; };
 		4FEAE2B51D0E218400677344 /* UIView+YALConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2B11D0E218400677344 /* UIView+YALConstraints.m */; };
@@ -91,6 +93,8 @@
 		4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSLayout.swift; sourceTree = "<group>"; };
 		4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4FAA1F921D0DF85C00BF8FAA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4FAE13701D10B1090069FFF8 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4FAE13721D10B3E80069FFF8 /* SkyFloatingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingExtension.swift; sourceTree = "<group>"; };
 		4FEAE2AA1D0E1D4F00677344 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		4FEAE2AB1D0E1D4F00677344 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		4FEAE2B01D0E218400677344 /* UIView+YALConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YALConstraints.h"; sourceTree = "<group>"; };
@@ -171,9 +175,9 @@
 		4F0D8E281D0B1D650013FDA7 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				4F14DEA11D0F7E1F00465299 /* LSTextField.swift */,
 				4F0BD9C61D0ECD33009B6C50 /* LSButton.swift */,
 				4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */,
-				4F14DEA11D0F7E1F00465299 /* LSTextField.swift */,
 			);
 			name = Subclasses;
 			sourceTree = "<group>";
@@ -184,6 +188,7 @@
 				4F23F5171D0DBE680053B72B /* StoryboardExtensions.swift */,
 				4F23F5181D0DBE680053B72B /* UIColorExtensions.swift */,
 				4FAA1F921D0DF85C00BF8FAA /* StringExtension.swift */,
+				4FAE13721D10B3E80069FFF8 /* SkyFloatingExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				4FEAE2BC1D0EACDE00677344 /* SettingsViewController.swift */,
 				4FEAE2BE1D0EAD0D00677344 /* MediaViewController.swift */,
 				4F0BD9C81D0ED107009B6C50 /* FormViewController.swift */,
+				4FAE13701D10B1090069FFF8 /* BaseViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -608,7 +614,9 @@
 				4FEAE2B61D0E218400677344 /* YALContextMenuTableView.m in Sources */,
 				4F32DED21CE9DA48007FE938 /* ChildrenViewController.swift in Sources */,
 				4FEAE2AC1D0E1D4F00677344 /* MenuCell.swift in Sources */,
+				4FAE13731D10B3E80069FFF8 /* SkyFloatingExtension.swift in Sources */,
 				4FEAE2B91D0EACBA00677344 /* LeylaViewController.swift in Sources */,
+				4FAE13711D10B1090069FFF8 /* BaseViewController.swift in Sources */,
 				4F6211A91D0D87B200FB4CDF /* ChildCollectionViewCell.swift in Sources */,
 				4F32DEA41CE9DA33007FE938 /* AppDelegate.swift in Sources */,
 				4FEAE2BF1D0EAD0D00677344 /* MediaViewController.swift in Sources */,

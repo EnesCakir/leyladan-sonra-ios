@@ -207,7 +207,7 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kpi-Nd-300" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="730"/>
+            <point key="canvasLocation" x="1851" y="759"/>
         </scene>
         <!--Biz Kimiz?-->
         <scene sceneID="9g5-Ho-uSJ">
@@ -224,7 +224,7 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmH-LS-a7x">
                                 <rect key="frame" x="20" y="20" width="560" height="1180"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-bx-ylz" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-bx-ylz" customClass="LSButton" customModule="LS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="999" width="560" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="gmg-da-x9u"/>
@@ -234,20 +234,43 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                                             <action selector="showChildren:" destination="stY-ut-eE7" eventType="touchUpInside" id="sHX-fJ-pnm"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-Zk-dk1">
-                                        <rect key="frame" x="0.0" y="8" width="560" height="983"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-Zk-dk1">
+                                        <rect key="frame" x="0.0" y="8" width="560" height="998"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">HİKÂYEMİZ
+                                        <attributedString key="attributedText">
+                                            <fragment content="HİKÂYEMİZ">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="HelveticaNeue-Medium"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
 Onkoloji servisi ziyaretlerinden birinde tanıştıkları Leyla'nın minicik dileğini gerçekleştirmek ve daha nice çocuğun tebessümüne aracı olmak parolasıyla yola çıkan üç tıp öğrencisinin temel adımlarını attığı, Leyla’nın vefatıyla arkalarında daha fazla pişmanlık bırakmamak adına süreci hızlandırarak kurduğu, şimdi ise Türkiye’nin birçok yerindeki tıp fakültelerinde aktif olarak ziyaret yapan, kronik hastalıklı çocuklarla kaliteli vakit geçiren ve dileklerinin gerçekleşmesine aracı olmaya çalışan tıp öğrencilerinden oluşan bir ekibiz.
 Projemiz İstanbul (Çapa) Tıp Fakültesi'nde başlamış olup şu an 33 fakültede aktif olarak ilerlemekte, 22 tıp fakültesinde ise başlaması için çalışmalar devam etmektedir. Çocuklarımızın bizler için belki çok küçük ama onlara bir hayal dünyası ifade eden en büyük dileklerini öğrenip, bu dileklerini gerçekleştirmek isteyen gönüllülerimizle beraber miniklerimizin tebessümü için çalışmaktayız.
 
-SÜREÇ NASIL İŞLİYOR?
-Tıp öğrencilerinden oluşan iki – üç kişilik ekipler oluşturuyor, düzenli olarak servislere gidip çocuklarımızı ziyaret ediyoruz. Sohbet ederken en sevdiği renk, izlediği filmler, hayalindeki meslek gibi çocuğumuzu daha iyi tanımamızı sağlayan sorularla arkadaşlığımızı ilerletmeyi ihmal etmiyoruz. Muhabbet sırasında hayatta gerçekleşmesini en çok istediği dileğini öğreniyoruz. Bu çok istenen bir oyuncak, öğrenme hayalleri kurulan bir enstruman ya da okunmayı bekleyen bir kitap olabildiği gibi bir ünlüyle tanışıp imzasını almak, bir gezi, bazen de sadece patates kızartması yemek gibi minik bir istek olabiliyor. Çocuğumuzu tanıtan ufak bir hikayeyle birlikte dileğini internet sitemiz ve sosyal medya hesaplarımız aracılığıyla, tabii ki cocuklarımız ve ailelerinden onay alarak yayımlıyoruz.
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">SÜREÇ NASIL İŞLİYOR?
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="HelveticaNeue-Medium"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Tıp öğrencilerinden oluşan iki – üç kişilik ekipler oluşturuyor, düzenli olarak servislere gidip çocuklarımızı ziyaret ediyoruz. Sohbet ederken en sevdiği renk, izlediği filmler, hayalindeki meslek gibi çocuğumuzu daha iyi tanımamızı sağlayan sorularla arkadaşlığımızı ilerletmeyi ihmal etmiyoruz. Muhabbet sırasında hayatta gerçekleşmesini en çok istediği dileğini öğreniyoruz. Bu çok istenen bir oyuncak, öğrenme hayalleri kurulan bir enstruman ya da okunmayı bekleyen bir kitap olabildiği gibi bir ünlüyle tanışıp imzasını almak, bir gezi, bazen de sadece patates kızartması yemek gibi minik bir istek olabiliyor. Çocuğumuzu tanıtan ufak bir hikayeyle birlikte dileğini internet sitemiz ve sosyal medya hesaplarımız aracılığıyla, tabii ki cocuklarımız ve ailelerinden onay alarak yayımlıyoruz.
 
 Bu hayali gerçekleştirmeye istekli gönüllülerimiz paylaşılan yazıların altında belirtilen mail adresimize yazarak bizimle iletişime geçiyor. Arkadaşımızın dileğini bizzat ziyarete gelirken getirerek, ya da dileğine yolculuğunda ona eşlik ederek veya kargo yoluyla oyuncak, kitap ya da enstrümanını göndererek gerçekleştiriyor.
 
-Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişimimiz sona ermiyor. Çocuğumuzla duygusal bir bağ kurmuş olup her fırsatta onu ziyaret ediyoruz. Birlikte oyun oynuyor, sohbet ediyor, doğum günleri gibi özel günlerini unutmuyor; onlara abi, abla veya arkadaş oluyoruz. Onların gözlerindeki mutluluğa şahit olmak ve bu iyilik halkasının bir parçası haline gelmek isterseniz sizleri de aramıza bekliyoruz.</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişimimiz sona ermiyor. Çocuğumuzla duygusal bir bağ kurmuş olup her fırsatta onu ziyaret ediyoruz. Birlikte oyun oynuyor, sohbet ediyor, doğum günleri gibi özel günlerini unutmuyor; onlara abi, abla veya arkadaş oluyoruz. Onların gözlerindeki mutluluğa şahit olmak ve bu iyilik halkasının bir parçası haline gelmek isterseniz sizleri de aramıza bekliyoruz.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -280,7 +303,7 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
             </objects>
             <point key="canvasLocation" x="2591" y="759"/>
         </scene>
-        <!--Ayarlar-->
+        <!--Delegate-->
         <scene sceneID="dHb-Ha-jhO">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" title="Ayarlar" id="DDY-uc-ONg" customClass="SettingsViewController" customModule="LS" customModuleProvider="target" sceneMemberID="viewController">
@@ -296,7 +319,7 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Çocuk Bildirimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsT-0c-5Cy">
-                                        <rect key="frame" x="40" y="70" width="200" height="25"/>
+                                        <rect key="frame" x="40" y="64" width="200" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Y8t-TH-9gx"/>
                                             <constraint firstAttribute="width" constant="200" id="wTx-7I-Lbd"/>
@@ -305,9 +328,6 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-Xo-9KO">
-                                        <rect key="frame" x="511" y="67" width="51" height="31"/>
-                                    </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uygulama Ayarları" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w1-Dw-8o0">
                                         <rect key="frame" x="40" y="30" width="200" height="30"/>
                                         <constraints>
@@ -319,19 +339,19 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yapımcıdan Mesaj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qO-Gm-ht6">
-                                        <rect key="frame" x="40" y="371" width="520" height="24"/>
+                                        <rect key="frame" x="40" y="377" width="520" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kişisel Bilgiler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA8-1S-p3z">
-                                        <rect key="frame" x="40" y="115" width="200" height="30"/>
+                                        <rect key="frame" x="40" y="113" width="200" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Bu bilgiler gönderdiğiniz en son mesaja göre doldurulmuştur." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqR-QG-IZk">
-                                        <rect key="frame" x="40" y="343" width="520" height="16"/>
+                                        <rect key="frame" x="40" y="337" width="520" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="420" id="vxt-eW-ZUT"/>
                                             <constraint firstAttribute="height" constant="20" id="zot-HC-FOE"/>
@@ -347,7 +367,7 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                         </variation>
                                     </label>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZr-En-hK7" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="40" y="153" width="255" height="40"/>
+                                        <rect key="frame" x="40" y="147" width="255" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="gx0-zQ-keE"/>
                                         </constraints>
@@ -363,11 +383,11 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ad"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="delegate" destination="TQh-v0-bwq" id="XQL-HD-6vD"/>
+                                            <outlet property="delegate" destination="DDY-uc-ONg" id="naW-kX-1hE"/>
                                         </connections>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-Aw-kZu" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="40" y="201" width="520" height="40"/>
+                                        <rect key="frame" x="40" y="195" width="520" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="E-posta"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="E-posta"/>
@@ -380,11 +400,11 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="E-posta"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="delegate" destination="TQh-v0-bwq" id="rcP-BZ-6wl"/>
+                                            <outlet property="delegate" destination="DDY-uc-ONg" id="zXN-hw-bXH"/>
                                         </connections>
                                     </view>
                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-7j-nm9" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="40" y="249" width="520" height="40"/>
+                                        <rect key="frame" x="40" y="243" width="520" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                                 <real key="value" value="1"/>
@@ -397,11 +417,11 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Telefon"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="delegate" destination="TQh-v0-bwq" id="5IL-4f-sDQ"/>
+                                            <outlet property="delegate" destination="DDY-uc-ONg" id="nhd-xp-ff8"/>
                                         </connections>
                                     </view>
                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3g-Br-HCO" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="40" y="297" width="520" height="40"/>
+                                        <rect key="frame" x="40" y="291" width="520" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Şehir"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Şehir"/>
@@ -414,11 +434,11 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Şehir"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="delegate" destination="TQh-v0-bwq" id="glB-fp-OOz"/>
+                                            <outlet property="delegate" destination="DDY-uc-ONg" id="i5K-Rj-gwr"/>
                                         </connections>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHN-Yu-UtC" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="305" y="153" width="255" height="40"/>
+                                        <rect key="frame" x="305" y="147" width="255" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Soyad"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Soyad"/>
@@ -431,11 +451,11 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Soyad"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="delegate" destination="TQh-v0-bwq" id="keG-AO-T4a"/>
+                                            <outlet property="delegate" destination="DDY-uc-ONg" id="VnS-CS-y1e"/>
                                         </connections>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-vV-lqo">
-                                        <rect key="frame" x="40" y="403" width="520" height="48"/>
+                                        <rect key="frame" x="40" y="405" width="520" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -463,13 +483,24 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-ah-UMp">
-                                        <rect key="frame" x="60" y="460" width="480" height="255"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-ah-UMp">
+                                        <rect key="frame" x="60" y="463" width="480" height="255"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2h6-ah-UMp" secondAttribute="height" multiplier="32:17" id="pPk-CX-KFh"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="enescakir_logo"/>
+                                        <connections>
+                                            <action selector="openEnesCakir:" destination="DDY-uc-ONg" eventType="touchUpInside" id="wMp-Pn-tA9"/>
+                                        </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTp-3j-x6D" customClass="FUISwitch">
+                                        <rect key="frame" x="470" y="61" width="90" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="i12-SE-7oa"/>
+                                            <constraint firstAttribute="width" constant="90" id="kbJ-Ic-kqj"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gsT-0c-5Cy" firstAttribute="leading" secondItem="1w1-Dw-8o0" secondAttribute="leading" id="05Y-Ww-IpC"/>
@@ -480,6 +511,7 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                     <constraint firstItem="VRK-7j-nm9" firstAttribute="leading" secondItem="Duj-Aw-kZu" secondAttribute="leading" id="9Po-ZJ-avV"/>
                                     <constraint firstItem="4qO-Gm-ht6" firstAttribute="leading" secondItem="aqR-QG-IZk" secondAttribute="leading" id="CUD-rY-kA2"/>
                                     <constraint firstItem="K3g-Br-HCO" firstAttribute="top" secondItem="VRK-7j-nm9" secondAttribute="bottom" constant="8" id="Dqh-kJ-EX9"/>
+                                    <constraint firstItem="PTp-3j-x6D" firstAttribute="trailing" secondItem="lHN-Yu-UtC" secondAttribute="trailing" id="FUv-6h-hZR"/>
                                     <constraint firstItem="K3g-Br-HCO" firstAttribute="trailing" secondItem="VRK-7j-nm9" secondAttribute="trailing" id="GGF-Ec-bK6"/>
                                     <constraint firstItem="Duj-Aw-kZu" firstAttribute="leading" secondItem="DZr-En-hK7" secondAttribute="leading" id="I1X-f0-zhE"/>
                                     <constraint firstItem="aqR-QG-IZk" firstAttribute="top" secondItem="K3g-Br-HCO" secondAttribute="bottom" constant="6" id="JaV-a0-owy"/>
@@ -490,30 +522,28 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                     <constraint firstItem="lHN-Yu-UtC" firstAttribute="height" secondItem="DZr-En-hK7" secondAttribute="height" id="SjC-NH-Hmu"/>
                                     <constraint firstItem="1w1-Dw-8o0" firstAttribute="top" secondItem="QDn-w9-MTB" secondAttribute="top" constant="30" id="TXB-VP-BTc"/>
                                     <constraint firstItem="XMg-vV-lqo" firstAttribute="trailing" secondItem="4qO-Gm-ht6" secondAttribute="trailing" id="U1i-eN-ltw"/>
-                                    <constraint firstItem="4qO-Gm-ht6" firstAttribute="top" secondItem="aqR-QG-IZk" secondAttribute="bottom" constant="12" id="U2s-v8-ah3"/>
+                                    <constraint firstItem="4qO-Gm-ht6" firstAttribute="top" secondItem="aqR-QG-IZk" secondAttribute="bottom" constant="24" id="U2s-v8-ah3"/>
                                     <constraint firstItem="tA8-1S-p3z" firstAttribute="leading" secondItem="1w1-Dw-8o0" secondAttribute="leading" id="Vdf-h7-OKd"/>
-                                    <constraint firstAttribute="trailing" secondItem="Y0a-Xo-9KO" secondAttribute="trailing" constant="40" id="W1J-gV-kOG"/>
                                     <constraint firstItem="2h6-ah-UMp" firstAttribute="leading" secondItem="XMg-vV-lqo" secondAttribute="leading" constant="20" id="W97-er-MDW"/>
                                     <constraint firstAttribute="bottom" secondItem="XMg-vV-lqo" secondAttribute="bottom" constant="84" id="Wsr-Kq-uXH"/>
-                                    <constraint firstItem="lHN-Yu-UtC" firstAttribute="trailing" secondItem="Y0a-Xo-9KO" secondAttribute="trailing" id="Xhd-Yk-Lyc"/>
                                     <constraint firstItem="2h6-ah-UMp" firstAttribute="top" secondItem="XMg-vV-lqo" secondAttribute="bottom" constant="10" id="YZ9-Ut-vsi"/>
                                     <constraint firstItem="K3g-Br-HCO" firstAttribute="height" secondItem="VRK-7j-nm9" secondAttribute="height" id="Yw5-Xt-7eE"/>
                                     <constraint firstItem="XMg-vV-lqo" firstAttribute="top" secondItem="4qO-Gm-ht6" secondAttribute="bottom" constant="8" id="ZTv-Hc-bpa"/>
-                                    <constraint firstItem="Y0a-Xo-9KO" firstAttribute="centerY" secondItem="gsT-0c-5Cy" secondAttribute="centerY" id="bk3-fc-4PH"/>
+                                    <constraint firstItem="PTp-3j-x6D" firstAttribute="centerY" secondItem="gsT-0c-5Cy" secondAttribute="centerY" id="aQW-0b-vcu"/>
                                     <constraint firstItem="lHN-Yu-UtC" firstAttribute="centerY" secondItem="DZr-En-hK7" secondAttribute="centerY" id="cA2-5z-ZnJ"/>
                                     <constraint firstItem="XMg-vV-lqo" firstAttribute="leading" secondItem="4qO-Gm-ht6" secondAttribute="leading" id="cDS-9f-raf"/>
-                                    <constraint firstItem="XMg-vV-lqo" firstAttribute="top" secondItem="4qO-Gm-ht6" secondAttribute="bottom" constant="8" id="cVl-Vb-LKb"/>
+                                    <constraint firstItem="XMg-vV-lqo" firstAttribute="top" secondItem="4qO-Gm-ht6" secondAttribute="bottom" constant="4" id="cVl-Vb-LKb"/>
                                     <constraint firstItem="1w1-Dw-8o0" firstAttribute="leading" secondItem="QDn-w9-MTB" secondAttribute="leading" constant="40" id="cXL-YF-sYh"/>
                                     <constraint firstItem="VRK-7j-nm9" firstAttribute="top" secondItem="Duj-Aw-kZu" secondAttribute="bottom" constant="8" id="hk9-gj-oer"/>
-                                    <constraint firstItem="tA8-1S-p3z" firstAttribute="top" secondItem="gsT-0c-5Cy" secondAttribute="bottom" constant="20" id="lYc-kA-7El"/>
+                                    <constraint firstItem="tA8-1S-p3z" firstAttribute="top" secondItem="gsT-0c-5Cy" secondAttribute="bottom" constant="24" id="lYc-kA-7El"/>
                                     <constraint firstItem="Duj-Aw-kZu" firstAttribute="top" secondItem="DZr-En-hK7" secondAttribute="bottom" constant="8" id="oQX-ub-vXJ"/>
-                                    <constraint firstItem="DZr-En-hK7" firstAttribute="top" secondItem="tA8-1S-p3z" secondAttribute="bottom" constant="8" id="ops-oY-2mw"/>
+                                    <constraint firstItem="DZr-En-hK7" firstAttribute="top" secondItem="tA8-1S-p3z" secondAttribute="bottom" constant="4" id="ops-oY-2mw"/>
                                     <constraint firstItem="Duj-Aw-kZu" firstAttribute="trailing" secondItem="lHN-Yu-UtC" secondAttribute="trailing" id="pdq-UD-V1I"/>
                                     <constraint firstItem="2h6-ah-UMp" firstAttribute="trailing" secondItem="XMg-vV-lqo" secondAttribute="trailing" constant="-20" id="q8W-hC-uJw"/>
                                     <constraint firstAttribute="bottom" secondItem="2h6-ah-UMp" secondAttribute="bottom" constant="10" id="qNy-Go-IBb"/>
                                     <constraint firstItem="tA8-1S-p3z" firstAttribute="width" secondItem="1w1-Dw-8o0" secondAttribute="width" id="rra-pT-Go3"/>
                                     <constraint firstItem="K3g-Br-HCO" firstAttribute="leading" secondItem="VRK-7j-nm9" secondAttribute="leading" id="voY-AQ-jXr"/>
-                                    <constraint firstItem="gsT-0c-5Cy" firstAttribute="top" secondItem="1w1-Dw-8o0" secondAttribute="bottom" constant="10" id="wU5-KD-Ayr"/>
+                                    <constraint firstItem="gsT-0c-5Cy" firstAttribute="top" secondItem="1w1-Dw-8o0" secondAttribute="bottom" constant="4" id="wU5-KD-Ayr"/>
                                     <constraint firstItem="lHN-Yu-UtC" firstAttribute="leading" secondItem="DZr-En-hK7" secondAttribute="trailing" constant="10" id="wWa-bh-iTm"/>
                                     <constraint firstItem="tA8-1S-p3z" firstAttribute="height" secondItem="1w1-Dw-8o0" secondAttribute="height" id="wbf-FO-XJA"/>
                                 </constraints>
@@ -522,27 +552,40 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                         <exclude reference="cXL-YF-sYh"/>
                                         <exclude reference="Wsr-Kq-uXH"/>
                                         <exclude reference="ZTv-Hc-bpa"/>
-                                        <exclude reference="W1J-gV-kOG"/>
                                     </mask>
                                 </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y0a-Xo-9KO" secondAttribute="trailing" constant="20" id="bMg-U8-ehS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PTp-3j-x6D" secondAttribute="trailing" constant="20" id="FhP-Wm-64L"/>
                             <constraint firstItem="QDn-w9-MTB" firstAttribute="leading" secondItem="uGA-W0-UIB" secondAttribute="leadingMargin" constant="-20" id="fLw-7b-g3i"/>
                             <constraint firstItem="AII-DH-Obi" firstAttribute="top" secondItem="QDn-w9-MTB" secondAttribute="bottom" id="hLB-3t-0jw"/>
                             <constraint firstItem="QDn-w9-MTB" firstAttribute="top" secondItem="KwQ-wx-Txo" secondAttribute="bottom" constant="-20" id="he2-dJ-8aq"/>
+                            <constraint firstItem="PTp-3j-x6D" firstAttribute="leading" secondItem="uGA-W0-UIB" secondAttribute="leadingMargin" constant="459" id="qde-yZ-pVH"/>
                             <constraint firstItem="1w1-Dw-8o0" firstAttribute="leading" secondItem="uGA-W0-UIB" secondAttribute="leadingMargin" constant="20" id="tCZ-nH-w9i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QDn-w9-MTB" secondAttribute="trailing" constant="-20" id="x7Z-E8-bCP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qde-yZ-pVH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="cityTF" destination="K3g-Br-HCO" id="9xZ-Ob-qpe"/>
+                        <outlet property="emailTF" destination="Duj-Aw-kZu" id="oFP-4s-s3U"/>
+                        <outlet property="firstnameTF" destination="DZr-En-hK7" id="e9H-aw-htl"/>
+                        <outlet property="lastnameTF" destination="lHN-Yu-UtC" id="hb6-rg-EKl"/>
+                        <outlet property="mobileTF" destination="VRK-7j-nm9" id="35Z-VO-PWx"/>
+                        <outlet property="notifSwitch" destination="PTp-3j-x6D" id="732-Co-lRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC2-zf-C94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3301" y="670"/>
+            <point key="canvasLocation" x="3299" y="659"/>
         </scene>
         <!--Görseller-->
         <scene sceneID="GT5-hN-OVs">
@@ -560,7 +603,7 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13l-RP-x8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3942" y="587"/>
+            <point key="canvasLocation" x="3966" y="459"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="90R-Dz-mXk">
@@ -577,8 +620,8 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOn-u3-xyS">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NM-W5-Fc5" customClass="LSButton" customModule="LS" customModuleProvider="target">
-                                        <rect key="frame" x="262" y="442" width="77" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NM-W5-Fc5" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="240" y="296" width="120" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fCx-lt-zt4"/>
                                             <constraint firstAttribute="width" constant="120" id="l3O-J5-lm9"/>
@@ -588,10 +631,10 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                             <action selector="showForm:" destination="QvU-XY-g7F" eventType="touchUpInside" id="OM8-RM-h4C"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCl-vl-mph">
-                                        <rect key="frame" x="8" y="0.0" width="584" height="434"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCl-vl-mph">
+                                        <rect key="frame" x="20" y="0.0" width="560" height="296"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -688,7 +731,7 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet'in hediyesini almak mı istiyorsun? Formu doldurunuz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXq-qm-Iu1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet'in hediyesini almak mı istiyorsun? Formu doldurunuz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xXq-qm-Iu1">
                                         <rect key="frame" x="20" y="68" width="480" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Wl8-fQ-zJ0"/>
@@ -927,7 +970,9 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="kzk-8i-YDa" id="tu4-zY-hem"/>
+                        <outlet property="cancelButton" destination="nzW-Qs-vSl" id="h96-eh-BKa"/>
                         <outlet property="cityTF" destination="jhZ-Vz-C26" id="ZfZ-Gx-QWs"/>
+                        <outlet property="descriptionLabel" destination="xXq-qm-Iu1" id="10E-f6-ixU"/>
                         <outlet property="emailTF" destination="jzy-Se-DGe" id="ABh-Ao-6Ef"/>
                         <outlet property="firstnameTF" destination="mmH-ce-u5v" id="FnR-SD-YfH"/>
                         <outlet property="lastnameTF" destination="EpB-u0-Fgt" id="iTL-c3-dq4"/>
@@ -959,23 +1004,6 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rlr-Tf-H3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1846" y="-252"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="GhA-iZ-ror">
-            <objects>
-                <viewController id="BoP-8f-VzJ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7ia-pv-dfQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="0Kd-6L-I6g"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fbf-6l-XAs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uyl-X4-4Lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

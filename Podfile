@@ -11,7 +11,8 @@ target 'LS' do
 	pod 'FlatUIKit'
 	pod 'ContextMenu.iOS', '~> 1.1.0'
 	pod 'SkyFloatingLabelTextField', '~> 1.0'
-	pod 'FontAwesome.swift'
+	pod 'MBProgressHUD', '~> 0.9.2'
+	pod 'NVActivityIndicatorView'
   # Pods for LS
 
   target 'LSTests' do
