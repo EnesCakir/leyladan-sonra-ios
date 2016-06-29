@@ -2,6 +2,14 @@ PODS:
   - Alamofire (3.4.1)
   - AlamofireImage (2.4.0):
     - Alamofire (~> 3.3)
+  - Appirater (2.0.5)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - CocoaLumberjack/Swift (2.3.0):
+    - CocoaLumberjack/Extensions
   - ContextMenu.iOS (1.1.0)
   - FlatUIKit (1.6.2)
   - MBProgressHUD (0.9.2)
@@ -13,17 +21,21 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage (~> 2.0)
+  - Appirater
+  - CocoaLumberjack/Swift
   - ContextMenu.iOS (~> 1.1.0)
   - FlatUIKit
   - MBProgressHUD (~> 0.9.2)
   - MXParallaxHeader
   - NVActivityIndicatorView
-  - SkyFloatingLabelTextField (~> 1.0)
+  - SkyFloatingLabelTextField
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  Appirater: e7c0a47fb67ee5041ce8479e6ba960927fb40264
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   ContextMenu.iOS: 7f3b63915e660f51aada2c4285c40a837b2c9737
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
@@ -32,6 +44,6 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 3f6610aded18e778df5cfab3b9e12a11b3e014e9
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: e02905011b891d6922f5df6dd79c1df34741e0d6
+PODFILE CHECKSUM: 3d5a0f00f474ff3abc6ab2f5f185d0db4d99bd02
 
 COCOAPODS: 1.0.0

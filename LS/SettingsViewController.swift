@@ -40,14 +40,22 @@ class SettingsViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func setupSwitch() {
-        notifSwitch.onColor = UIColor.primaryColor();
+        notifSwitch.onColor = UIColor.whiteColor();
         notifSwitch.offColor = UIColor.cloudsColor();
-        notifSwitch.onBackgroundColor = UIColor(red: 210/255, green: 240/255, blue: 240/255, alpha: 1);
+        notifSwitch.onBackgroundColor = UIColor.primaryColor();
         notifSwitch.offBackgroundColor = UIColor.silverColor();
         notifSwitch.offLabel.font = UIFont.boldFlatFontOfSize(14);
         notifSwitch.onLabel.font = UIFont.boldFlatFontOfSize(14);
         notifSwitch.onLabel.text = "Açık"
         notifSwitch.offLabel.text = "Kapalı"
+        
+        if UIApplication.sharedApplication().isRegisteredForRemoteNotifications(){
+            notifSwitch.on = true
+        }
+        else{
+            notifSwitch.on = false
+        }
+
     }
 
     
@@ -80,6 +88,30 @@ class SettingsViewController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func openEnesCakir(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: "http://enescakir.com")!)
+    }
+    
+    @IBAction func openFolx(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://folx.com.tr")!)
+    }
+
+
+    @IBAction func pushNotificationValueChanged(sender: UISwitch)
+    {
+        if sender.on
+        {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("token")
+            let pushNotificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+            UIApplication.sharedApplication().registerUserNotificationSettings(pushNotificationSettings)
+            UIApplication.sharedApplication().registerForRemoteNotifications()
+
+
+        }
+            
+        else
+        {
+            UIApplication.sharedApplication().unregisterForRemoteNotifications()
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("token")
+        }
     }
 
     /*

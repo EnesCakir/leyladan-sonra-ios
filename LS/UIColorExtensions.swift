@@ -1,8 +1,8 @@
 //
 //  UIColorExtensions.swift
-//  NeKaldi
+//  LS
 //
-//  Created by Mustafa Enes Cakir on 4/3/16.
+//  Created by Mustafa Enes Cakir on 6/15/16.
 //  Copyright © 2016 EnesCakir. All rights reserved.
 //
 
@@ -15,6 +15,11 @@ extension UIColor
     class func primaryColor() -> UIColor
     {
         return UIColor(red: 51/255, green: 153/255, blue: 153/255, alpha: 1.0)
+    }
+    
+    class func primaryDarkColor() -> UIColor
+    {
+        return UIColor(red: 0/255, green: 69/255, blue: 73/255, alpha: 1.0)
     }
     
     class func primaryShadowColor() -> UIColor

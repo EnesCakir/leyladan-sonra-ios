@@ -16,7 +16,12 @@ class DetailViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var giftButton: LSButton!
+    @IBOutlet weak var giftButton: UIButton!
+    @IBOutlet weak var facultyLogo: UIImageView!
+
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var meetingLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
 
     // MARK: - Properties
     var child = Child()
@@ -42,10 +47,24 @@ class DetailViewController: UIViewController {
 
         self.navigationController?.pushViewController(UIStoryboard.formViewController(), animated: true)
     }
+    
     // MARK: - Setups
     func setupUI(){
+        let buttonTitle = NSMutableAttributedString(string: "HEDİYEYİ AL")
+        buttonTitle.addAttributes([ NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 20)! ], range: NSMakeRange(0, buttonTitle.length))
+        buttonTitle.addAttribute(NSKernAttributeName, value: 5.0, range: NSMakeRange(0, buttonTitle.length))
+        buttonTitle.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor(), range: NSMakeRange(0, buttonTitle.length))
+        giftButton.setAttributedTitle(buttonTitle, forState: .Normal)
+        giftButton.backgroundColor = UIColor.primaryDarkColor()
+
         self.title = child.name
         textView.text = child.post.htmlToString.string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        cityLabel.text = child.faculty.city
+        meetingLabel.text = NSDate.dateToNSDate(child.meetingDay).toLabel()
+        facultyLogo.af_setImageWithURL(
+            NSURL(string: Constants.URL.Faculty(child.faculty.image))!,
+            placeholderImage: UIImage(named: "ls_logo"),
+            imageTransition: .CrossDissolve(0.2))
     }
 
     func setupHeader(){

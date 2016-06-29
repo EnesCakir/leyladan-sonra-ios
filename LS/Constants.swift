@@ -12,12 +12,26 @@ import Foundation
 class Constants
 {
     static let UserDefaults = NSUserDefaults.standardUserDefaults()
-    static let BaseURL = "http://beta.leyladansonra.com/api"
     
-    
-    struct Menu {
-        static let Items:[(title:String, icon:String)] = [("","menuCloseIcon"),("Çocuklar","menuChildrenIcon"),("Biz Kimiz?","menuUsIcon"),("Leyla Kimdir?","menuLeylaIcon"), ("Görseller","menuMediaIcon") ,("Paylaş","menuShareIcon"),("Ayarlar","menuSettingIcon")]
+    struct URL {
+        static let Base = "http://www.leyladansonra.com"
+        static let API = "http://www.leyladansonra.com/api"
+        static let Uploads = "http://www.leyladansonra.com/resources/admin/uploads"
+        static func Child(imageUrl:String) -> String { return "http://www.leyladansonra.com/resources/admin/uploads/child_photos/\(imageUrl)" }
+        static func Faculty(imageUrl:String) -> String { return "http://www.leyladansonra.com/resources/admin/uploads/faculty_logos/\(imageUrl).png" }
     }
+
+    struct Menu {
+//        static let Items:[(title:String, icon:String)] = [("","menuCloseIcon"),("Çocuklar","menuChildrenIcon"),("Biz Kimiz?","menuUsIcon"),("Leyla Kimdir?","menuLeylaIcon"), ("Görseller","menuMediaIcon") ,("Paylaş","menuShareIcon"),("Ayarlar","menuSettingIcon")]
+            static let Items:[(title:String, icon:String)] = [("","menuCloseIcon"),("Biz Kimiz?","menuUsIcon"),("Leyla Kimdir?","menuLeylaIcon") ,("Paylaş","menuShareIcon"),("Ayarlar","menuSettingIcon")]
+
+    }
+    
+    struct User {
+        static func FirstName() -> String { return "" }
+    }
+
+    
     struct Identifiers
     {
         struct Messages

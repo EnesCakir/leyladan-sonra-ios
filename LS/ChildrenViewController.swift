@@ -14,10 +14,12 @@ import FlatUIKit
 import MBProgressHUD
 import NVActivityIndicatorView
 
-class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, LSLayoutDelegate, YALContextMenuTableViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, LSLayoutDelegate, YALContextMenuTableViewDelegate, UITableViewDelegate, UITableViewDataSource, LSContextMenuCellDelegate {
     
     var children:[Child] = []
     var menuItems = Constants.Menu.Items
+    var refreshControl:UIRefreshControl?
+    @IBOutlet weak var retryButton: LSButton!
 
     @IBOutlet weak var collectionView: UICollectionView!
     var contextMenuTableView = YALContextMenuTableView()
@@ -25,6 +27,11 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl!.addTarget(self, action: #selector(ChildrenViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
+        self.collectionView.addSubview(refreshControl!)
+
         collectionView.backgroundColor = UIColor.clearColor()
         self.title = "Hediye Bekleyen Çocuklar"
         if let layout = collectionView?.collectionViewLayout as? LSLayout { layout.delegate = self }
@@ -32,25 +39,37 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    @IBAction func showMenu(sender: AnyObject) {
-            self.contextMenuTableView = YALContextMenuTableView();
-            self.contextMenuTableView.animationDuration = 0.15;
-            //optional - implement custom YALContextMenuTableView custom protocol
-            self.contextMenuTableView.yalDelegate = self;
-            self.contextMenuTableView.delegate = self
-            self.contextMenuTableView.dataSource = self
-            //optional - implement menu items layout
-            self.contextMenuTableView.menuItemsSide = .Right;
-            self.contextMenuTableView.menuItemsAppearanceDirection = .FromTopToBottom;
-            self.contextMenuTableView.scrollEnabled = false
-            //register nib
-            let cellNib = UINib(nibName: "MenuCell", bundle: nil)
-        
-            self.contextMenuTableView.registerNib(cellNib, forCellReuseIdentifier: "menuCell")
-            self.contextMenuTableView.showInView(self.navigationController?.view, withEdgeInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0), animated: true)
+    @IBAction func retry(sender: AnyObject) {
+        loadData()
     }
     
+    @IBAction func showMenu(sender: AnyObject) {
+        self.contextMenuTableView = YALContextMenuTableView();
+        self.contextMenuTableView.animationDuration = 0.15;
+        //optional - implement custom YALContextMenuTableView custom protocol
+        self.contextMenuTableView.yalDelegate = self;
+        self.contextMenuTableView.delegate = self
+        self.contextMenuTableView.dataSource = self
+        //optional - implement menu items layout
+        self.contextMenuTableView.menuItemsSide = .Right;
+        self.contextMenuTableView.menuItemsAppearanceDirection = .FromTopToBottom;
+        self.contextMenuTableView.scrollEnabled = false
+        //register nib
+        let cellNib = UINib(nibName: "MenuCell", bundle: nil)
+        self.contextMenuTableView.registerNib(cellNib, forCellReuseIdentifier: "menuCell")
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChildrenViewController.closeMenu))
+        self.contextMenuTableView.backgroundView = UIView(frame: self.contextMenuTableView.bounds)
+        self.contextMenuTableView.backgroundView?.addGestureRecognizer(tap)
+
+        
+        self.contextMenuTableView.showInView(self.navigationController?.view, withEdgeInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0), animated: true)
+    }
+    
+    func closeMenu() {
+        self.contextMenuTableView.hidden = true
+    }
+
 
     // MARK: CollectionViewDelegate
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -59,7 +78,6 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return children.count;
     }
-    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("reuseIdentifier", forIndexPath: indexPath) as! ChildCollectionViewCell
         cell.setChild(children[indexPath.row])
@@ -95,19 +113,15 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     func contextMenuTableView(contextMenuTableView: YALContextMenuTableView!, didDismissWithIndexPath indexPath: NSIndexPath!) {
         switch indexPath.row {
         case 1:
-            self.navigationController?.popToRootViewControllerAnimated(true)
-        case 2:
             self.navigationController?.pushViewController(UIStoryboard.usViewController(), animated: true)
-        case 3:
+        case 2:
             self.navigationController?.pushViewController(UIStoryboard.leylaViewController(), animated: true)
-        case 4:
-            self.navigationController?.pushViewController(UIStoryboard.mediaViewController(), animated: true)
-        case 5:
+        case 3:
             let textToShare = "Bu gönderi @leyladansonra'nın iOS uygulamasıyla paylaşılmıştır. Siz de çocuklardan anında haberdar olmak için uygulamayı indirin."
             let objectsToShare = [textToShare, UIImage(named:"imageToShare")!]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             self.presentViewController(activityVC, animated: true, completion: nil)
-        case 6:
+        case 4:
             self.navigationController?.pushViewController(UIStoryboard.settingsViewController(), animated: true)
         default:
             print("Close")
@@ -134,14 +148,16 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
         cell.backgroundColor = UIColor.clearColor()
         cell.menuTitleLabel.text = menuItems[indexPath.row].title
         cell.menuImageView.image = UIImage(named: menuItems[indexPath.row].icon)
+        cell.delegate = self
         return cell
     }
     
 
     // MARK: Helpers
     func loadData() {
+        retryButton.hidden = true
         self.showHUD("Miniklerimiz yükleniyor")
-        Alamofire.request(.GET, Constants.BaseURL + "/children").validate().responseJSON { response in
+        Alamofire.request(.GET, Constants.URL.API + "/children").validate().responseJSON { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
@@ -149,11 +165,14 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
                     for (_,subJson):(String, JSON) in json["children"] {
                         let id = subJson["id"].intValue
                         let name = subJson["first_name"].stringValue
-                        let faculty = subJson["faculty"]["full_name"].stringValue
-                        let post = subJson["posts"][0]["text"].stringValue
-                        let imageURL = subJson["posts"][0]["images"][0]["name"].stringValue
-                        let imageRatio = subJson["posts"][0]["images"][0]["ratio"].stringValue
-                        let child = Child(id: id, name: name, faculty: faculty, post: post, url: "", imageURL: imageURL, imageRatio: imageRatio)
+                        let facultyName = subJson["faculty"]["full_name"].stringValue
+                        let facultyImage = subJson["faculty"]["slug"].stringValue
+                        let facultyCity = subJson["faculty"]["city"].stringValue
+                        let meetingDay = subJson["meeting_day"].stringValue
+                        let post = subJson["meeting_posts"][0]["text"].stringValue
+                        let imageURL = subJson["meeting_posts"][0]["images"][0]["name"].stringValue
+                        let imageRatio = subJson["meeting_posts"][0]["images"][0]["ratio"].stringValue
+                        let child = Child(id: id, name: name, facultyName: facultyName, facultyImage: facultyImage, facultyCity: facultyCity, meetingDay: meetingDay, post: post, url: "", imageURL: imageURL, imageRatio: imageRatio)
                         self.children.append(child)
 
                     }
@@ -164,11 +183,16 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
 //                    self.totalChild.text = json["totalChild"].stringValue
                     self.collectionView.reloadData()
                     self.hideHUD()
+                    self.refreshControl?.endRefreshing()
                 }
             case .Failure(let error):
                 let alertController = UIAlertController(title: error.localizedFailureReason, message: error.localizedDescription , preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "Tamam", style: UIAlertActionStyle.Default,handler: nil))
                 self.presentViewController(alertController, animated: true, completion: nil)
+                self.collectionView.reloadData()
+                self.hideHUD()
+                self.refreshControl?.endRefreshing()
+                self.retryButton.hidden = false
                 return
             }
         }

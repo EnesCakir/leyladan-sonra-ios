@@ -53,10 +53,10 @@ class ChildCollectionViewCell: UICollectionViewCell {
 
     func setChild(child:Child) {
         childName.text = child.name
-        facultyName.text = child.faculty
+        facultyName.text = child.faculty.name
         activityIndicator.startAnimating();
         childPhoto.af_setImageWithURL(
-            NSURL(string: "http://beta.leyladansonra.com/resources/admin/uploads/child_photos/" + child.image.URL)!,
+            NSURL(string: Constants.URL.Child(child.image.URL))!,
             placeholderImage: UIImage(named: "childNoPhoto"),
             imageTransition: .CrossDissolve(0.2),
             completion: { (_) -> Void in self.activityIndicator.stopAnimating()})

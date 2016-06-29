@@ -13,13 +13,21 @@ struct Image {
     var ratio:String
 }
 
+struct Faculty {
+    var name:String
+    var image:String
+    var city:String
+}
+
+
 class Child {
     
     // MARK: - Properties
     var id:Int
     var name:String
-    var faculty:String
+    var faculty:Faculty
     var post:String
+    var meetingDay:String
     var image:Image
     var url:String
     
@@ -28,16 +36,19 @@ class Child {
     init(){
         id = 0
         name = ""
-        faculty = ""
+        faculty = Faculty(name: "", image: "", city: "")
+        meetingDay = ""
         post = ""
         url = ""
         image = Image(URL: "", ratio: "")
     }
     
-    init(id:Int, name:String, faculty:String, post:String, url:String, imageURL:String, imageRatio:String){
+    init(id:Int, name:String, facultyName:String, facultyImage:String, facultyCity:String, meetingDay:String, post:String, url:String, imageURL:String, imageRatio:String){
         self.id = id;
         self.name = name;
-        self.faculty = faculty;
+        self.faculty = Faculty(name: facultyName, image: facultyImage, city: facultyCity)
+        self.meetingDay = meetingDay;
+        self.meetingDay.removeRange( self.meetingDay.rangeOfString("00:00:00")! )
         self.post = post;
         self.url = url;
         self.image = Image(URL: imageURL, ratio: imageRatio)

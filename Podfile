@@ -10,9 +10,11 @@ target 'LS' do
 	pod 'MXParallaxHeader'
 	pod 'FlatUIKit'
 	pod 'ContextMenu.iOS', '~> 1.1.0'
-	pod 'SkyFloatingLabelTextField', '~> 1.0'
+	pod 'SkyFloatingLabelTextField'
 	pod 'MBProgressHUD', '~> 0.9.2'
 	pod 'NVActivityIndicatorView'
+	pod 'CocoaLumberjack/Swift'
+        pod "Appirater"
   # Pods for LS
 
   target 'LSTests' do

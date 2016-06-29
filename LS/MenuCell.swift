@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol LSContextMenuCellDelegate {
+    func closeMenu()
+}
+
 class MenuCell: UITableViewCell, YALContextMenuCell {
 
     @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var menuTitleLabel: UILabel!
+    
+    var delegate: LSContextMenuCellDelegate!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +35,12 @@ class MenuCell: UITableViewCell, YALContextMenuCell {
         // Configure the view for the selected state
     }
     
+    
+    // MARK: - IBActions
+    @IBAction func closeMenu(sender: AnyObject) {
+        delegate.closeMenu()
+    }
+
     
     //MARK: YALContextMenuCell
     func animatedIcon() -> UIView! {

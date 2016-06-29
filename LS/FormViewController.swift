@@ -54,7 +54,7 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
     // MARK: Setups
     func setupUI(){
         setupTextFields()
-        descriptionLabel.text = "\(child.name)'in hediyesini almak mı istiyorsun? Formu doldurunuz"
+        descriptionLabel.text = "\(child.name) için hediye almak mı istiyorsunuz? Formu doldurunuz"
         // Rounded view
         self.automaticallyAdjustsScrollViewInsets = false
         scrollView.layer.cornerRadius = 6
@@ -62,7 +62,7 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
         //Blur background
         let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.Light)
         let blurView = UIVisualEffectView(effect: darkBlur)
-        blurView.frame = backgroundView.bounds
+        blurView.frame = self.view.bounds
         backgroundView.addSubview(blurView)
         
         //Cancel button
@@ -212,6 +212,7 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
             "email": form.email,
             "mobile": form.mobile,
             "city": form.city,
+            "via": "iOS",
             "text": form.message]
         
         Constants.UserDefaults.setObject([
@@ -222,7 +223,7 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
             "city": form.city], forKey: "volunteer")
 
         self.showHUD("Gönderiliyor")
-        Alamofire.request(.POST, Constants.BaseURL + "/child/form", parameters: parameters).response { request, response, data, error in
+        Alamofire.request(.POST, Constants.URL.API + "/child/form", parameters: parameters).response { request, response, data, error in
             self.hideHUD()
             if error != nil{
                 let alertController = UIAlertController(title: error?.localizedFailureReason, message: error?.localizedDescription , preferredStyle: UIAlertControllerStyle.Alert)

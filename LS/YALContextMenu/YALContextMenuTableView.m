@@ -354,7 +354,6 @@ typedef NS_ENUM(NSUInteger, AnimatingState) {
     UITableViewCell<YALContextMenuCell> *cell = [super dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
     [self resetAnimatedIconForCell:cell];
-    
     if (cell) {
         if (self.animatingState==Showing) {
             [cell contentView].hidden = YES;

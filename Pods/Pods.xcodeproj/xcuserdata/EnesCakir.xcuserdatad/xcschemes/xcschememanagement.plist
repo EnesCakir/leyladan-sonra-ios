@@ -14,6 +14,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Appirater-Appirater.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Appirater.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ContextMenu.iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>23D283A41AF8E6E8E01D511660CA1442</key>
+		<key>484F4A81F64386835FE4721CE6BED57A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>484F4A81F64386835FE4721CE6BED57A</key>
+		<key>6832B17DA199016980479CC8975A86B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7B70870D8B461DF43521B992C810D78B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8698C4558AE758AD92477EC134E714F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>871A7BA32C7B5C87DF08B9ECB4DFDC3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +122,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD0892BE565CA9D5A839B9137561277C</key>
+		<key>ABC046E9502AB7E3DAD8BDDCE434DC6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD8817CE75B308CCBE0F9F9832027B17</key>
+		<key>AD0892BE565CA9D5A839B9137561277C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB5A75C228948EA324F976139988FC36</key>
+		<key>B73D876630BC26E91A09548400FB65C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D082FD9722F53B9C3A1229257D4008F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

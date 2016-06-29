@@ -15,7 +15,6 @@ import AlamofireImage
 class ChildDetailHeader: UIView, MXParallaxHeaderProtocol {
     
     @IBOutlet weak var childPhoto: UIImageView!
-    @IBOutlet weak var childName: UILabel!
     
     class func instanciateFromNib() -> ChildDetailHeader {
         return NSBundle.mainBundle().loadNibNamed("ChildDetailHeader", owner: nil, options: nil)[0] as! ChildDetailHeader
@@ -23,9 +22,9 @@ class ChildDetailHeader: UIView, MXParallaxHeaderProtocol {
     
 
     func setChild(child:Child) {
-        childName.text = child.name
+//        childName.text = child.name
         childPhoto.af_setImageWithURL(
-            NSURL(string: "http://beta.leyladansonra.com/resources/admin/uploads/child_photos/" + child.image.URL)!,
+            NSURL(string: Constants.URL.Child(child.image.URL))!,
             placeholderImage: UIImage(named: "childNoPhoto"),
             imageTransition: .CrossDissolve(0.2),
             completion: { (_) -> Void in })

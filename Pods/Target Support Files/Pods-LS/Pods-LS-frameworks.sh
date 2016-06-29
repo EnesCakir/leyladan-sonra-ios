@@ -86,6 +86,8 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Appirater/Appirater.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ContextMenu.iOS/ContextMenu_iOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FlatUIKit/FlatUIKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
@@ -97,6 +99,8 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Appirater/Appirater.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ContextMenu.iOS/ContextMenu_iOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FlatUIKit/FlatUIKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"

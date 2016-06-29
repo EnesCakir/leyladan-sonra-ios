@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,21 +23,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
 
-        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
-        let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+        let pushNotificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
         
         return true
-    }
+    }  
 
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        print("DEVICE TOKEN = \(deviceToken)")
-        var token = deviceToken.description
-        token = token.stringByReplacingOccurrencesOfString(" ", withString: "").stringByReplacingOccurrencesOfString(">", withString: "").stringByReplacingOccurrencesOfString("<", withString: "")
-        print("DEVICE TOKEN2 = \(token)")
-
+        var notification_token = deviceToken.description
+        notification_token = notification_token.stringByReplacingOccurrencesOfString(" ", withString: "").stringByReplacingOccurrencesOfString(">", withString: "").stringByReplacingOccurrencesOfString("<", withString: "")
+        print("Notification TOKEN = \(notification_token)")
+//        let device_token = UIDevice.currentDevice().identifierForVendor!.UUIDString.stringByReplacingOccurrencesOfString("-", withString: "")
+//        print("Device TOKEN = \(device_token)")
         
+        let parameters = [
+            "token": notification_token,
+            "platform": "iOS"]
+        
+        Constants.UserDefaults.setObject(notification_token, forKey: "token")
+        
+        Alamofire.request(.POST, Constants.URL.API + "/token", parameters: parameters).response { request, response, data, error in
+            print(response)
+            print(error)
+        }
+
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
