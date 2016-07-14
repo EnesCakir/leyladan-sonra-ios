@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 class Constants
 {
@@ -21,11 +21,6 @@ class Constants
         static func Faculty(imageUrl:String) -> String { return "http://www.leyladansonra.com/resources/admin/uploads/faculty_logos/\(imageUrl).png" }
     }
 
-    struct Menu {
-//        static let Items:[(title:String, icon:String)] = [("","menuCloseIcon"),("Çocuklar","menuChildrenIcon"),("Biz Kimiz?","menuUsIcon"),("Leyla Kimdir?","menuLeylaIcon"), ("Görseller","menuMediaIcon") ,("Paylaş","menuShareIcon"),("Ayarlar","menuSettingIcon")]
-            static let Items:[(title:String, icon:String)] = [("","menuCloseIcon"),("Biz Kimiz?","menuUsIcon"),("Leyla Kimdir?","menuLeylaIcon") ,("Paylaş","menuShareIcon"),("Ayarlar","menuSettingIcon")]
-
-    }
     
     struct User {
         static func FirstName() -> String { return "" }

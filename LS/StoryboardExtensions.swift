@@ -53,12 +53,5 @@ extension UIStoryboard
         return settingsVC
     }
 
-    class func mediaViewController() -> MediaViewController
-    {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mediaVC = storyboard.instantiateViewControllerWithIdentifier("MediaViewController") as! MediaViewController
-        return mediaVC
-    }
-
 
 }

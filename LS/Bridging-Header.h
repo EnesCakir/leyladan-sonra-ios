@@ -9,7 +9,5 @@
 #ifndef Bridging_Header_h
 #define Bridging_Header_h
 
-#import "YALContextMenuTableView.h"
-#import "YALContextMenuCell.h"
 
 #endif /* Bridging_Header_h */

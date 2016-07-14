@@ -15,6 +15,8 @@ class LeylaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHeader()
+        self.navigationItem.title = "Leyla Kimdir?"
+
         // Do any additional setup after loading the view.
     }
 

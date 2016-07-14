@@ -1827,6 +1827,60 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					05094CC4A047119F7ADC14EE74C4881C = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					484F4A81F64386835FE4721CE6BED57A = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					6832B17DA199016980479CC8975A86B8 = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					79C040AFDDCE1BCBF6D8B5EB0B85887F = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					8698C4558AE758AD92477EC134E714F7 = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					871A7BA32C7B5C87DF08B9ECB4DFDC3C = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					ABC046E9502AB7E3DAD8BDDCE434DC6F = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					AD0892BE565CA9D5A839B9137561277C = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					AE58340C183B963C900C9FF91F7C3E95 = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					B73D876630BC26E91A09548400FB65C0 = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					D082FD9722F53B9C3A1229257D4008F7 = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					E61CE3B6DFA1FE6B3E296965C76C0E10 = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+					EE706719D86B1201E7916620415DD70B = {
+						DevelopmentTeam = CU9SUZ54RA;
+						DevelopmentTeamName = "Murat Cakir";
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";

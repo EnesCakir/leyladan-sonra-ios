@@ -15,6 +15,7 @@ class UsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
+        self.navigationItem.title = "Biz Kimiz?"
 
         // Do any additional setup after loading the view.
     }

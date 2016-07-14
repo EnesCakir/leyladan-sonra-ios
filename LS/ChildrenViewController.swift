@@ -14,15 +14,13 @@ import FlatUIKit
 import MBProgressHUD
 import NVActivityIndicatorView
 
-class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, LSLayoutDelegate, YALContextMenuTableViewDelegate, UITableViewDelegate, UITableViewDataSource, LSContextMenuCellDelegate {
+class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, LSLayoutDelegate {
     
     var children:[Child] = []
-    var menuItems = Constants.Menu.Items
     var refreshControl:UIRefreshControl?
     @IBOutlet weak var retryButton: LSButton!
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var contextMenuTableView = YALContextMenuTableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +31,7 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
         self.collectionView.addSubview(refreshControl!)
 
         collectionView.backgroundColor = UIColor.clearColor()
-        self.title = "Hediye Bekleyen Çocuklar"
+        self.navigationItem.title = "Hediye Bekleyen Minikler"
         if let layout = collectionView?.collectionViewLayout as? LSLayout { layout.delegate = self }
     }
     override func didReceiveMemoryWarning() {
@@ -43,32 +41,6 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
         loadData()
     }
     
-    @IBAction func showMenu(sender: AnyObject) {
-        self.contextMenuTableView = YALContextMenuTableView();
-        self.contextMenuTableView.animationDuration = 0.15;
-        //optional - implement custom YALContextMenuTableView custom protocol
-        self.contextMenuTableView.yalDelegate = self;
-        self.contextMenuTableView.delegate = self
-        self.contextMenuTableView.dataSource = self
-        //optional - implement menu items layout
-        self.contextMenuTableView.menuItemsSide = .Right;
-        self.contextMenuTableView.menuItemsAppearanceDirection = .FromTopToBottom;
-        self.contextMenuTableView.scrollEnabled = false
-        //register nib
-        let cellNib = UINib(nibName: "MenuCell", bundle: nil)
-        self.contextMenuTableView.registerNib(cellNib, forCellReuseIdentifier: "menuCell")
-
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ChildrenViewController.closeMenu))
-        self.contextMenuTableView.backgroundView = UIView(frame: self.contextMenuTableView.bounds)
-        self.contextMenuTableView.backgroundView?.addGestureRecognizer(tap)
-
-        
-        self.contextMenuTableView.showInView(self.navigationController?.view, withEdgeInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0), animated: true)
-    }
-    
-    func closeMenu() {
-        self.contextMenuTableView.hidden = true
-    }
 
 
     // MARK: CollectionViewDelegate
@@ -108,50 +80,6 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
             return columnWidth * 3 / 4
         }
     }
-    
-    // MARK: YALMenuDelegate
-    func contextMenuTableView(contextMenuTableView: YALContextMenuTableView!, didDismissWithIndexPath indexPath: NSIndexPath!) {
-        switch indexPath.row {
-        case 1:
-            self.navigationController?.pushViewController(UIStoryboard.usViewController(), animated: true)
-        case 2:
-            self.navigationController?.pushViewController(UIStoryboard.leylaViewController(), animated: true)
-        case 3:
-            let textToShare = "Bu gönderi @leyladansonra'nın iOS uygulamasıyla paylaşılmıştır. Siz de çocuklardan anında haberdar olmak için uygulamayı indirin."
-            let objectsToShare = [textToShare, UIImage(named:"imageToShare")!]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            self.presentViewController(activityVC, animated: true, completion: nil)
-        case 4:
-            self.navigationController?.pushViewController(UIStoryboard.settingsViewController(), animated: true)
-        default:
-            print("Close")
-        }
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let contextMenu = tableView as! YALContextMenuTableView
-        contextMenu.dismisWithIndexPath(indexPath)
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 65
-    }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuItems.count;
-    }
-
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
-    }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuCell
-        cell.backgroundColor = UIColor.clearColor()
-        cell.menuTitleLabel.text = menuItems[indexPath.row].title
-        cell.menuImageView.image = UIImage(named: menuItems[indexPath.row].icon)
-        cell.delegate = self
-        return cell
-    }
-    
 
     // MARK: Helpers
     func loadData() {

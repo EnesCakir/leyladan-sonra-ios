@@ -26,6 +26,8 @@ class SettingsViewController: BaseViewController, UITextFieldDelegate {
         setupTextFields()
         setupSwitch()
         setupTap()
+        self.navigationItem.title = "Ayarlar"
+
         // Do any additional setup after loading the view.
     }
 
