@@ -31,6 +31,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupHeader()
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Geri"
+        navigationItem.backBarButtonItem = backItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,11 +45,10 @@ class DetailViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func showForm(sender: AnyObject) {
         let formVC = UIStoryboard.formViewController()
-        formVC.modalPresentationStyle = .OverCurrentContext
+//        formVC.modalPresentationStyle = .OverCurrentContext
         formVC.child = child
-        presentViewController(formVC, animated: true, completion: nil)
-
-        self.navigationController?.pushViewController(UIStoryboard.formViewController(), animated: true)
+//        presentViewController(formVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(formVC, animated: true)
     }
     
     // MARK: - Setups

@@ -18,8 +18,11 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     
     var children:[Child] = []
     var refreshControl:UIRefreshControl?
+    var leylaRefreshView: UIView!
+    var refreshImage: UIImageView!
+    var isAnimatingRefresh = false
+    
     @IBOutlet weak var retryButton: LSButton!
-
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -28,11 +31,16 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
         
         refreshControl = UIRefreshControl()
         refreshControl!.addTarget(self, action: #selector(ChildrenViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl?.backgroundColor = UIColor.primaryColor()
+        refreshControl?.tintColor = UIColor.whiteColor()
         self.collectionView.addSubview(refreshControl!)
+
+        loadCustomRefreshContents()
 
         collectionView.backgroundColor = UIColor.clearColor()
         self.navigationItem.title = "Hediye Bekleyen Minikler"
         if let layout = collectionView?.collectionViewLayout as? LSLayout { layout.delegate = self }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,6 +50,7 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     }
     
 
+    
 
     // MARK: CollectionViewDelegate
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -80,8 +89,47 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
             return columnWidth * 3 / 4
         }
     }
+    
+    // MARK: ScrollViewDelegate
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < -64 {
+            if(!isAnimatingRefresh){
+                animateRefresh()
+            }
+        }
+    }
 
     // MARK: Helpers
+    func animateRefresh(){
+        isAnimatingRefresh = true
+        UIView.animateWithDuration(0.35, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+            self.refreshImage.alpha = 0
+            }, completion: { (finished) -> Void in
+                UIView.animateWithDuration(0.25, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+                    self.refreshImage.alpha = 1
+                    
+                    }, completion: { (finished) -> Void in
+                        if self.refreshControl!.refreshing {
+                            self.animateRefresh()
+                        }
+                        else{
+                            self.isAnimatingRefresh = false
+                        }
+                })
+        })
+        
+    }
+    
+    func loadCustomRefreshContents() {
+        let refreshContents = NSBundle.mainBundle().loadNibNamed("LeylaRefresh", owner: self, options: nil)
+        leylaRefreshView = refreshContents[0] as! UIView
+        leylaRefreshView.frame = refreshControl!.bounds
+        leylaRefreshView.backgroundColor = UIColor.primaryColor()
+        refreshImage = leylaRefreshView.viewWithTag(1) as! UIImageView
+        refreshControl?.addSubview(leylaRefreshView)
+    }
+    
     func loadData() {
         retryButton.hidden = true
         self.showHUD("Miniklerimiz yükleniyor")

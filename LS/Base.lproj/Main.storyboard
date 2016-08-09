@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A239j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="th8-sU-wPv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="th8-sU-wPv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -132,14 +132,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="gBh-Yo-z8K">
-                        <barButtonItem key="rightBarButtonItem" image="menuIcon" id="AUO-7S-sHi">
-                            <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
-                            <connections>
-                                <action selector="showMenu:" destination="4Ff-wn-np0" id="Uvn-z6-7C9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="gBh-Yo-z8K"/>
                     <connections>
                         <outlet property="collectionView" destination="Kou-Nx-K6r" id="Pgh-7V-axC"/>
                         <outlet property="retryButton" destination="A5K-mG-hyf" id="FUh-bv-jLa"/>
@@ -158,20 +151,47 @@
                         <viewControllerLayoutGuide type="bottom" id="O3D-QB-RYx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NHf-Rx-OPQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-vw-W41">
-                                <rect key="frame" x="0.0" y="44" width="600" height="1107"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="1307"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-9f-chO">
-                                        <rect key="frame" x="20" y="8" width="560" height="983"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-9f-chO" customClass="LSTextView" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="8" width="560" height="574.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Biz kimiz? Şimdilik 3 kişiden oluşan tıbbiyeli bir ekibiz. Okulumuzun onkoloji servisini ziyaretlerimiz sırasında çocukların en büyük isteklerinin bile bizimkilere kıyasla ne denli küçük olduğunu gördük ve ‘1 çocuk 1 dilek’ temalı bir proje başlatmak istedik. Yani Latince deyimiyle mottomuz da olan ‘Unus puer Unum desiderum’ Amacımız asla bağış toplamak değil. Yalnızca bir çocuğa sorulduğunda ağzından ilk çıkan, son zamanlarda en çok düşlediği şeyin gerçekleşebilmesi için aracı olmak. Biz onları ziyaret ettikçe yenileniyoruz, öğreniyoruz, vermekten çok alıyoruz esasen. İstedik ki borcumuzu ödeyelim küçük arkadaşlarımıza. Bir fotoğrafla birlikte ufak da bir tıbbi hikaye ve o miniğin tek dileğini paylaşacağız sizinle. Mutluluğunu bizzat görmek isterseniz İstanbul Üniversitesi İstanbul (Çapa) Tıp Fakültesi’nde kendisini bulabileceğiniz yeri tarif edeceğiz size, böyle bir imkan yoksa da bize kargolamak isterseniz biz ulaştıracağız.
 
-Olay bu kadar basit ve bir o kadar değerli iken biz isim, konsept vb hususları tartışarak o kadar vakit kaybettik ki! Bugün odamı toplarken bir yerlerden Leyla’nın annesinin telefonu çıktı karşıma. İçim ‘cız’ etti, korkarak aradım ve yine korka korka ‘Peki ya Leyla’yı sorsam?’ dedim. Titreyen bir ses ‘Ben de kandil diye Leyla’nın ruhuna irmik kavuruyordum şimdi’ cevabını verdi. Ve o anda kafamdan geçen, günlerdir peşinde koşturduklarım oldu. Fatoş Abla’ya mutlaka bir çayını içme sözü verip, ölüme dair birkaç beylik laf edip, aslında söylediklerimle kendimi bile teskin edemeyip 17 aylık yeğenime koşup sarıldım.
-
-Ve bu kez çok kısa süren bir toplantının ardından ‘Daha fazla beklemek yok’ dedik. Daha fazla gözyaşı ve pişmanlık kalmamalı geride. Çünkü Leyla’nın bizden beklediği yalnızca bir bisikletti, camdan hergün annesine gösterdiği, evine kısacık gidebildiği zamanlarda da olsa sürmek istediği.. 6.5 aylıkken tanısı konan hastalığı oldukça kötü huylu bir tümördü, nefes borusuna yakın olması sebebiyle de oldukça kritikti. Kendisini koca koca ameliyatların beklediğinden habersiz ve öyle masumdu ki Leyla.
+Olay bu kadar basit ve bir o kadar değerli iken biz isim, konsept vb hususları tartışarak o kadar vakit kaybettik ki! Bugün odamı toplarken bir yerlerden Leyla’nın annesinin telefonu çıktı karşıma. İçim ‘cız’ etti, korkarak aradım ve yine korka korka ‘Peki ya Leyla’yı sorsam?’ dedim. Titreyen bir ses ‘Ben de kandil diye Leyla’nın ruhuna irmik kavuruyordum şimdi’ cevabını verdi. Ve o anda kafamdan geçen, günlerdir peşinde koşturduklarım oldu. Fatoş Abla’ya mutlaka bir çayını içme sözü verip, ölüme dair birkaç beylik laf edip, aslında söylediklerimle kendimi bile teskin edemeyip 17 aylık yeğenime koşup sarıldım.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y3Q-E0-LjY">
+                                        <rect key="frame" x="0.0" y="590" width="600" height="188"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leyla-2" translatesAutoresizingMaskIntoConstraints="NO" id="6dt-gf-PGC">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.34123460979999998" blue="0.08118321765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6dt-gf-PGC" secondAttribute="trailing" id="BGo-Vx-uk0"/>
+                                            <constraint firstAttribute="bottom" secondItem="6dt-gf-PGC" secondAttribute="bottom" id="HfP-H3-gbG"/>
+                                            <constraint firstItem="6dt-gf-PGC" firstAttribute="leading" secondItem="y3Q-E0-LjY" secondAttribute="leading" id="HvA-2f-aIy"/>
+                                            <constraint firstAttribute="width" secondItem="y3Q-E0-LjY" secondAttribute="height" multiplier="5:4" id="Njs-H6-ILy"/>
+                                            <constraint firstItem="6dt-gf-PGC" firstAttribute="top" secondItem="y3Q-E0-LjY" secondAttribute="top" id="giG-Ll-faE"/>
+                                            <constraint firstAttribute="height" constant="200" id="xEk-bn-e2t"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="xEk-bn-e2t"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="D8W-ag-AD8" customClass="LSTextView" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="798" width="557.5" height="403"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Ve bu kez çok kısa süren bir toplantının ardından ‘Daha fazla beklemek yok’ dedik. Daha fazla gözyaşı ve pişmanlık kalmamalı geride. Çünkü Leyla’nın bizden beklediği yalnızca bir bisikletti, camdan hergün annesine gösterdiği, evine kısacık gidebildiği zamanlarda da olsa sürmek istediği.. 6.5 aylıkken tanısı konan hastalığı oldukça kötü huylu bir tümördü, nefes borusuna yakın olması sebebiyle de oldukça kritikti. Kendisini koca koca ameliyatların beklediğinden habersiz ve öyle masumdu ki Leyla.
 
 Ve şimdi o yok. Arkada teslimiyetli bir anne, kimbilir küçük dünyalarında neler hisseden abileri ve bir de fazlasıyla mahcup biz üç koca abla var işte. Gittiğin yerde ennnn güzel bisiklet senin olsun tamam mı minik melek?
 
@@ -179,8 +199,8 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F76-TD-EC1" customClass="LSButton" customModule="LS" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="999" width="560" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F76-TD-EC1" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="1789.5" width="560" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="xyw-3J-hRA"/>
                                         </constraints>
@@ -191,16 +211,24 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="D8W-ag-AD8" firstAttribute="top" secondItem="y3Q-E0-LjY" secondAttribute="bottom" constant="8" id="8pf-1D-kCc"/>
                                     <constraint firstItem="F76-TD-EC1" firstAttribute="trailing" secondItem="fm8-9f-chO" secondAttribute="trailing" id="Lcq-t6-RrA"/>
                                     <constraint firstItem="fm8-9f-chO" firstAttribute="top" secondItem="xaH-vw-W41" secondAttribute="topMargin" id="PUy-WD-0CD"/>
+                                    <constraint firstItem="D8W-ag-AD8" firstAttribute="leading" secondItem="fm8-9f-chO" secondAttribute="leading" id="VRM-cx-Gfy"/>
                                     <constraint firstAttribute="bottom" secondItem="F76-TD-EC1" secondAttribute="bottom" constant="8" id="XKX-cL-Kuc"/>
+                                    <constraint firstItem="D8W-ag-AD8" firstAttribute="trailing" secondItem="fm8-9f-chO" secondAttribute="trailing" id="ar9-Mj-CeM"/>
                                     <constraint firstItem="F76-TD-EC1" firstAttribute="leading" secondItem="fm8-9f-chO" secondAttribute="leading" id="cXP-6d-HB1"/>
+                                    <constraint firstItem="y3Q-E0-LjY" firstAttribute="top" secondItem="fm8-9f-chO" secondAttribute="bottom" constant="8" id="dus-qd-Jlz"/>
+                                    <constraint firstItem="fm8-9f-chO" firstAttribute="leading" secondItem="y3Q-E0-LjY" secondAttribute="trailing" constant="-240" id="ftL-Eo-5HI"/>
                                     <constraint firstItem="fm8-9f-chO" firstAttribute="bottom" secondItem="xaH-vw-W41" secondAttribute="bottomMargin" id="pfb-8Q-0jd"/>
                                     <constraint firstItem="F76-TD-EC1" firstAttribute="top" secondItem="fm8-9f-chO" secondAttribute="bottom" constant="8" id="pvW-aP-fGJ"/>
+                                    <constraint firstItem="F76-TD-EC1" firstAttribute="top" secondItem="D8W-ag-AD8" secondAttribute="bottom" constant="8" id="td2-qQ-y5k"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="ftL-Eo-5HI"/>
                                         <exclude reference="pfb-8Q-0jd"/>
+                                        <exclude reference="pvW-aP-fGJ"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -208,23 +236,25 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fm8-9f-chO" firstAttribute="leading" secondItem="NHf-Rx-OPQ" secondAttribute="leadingMargin" id="1YM-rB-isS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y3Q-E0-LjY" secondAttribute="trailing" constant="-20" id="dJD-vP-5VF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fm8-9f-chO" secondAttribute="trailing" id="fH1-TP-UMr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xaH-vw-W41" secondAttribute="trailing" constant="-20" id="gd8-fa-jYX"/>
                             <constraint firstItem="xaH-vw-W41" firstAttribute="leading" secondItem="NHf-Rx-OPQ" secondAttribute="leadingMargin" constant="-20" id="hx7-5j-JNQ"/>
                             <constraint firstItem="xaH-vw-W41" firstAttribute="top" secondItem="1ME-4v-kce" secondAttribute="bottom" constant="-20" id="kbL-0b-brD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="y3Q-E0-LjY" secondAttribute="leading" constant="20" id="lsU-ZS-Djz"/>
                             <constraint firstItem="O3D-QB-RYx" firstAttribute="top" secondItem="xaH-vw-W41" secondAttribute="bottom" id="x0q-hu-HXW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Up-6e-ybk"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1200"/>
+                    <size key="freeformSize" width="600" height="1400"/>
                     <connections>
                         <outlet property="scrollView" destination="xaH-vw-W41" id="FpT-5Q-1GW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kpi-Nd-300" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3398" y="483"/>
+            <point key="canvasLocation" x="3634" y="419"/>
         </scene>
         <!--Biz Kimiz?-->
         <scene sceneID="9g5-Ho-uSJ">
@@ -239,10 +269,10 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmH-LS-a7x">
-                                <rect key="frame" x="20" y="64" width="560" height="1087"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="1087"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-bx-ylz" customClass="LSButton" customModule="LS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1014" width="560" height="50"/>
+                                        <rect key="frame" x="20" y="1432.5" width="560" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="gmg-da-x9u"/>
                                         </constraints>
@@ -251,32 +281,62 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                                             <action selector="showChildren:" destination="stY-ut-eE7" eventType="touchUpInside" id="sHX-fJ-pnm"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-Zk-dk1">
-                                        <rect key="frame" x="0.0" y="8" width="560" height="998"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HİKÂYEMİZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-Pr-fxu">
+                                        <rect key="frame" x="20" y="8" width="560" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-Zk-dk1" customClass="LSTextView" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="37" width="560" height="338.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="HİKÂYEMİZ">
-                                                <attributes>
-                                                    <font key="NSFont" size="24" name="HelveticaNeue-Medium"/>
-                                                </attributes>
-                                            </fragment>
                                             <fragment>
-                                                <string key="content">
-Onkoloji servisi ziyaretlerinden birinde tanıştıkları Leyla'nın minicik dileğini gerçekleştirmek ve daha nice çocuğun tebessümüne aracı olmak parolasıyla yola çıkan üç tıp öğrencisinin temel adımlarını attığı, Leyla’nın vefatıyla arkalarında daha fazla pişmanlık bırakmamak adına süreci hızlandırarak kurduğu, şimdi ise Türkiye’nin birçok yerindeki tıp fakültelerinde aktif olarak ziyaret yapan, kronik hastalıklı çocuklarla kaliteli vakit geçiren ve dileklerinin gerçekleşmesine aracı olmaya çalışan tıp öğrencilerinden oluşan bir ekibiz.
-Projemiz İstanbul (Çapa) Tıp Fakültesi'nde başlamış olup şu an 33 fakültede aktif olarak ilerlemekte, 22 tıp fakültesinde ise başlaması için çalışmalar devam etmektedir. Çocuklarımızın bizler için belki çok küçük ama onlara bir hayal dünyası ifade eden en büyük dileklerini öğrenip, bu dileklerini gerçekleştirmek isteyen gönüllülerimizle beraber miniklerimizin tebessümü için çalışmaktayız.
-
-</string>
+                                                <string key="content">Onkoloji servisi ziyaretlerinden birinde tanıştıkları Leyla'nın minicik dileğini gerçekleştirmek ve daha nice çocuğun tebessümüne aracı olmak parolasıyla yola çıkan üç tıp öğrencisinin temel adımlarını attığı, Leyla’nın vefatıyla arkalarında daha fazla pişmanlık bırakmamak adına süreci hızlandırarak kurduğu, şimdi ise Türkiye’nin birçok yerindeki tıp fakültelerinde aktif olarak ziyaret yapan, kronik hastalıklı çocuklarla kaliteli vakit geçiren ve dileklerinin gerçekleşmesine aracı olmaya çalışan tıp öğrencilerinden oluşan bir ekibiz.
+Projemiz İstanbul (Çapa) Tıp Fakültesi'nde başlamış olup şu an 34 fakültede aktif olarak ilerlemekte, 22 tıp fakültesinde ise başlaması için çalışmalar devam etmektedir. Çocuklarımızın bizler için belki çok küçük ama onlara bir hayal dünyası ifade eden en büyük dileklerini öğrenip, bu dileklerini gerçekleştirmek isteyen gönüllülerimizle beraber miniklerimizin tebessümü için çalışmaktayız.</string>
                                                 <attributes>
                                                     <font key="NSFont" size="18" name="HelveticaNeue"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment>
-                                                <string key="content">SÜREÇ NASIL İŞLİYOR?
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="24" name="HelveticaNeue-Medium"/>
-                                                </attributes>
-                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN6-eV-MQ5">
+                                        <rect key="frame" x="0.0" y="387.5" width="600" height="450"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leyla-2" translatesAutoresizingMaskIntoConstraints="NO" id="RRK-xF-Rd5">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpH-3D-l0b">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
+                                                <connections>
+                                                    <action selector="tapImage:" destination="stY-ut-eE7" eventType="touchUpInside" id="8Gi-Bh-BJq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.34123460979999998" blue="0.08118321765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="lpH-3D-l0b" secondAttribute="bottom" id="36B-df-gON"/>
+                                            <constraint firstItem="lpH-3D-l0b" firstAttribute="top" secondItem="dN6-eV-MQ5" secondAttribute="top" id="4FA-HC-s5I"/>
+                                            <constraint firstAttribute="width" secondItem="dN6-eV-MQ5" secondAttribute="height" multiplier="4:3" id="Gb5-s1-bP6"/>
+                                            <constraint firstItem="RRK-xF-Rd5" firstAttribute="top" secondItem="dN6-eV-MQ5" secondAttribute="top" id="MJx-Qm-GEp"/>
+                                            <constraint firstAttribute="trailing" secondItem="RRK-xF-Rd5" secondAttribute="trailing" id="jOK-vy-Q2a"/>
+                                            <constraint firstAttribute="trailing" secondItem="lpH-3D-l0b" secondAttribute="trailing" id="o8e-wo-ewi"/>
+                                            <constraint firstItem="RRK-xF-Rd5" firstAttribute="leading" secondItem="dN6-eV-MQ5" secondAttribute="leading" id="vGc-h7-h8z"/>
+                                            <constraint firstAttribute="bottom" secondItem="RRK-xF-Rd5" secondAttribute="bottom" id="xuB-dJ-1ll"/>
+                                            <constraint firstItem="lpH-3D-l0b" firstAttribute="leading" secondItem="dN6-eV-MQ5" secondAttribute="leading" id="yti-gY-t83"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SÜREÇ NASIL İŞLİYOR?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQi-7b-Us0">
+                                        <rect key="frame" x="20" y="857.5" width="560" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-MP-czW" customClass="LSTextView" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="886.5" width="560" height="596"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Tıp öğrencilerinden oluşan iki – üç kişilik ekipler oluşturuyor, düzenli olarak servislere gidip çocuklarımızı ziyaret ediyoruz. Sohbet ederken en sevdiği renk, izlediği filmler, hayalindeki meslek gibi çocuğumuzu daha iyi tanımamızı sağlayan sorularla arkadaşlığımızı ilerletmeyi ihmal etmiyoruz. Muhabbet sırasında hayatta gerçekleşmesini en çok istediği dileğini öğreniyoruz. Bu çok istenen bir oyuncak, öğrenme hayalleri kurulan bir enstruman ya da okunmayı bekleyen bir kitap olabildiği gibi bir ünlüyle tanışıp imzasını almak, bir gezi, bazen de sadece patates kızartması yemek gibi minik bir istek olabiliyor. Çocuğumuzu tanıtan ufak bir hikayeyle birlikte dileğini internet sitemiz ve sosyal medya hesaplarımız aracılığıyla, tabii ki cocuklarımız ve ailelerinden onay alarak yayımlıyoruz.
 
@@ -292,34 +352,62 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                     </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="PQi-7b-Us0" firstAttribute="leading" secondItem="gEt-Zk-dk1" secondAttribute="leading" id="0VV-Xs-RoO"/>
                                     <constraint firstItem="F2S-bx-ylz" firstAttribute="leading" secondItem="gEt-Zk-dk1" secondAttribute="leading" id="9P1-NR-ZBv"/>
+                                    <constraint firstItem="gEt-Zk-dk1" firstAttribute="top" secondItem="dN6-eV-MQ5" secondAttribute="bottom" constant="-523" id="CTS-qI-eTe"/>
+                                    <constraint firstItem="0l9-Pr-fxu" firstAttribute="top" secondItem="UmH-LS-a7x" secondAttribute="top" constant="8" id="EbZ-Qw-NwA"/>
+                                    <constraint firstItem="Vfk-MP-czW" firstAttribute="top" secondItem="dN6-eV-MQ5" secondAttribute="bottom" constant="8" id="F4d-e8-w6U"/>
+                                    <constraint firstItem="Vfk-MP-czW" firstAttribute="trailing" secondItem="gEt-Zk-dk1" secondAttribute="trailing" id="Fk8-Px-LB6"/>
+                                    <constraint firstItem="gEt-Zk-dk1" firstAttribute="top" secondItem="dN6-eV-MQ5" secondAttribute="bottom" constant="-523" id="FlC-GY-fxy"/>
+                                    <constraint firstItem="Vfk-MP-czW" firstAttribute="top" secondItem="PQi-7b-Us0" secondAttribute="bottom" id="Hb5-3u-1C9"/>
                                     <constraint firstItem="F2S-bx-ylz" firstAttribute="trailing" secondItem="gEt-Zk-dk1" secondAttribute="trailing" id="KnG-Tc-WzJ"/>
+                                    <constraint firstItem="PQi-7b-Us0" firstAttribute="trailing" secondItem="gEt-Zk-dk1" secondAttribute="trailing" id="NRU-eD-rkw"/>
                                     <constraint firstItem="F2S-bx-ylz" firstAttribute="top" secondItem="gEt-Zk-dk1" secondAttribute="bottom" constant="8" id="UJ5-xB-RcV"/>
                                     <constraint firstItem="gEt-Zk-dk1" firstAttribute="top" secondItem="UmH-LS-a7x" secondAttribute="topMargin" id="V7f-Lj-Cky"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vfk-MP-czW" secondAttribute="bottom" constant="8" id="Z06-jV-V4v"/>
+                                    <constraint firstItem="0l9-Pr-fxu" firstAttribute="trailing" secondItem="gEt-Zk-dk1" secondAttribute="trailing" id="bmm-gn-H3U"/>
+                                    <constraint firstItem="dN6-eV-MQ5" firstAttribute="top" secondItem="gEt-Zk-dk1" secondAttribute="bottom" constant="12" id="cLQ-YH-qCG"/>
+                                    <constraint firstItem="gEt-Zk-dk1" firstAttribute="top" secondItem="0l9-Pr-fxu" secondAttribute="bottom" id="h4b-RF-l24"/>
                                     <constraint firstAttribute="bottom" secondItem="F2S-bx-ylz" secondAttribute="bottom" constant="8" id="ikE-bE-M9v"/>
+                                    <constraint firstItem="PQi-7b-Us0" firstAttribute="top" secondItem="dN6-eV-MQ5" secondAttribute="bottom" constant="20" id="s0K-gQ-sdU"/>
+                                    <constraint firstItem="0l9-Pr-fxu" firstAttribute="leading" secondItem="gEt-Zk-dk1" secondAttribute="leading" id="sBm-SM-pZb"/>
+                                    <constraint firstItem="Vfk-MP-czW" firstAttribute="leading" secondItem="gEt-Zk-dk1" secondAttribute="leading" id="xY3-j5-4bB"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CTS-qI-eTe"/>
+                                        <exclude reference="FlC-GY-fxy"/>
+                                        <exclude reference="V7f-Lj-Cky"/>
+                                        <exclude reference="F4d-e8-w6U"/>
+                                        <exclude reference="UJ5-xB-RcV"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="gEt-Zk-dk1" secondAttribute="trailing" id="4PX-e6-irc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UmH-LS-a7x" secondAttribute="trailing" id="6X2-gY-E4p"/>
-                            <constraint firstItem="UmH-LS-a7x" firstAttribute="leading" secondItem="yx7-Go-qJR" secondAttribute="leadingMargin" id="Ugl-De-GnS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UmH-LS-a7x" secondAttribute="trailing" constant="-20" id="6X2-gY-E4p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dN6-eV-MQ5" secondAttribute="trailing" constant="-20" id="IOl-gZ-LSo"/>
+                            <constraint firstItem="UmH-LS-a7x" firstAttribute="leading" secondItem="yx7-Go-qJR" secondAttribute="leadingMargin" constant="-20" id="Ugl-De-GnS"/>
                             <constraint firstItem="UmH-LS-a7x" firstAttribute="top" secondItem="Fqs-BB-3Mt" secondAttribute="bottom" id="oVo-9v-bQf"/>
                             <constraint firstItem="gEt-Zk-dk1" firstAttribute="leading" secondItem="yx7-Go-qJR" secondAttribute="leadingMargin" id="q02-k3-v5M"/>
                             <constraint firstItem="K3P-As-r0A" firstAttribute="top" secondItem="UmH-LS-a7x" secondAttribute="bottom" id="t5B-5P-e4P"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dN6-eV-MQ5" secondAttribute="leading" constant="20" id="v8V-Ni-JLX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sTm-jT-AwJ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1200"/>
                     <connections>
+                        <outlet property="imageView" destination="RRK-xF-Rd5" id="zD3-6e-okr"/>
                         <outlet property="scrollView" destination="UmH-LS-a7x" id="AU1-wT-hm1"/>
+                        <outlet property="textTop" destination="gEt-Zk-dk1" id="acC-8q-VWR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvP-PZ-Xlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3398" y="1851"/>
+            <point key="canvasLocation" x="3486" y="1991"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="dHb-Ha-jhO">
@@ -638,7 +726,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC2-zf-C94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3398" y="3099"/>
+            <point key="canvasLocation" x="3518" y="3311"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="90R-Dz-mXk">
@@ -847,38 +935,11 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzk-8i-YDa">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="620"/>
-                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2d-Zh-wOX">
-                                <rect key="frame" x="40" y="60" width="520" height="520"/>
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-eH-9FH">
-                                        <rect key="frame" x="0.0" y="0.0" width="520" height="60"/>
-                                        <color key="backgroundColor" red="0.20784313730000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="a8W-kp-oNt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hediye Başvuru Formu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWz-So-ehj">
-                                        <rect key="frame" x="10" y="10" width="500" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Pm9-3P-DE8"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Pm9-3P-DE8"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet için hediye almak mı istiyorsunuz? Formu doldurunuz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xXq-qm-Iu1">
-                                        <rect key="frame" x="20" y="68" width="480" height="50"/>
+                                        <rect key="frame" x="40" y="10" width="480" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Wl8-fQ-zJ0"/>
                                         </constraints>
@@ -887,7 +948,7 @@ Cg
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmH-ce-u5v" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="20" y="122" width="230" height="40"/>
+                                        <rect key="frame" x="40" y="64" width="230" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="nlK-Rm-ycR"/>
                                         </constraints>
@@ -907,7 +968,7 @@ Cg
                                         </connections>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpB-u0-Fgt" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="270" y="122" width="230" height="40"/>
+                                        <rect key="frame" x="290" y="64" width="230" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Soyad"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Soyad"/>
@@ -924,7 +985,7 @@ Cg
                                         </connections>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzy-Se-DGe" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="20" y="170" width="480" height="40"/>
+                                        <rect key="frame" x="40" y="112" width="480" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="E-posta"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="E-posta"/>
@@ -941,7 +1002,7 @@ Cg
                                         </connections>
                                     </view>
                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwh-2H-pvb" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="20" y="218" width="480" height="40"/>
+                                        <rect key="frame" x="40" y="160" width="480" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                                 <real key="value" value="1"/>
@@ -958,7 +1019,7 @@ Cg
                                         </connections>
                                     </view>
                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhZ-Vz-C26" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="20" y="266" width="480" height="40"/>
+                                        <rect key="frame" x="40" y="208" width="480" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Şehir"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Şehir"/>
@@ -975,7 +1036,7 @@ Cg
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zae-7H-bB5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="20" y="314" width="480" height="120"/>
+                                        <rect key="frame" x="40" y="256" width="480" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="zsU-3X-N3N"/>
                                         </constraints>
@@ -992,51 +1053,30 @@ Cg
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="6" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TXl-4e-T4M">
-                                        <rect key="frame" x="20" y="334" width="480" height="100"/>
+                                        <rect key="frame" x="40" y="276" width="480" height="100"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outlet property="delegate" destination="TQh-v0-bwq" id="WAI-A6-vkf"/>
                                         </connections>
                                     </textView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13I-mg-lzz">
-                                        <rect key="frame" x="175" y="438" width="170" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-Qs-vSl" customClass="LSButton" customModule="LS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Vah-Ml-CRc"/>
-                                                    <constraint firstAttribute="width" constant="80" id="ok8-IV-kYj"/>
-                                                </constraints>
-                                                <state key="normal" title="Vazgeç"/>
-                                                <connections>
-                                                    <action selector="cancel:" destination="TQh-v0-bwq" eventType="touchUpInside" id="Vcm-0A-L6x"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyf-tB-Iyn" customClass="LSButton" customModule="LS" customModuleProvider="target">
-                                                <rect key="frame" x="90" y="0.0" width="80" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="BQo-2X-zYb"/>
-                                                    <constraint firstAttribute="height" constant="40" id="T1x-VI-IV9"/>
-                                                </constraints>
-                                                <state key="normal" title="Gönder"/>
-                                                <connections>
-                                                    <action selector="checkValidation:" destination="TQh-v0-bwq" eventType="touchDown" id="uPz-dU-M02"/>
-                                                    <action selector="send:" destination="TQh-v0-bwq" eventType="touchUpInside" id="JgW-Oc-s1y"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyf-tB-Iyn" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="384" width="480" height="40"/>
                                         <constraints>
-                                            <constraint firstItem="gyf-tB-Iyn" firstAttribute="top" secondItem="13I-mg-lzz" secondAttribute="top" id="AqQ-fV-jsr"/>
-                                            <constraint firstItem="nzW-Qs-vSl" firstAttribute="top" secondItem="13I-mg-lzz" secondAttribute="top" id="GCv-xH-JEs"/>
-                                            <constraint firstItem="gyf-tB-Iyn" firstAttribute="leading" secondItem="nzW-Qs-vSl" secondAttribute="trailing" constant="10" id="PZN-3I-dTV"/>
-                                            <constraint firstItem="nzW-Qs-vSl" firstAttribute="leading" secondItem="13I-mg-lzz" secondAttribute="leading" id="UiY-xV-MKv"/>
-                                            <constraint firstAttribute="bottom" secondItem="nzW-Qs-vSl" secondAttribute="bottom" id="ak4-ge-432"/>
-                                            <constraint firstAttribute="trailing" secondItem="gyf-tB-Iyn" secondAttribute="trailing" id="bSl-hB-scF"/>
-                                            <constraint firstAttribute="bottom" secondItem="gyf-tB-Iyn" secondAttribute="bottom" id="lZO-fn-HkN"/>
+                                            <constraint firstAttribute="width" constant="80" id="BQo-2X-zYb"/>
+                                            <constraint firstAttribute="height" constant="40" id="T1x-VI-IV9"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" title="Gönder"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BQo-2X-zYb"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="checkValidation:" destination="TQh-v0-bwq" eventType="touchDown" id="uPz-dU-M02"/>
+                                            <action selector="send:" destination="TQh-v0-bwq" eventType="touchUpInside" id="JgW-Oc-s1y"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1044,39 +1084,32 @@ Cg
                                     <constraint firstItem="jhZ-Vz-C26" firstAttribute="trailing" secondItem="jzy-Se-DGe" secondAttribute="trailing" id="4Em-4c-gg2"/>
                                     <constraint firstItem="mmH-ce-u5v" firstAttribute="centerY" secondItem="EpB-u0-Fgt" secondAttribute="centerY" id="4Lh-eX-N0x"/>
                                     <constraint firstItem="jzy-Se-DGe" firstAttribute="top" secondItem="EpB-u0-Fgt" secondAttribute="bottom" constant="4" id="5zr-IM-v5L"/>
-                                    <constraint firstAttribute="trailing" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="8" id="87O-f2-54a"/>
+                                    <constraint firstItem="xXq-qm-Iu1" firstAttribute="top" secondItem="n2d-Zh-wOX" secondAttribute="top" constant="10" id="7Zv-U2-vqJ"/>
                                     <constraint firstItem="TXl-4e-T4M" firstAttribute="bottom" secondItem="zae-7H-bB5" secondAttribute="bottom" id="CXM-Kn-I9z"/>
                                     <constraint firstItem="EpB-u0-Fgt" firstAttribute="width" secondItem="mmH-ce-u5v" secondAttribute="width" id="DM9-eE-lz0"/>
                                     <constraint firstItem="iwh-2H-pvb" firstAttribute="top" secondItem="jzy-Se-DGe" secondAttribute="bottom" constant="8" id="E0r-Tn-Fts"/>
+                                    <constraint firstItem="gyf-tB-Iyn" firstAttribute="top" secondItem="TXl-4e-T4M" secondAttribute="bottom" constant="8" id="EJ6-VM-Y95"/>
                                     <constraint firstItem="zae-7H-bB5" firstAttribute="trailing" secondItem="jhZ-Vz-C26" secondAttribute="trailing" id="Ewc-SS-PCi"/>
-                                    <constraint firstItem="13I-mg-lzz" firstAttribute="top" secondItem="TXl-4e-T4M" secondAttribute="bottom" constant="4" id="GTd-8E-CF4"/>
                                     <constraint firstItem="EpB-u0-Fgt" firstAttribute="leading" secondItem="mmH-ce-u5v" secondAttribute="leading" id="H3z-kS-Kq1"/>
                                     <constraint firstItem="iwh-2H-pvb" firstAttribute="leading" secondItem="jzy-Se-DGe" secondAttribute="leading" id="If6-jE-t7N"/>
                                     <constraint firstItem="jhZ-Vz-C26" firstAttribute="top" secondItem="iwh-2H-pvb" secondAttribute="bottom" constant="8" id="KHx-Fy-UXU"/>
                                     <constraint firstItem="EpB-u0-Fgt" firstAttribute="trailing" secondItem="mmH-ce-u5v" secondAttribute="trailing" id="LyD-Cp-zrL"/>
                                     <constraint firstItem="jhZ-Vz-C26" firstAttribute="leading" secondItem="iwh-2H-pvb" secondAttribute="leading" id="N13-uT-Sa9"/>
-                                    <constraint firstItem="fWz-So-ehj" firstAttribute="leading" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="-520" id="N86-p3-7Yn"/>
-                                    <constraint firstItem="fWz-So-ehj" firstAttribute="centerY" secondItem="g9B-eH-9FH" secondAttribute="centerY" id="O4u-ZG-PYm"/>
+                                    <constraint firstItem="gyf-tB-Iyn" firstAttribute="trailing" secondItem="TXl-4e-T4M" secondAttribute="trailing" id="RDV-Rc-RQo"/>
                                     <constraint firstItem="EpB-u0-Fgt" firstAttribute="trailing" secondItem="xXq-qm-Iu1" secondAttribute="trailing" id="Rho-pN-b5X"/>
+                                    <constraint firstItem="gyf-tB-Iyn" firstAttribute="leading" secondItem="TXl-4e-T4M" secondAttribute="leading" id="RtC-B0-7KO"/>
                                     <constraint firstItem="TXl-4e-T4M" firstAttribute="trailing" secondItem="zae-7H-bB5" secondAttribute="trailing" id="STT-38-ieN"/>
-                                    <constraint firstItem="fWz-So-ehj" firstAttribute="height" secondItem="g9B-eH-9FH" secondAttribute="height" constant="-20" id="Th3-Q8-1G6"/>
                                     <constraint firstItem="EpB-u0-Fgt" firstAttribute="height" secondItem="mmH-ce-u5v" secondAttribute="height" id="V3u-Rh-xvX"/>
                                     <constraint firstItem="jzy-Se-DGe" firstAttribute="top" secondItem="mmH-ce-u5v" secondAttribute="bottom" constant="8" id="Vnq-ph-GWh"/>
                                     <constraint firstItem="jzy-Se-DGe" firstAttribute="trailing" secondItem="EpB-u0-Fgt" secondAttribute="trailing" id="WM7-lr-P2t"/>
+                                    <constraint firstAttribute="bottom" secondItem="gyf-tB-Iyn" secondAttribute="bottom" constant="8" id="Xxg-rB-xG5"/>
                                     <constraint firstItem="mmH-ce-u5v" firstAttribute="leading" secondItem="xXq-qm-Iu1" secondAttribute="leading" id="Zwt-4I-j9C"/>
                                     <constraint firstItem="jzy-Se-DGe" firstAttribute="height" secondItem="EpB-u0-Fgt" secondAttribute="height" id="aAf-yh-8Gs"/>
                                     <constraint firstItem="mmH-ce-u5v" firstAttribute="top" secondItem="xXq-qm-Iu1" secondAttribute="bottom" constant="4" id="bx0-1J-GWJ"/>
                                     <constraint firstItem="TXl-4e-T4M" firstAttribute="leading" secondItem="zae-7H-bB5" secondAttribute="leading" id="cW2-VL-31J"/>
-                                    <constraint firstItem="fWz-So-ehj" firstAttribute="centerX" secondItem="g9B-eH-9FH" secondAttribute="centerX" id="dwt-Pq-kSU"/>
-                                    <constraint firstItem="xXq-qm-Iu1" firstAttribute="top" secondItem="g9B-eH-9FH" secondAttribute="bottom" constant="8" id="eGf-i8-l2P"/>
-                                    <constraint firstItem="xXq-qm-Iu1" firstAttribute="trailing" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="-20" id="evy-7i-ubW"/>
                                     <constraint firstItem="jhZ-Vz-C26" firstAttribute="top" secondItem="jzy-Se-DGe" secondAttribute="bottom" constant="26" id="f7c-wa-xkG"/>
                                     <constraint firstItem="jzy-Se-DGe" firstAttribute="leading" secondItem="mmH-ce-u5v" secondAttribute="leading" id="gHm-3Q-TWe"/>
-                                    <constraint firstItem="g9B-eH-9FH" firstAttribute="leading" secondItem="n2d-Zh-wOX" secondAttribute="leading" constant="8" id="iS9-dt-A3J"/>
                                     <constraint firstItem="zae-7H-bB5" firstAttribute="leading" secondItem="jhZ-Vz-C26" secondAttribute="leading" id="ieS-Kl-tdm"/>
-                                    <constraint firstItem="xXq-qm-Iu1" firstAttribute="leading" secondItem="g9B-eH-9FH" secondAttribute="leading" constant="20" id="kTr-23-Lvn"/>
-                                    <constraint firstItem="g9B-eH-9FH" firstAttribute="top" secondItem="n2d-Zh-wOX" secondAttribute="top" id="niJ-1E-OHK"/>
-                                    <constraint firstAttribute="bottom" secondItem="13I-mg-lzz" secondAttribute="bottom" constant="8" id="rDN-q5-acD"/>
                                     <constraint firstItem="mmH-ce-u5v" firstAttribute="trailing" secondItem="xXq-qm-Iu1" secondAttribute="trailing" id="shx-Z7-YCU"/>
                                     <constraint firstItem="jzy-Se-DGe" firstAttribute="leading" secondItem="EpB-u0-Fgt" secondAttribute="leading" id="t6X-hj-sSJ"/>
                                     <constraint firstItem="EpB-u0-Fgt" firstAttribute="leading" secondItem="mmH-ce-u5v" secondAttribute="trailing" constant="20" id="tPS-Ph-sli"/>
@@ -1086,16 +1119,11 @@ Cg
                                     <constraint firstItem="jzy-Se-DGe" firstAttribute="trailing" secondItem="EpB-u0-Fgt" secondAttribute="trailing" id="wnQ-4j-rdO"/>
                                     <constraint firstItem="iwh-2H-pvb" firstAttribute="trailing" secondItem="jzy-Se-DGe" secondAttribute="trailing" id="xzL-Kx-7wa"/>
                                     <constraint firstItem="iwh-2H-pvb" firstAttribute="height" secondItem="jzy-Se-DGe" secondAttribute="height" id="yBX-Ee-1YL"/>
-                                    <constraint firstItem="13I-mg-lzz" firstAttribute="centerX" secondItem="n2d-Zh-wOX" secondAttribute="centerX" id="ycC-ce-TqO"/>
                                     <constraint firstItem="EpB-u0-Fgt" firstAttribute="top" secondItem="mmH-ce-u5v" secondAttribute="bottom" constant="4" id="zkf-bd-nBk"/>
                                     <constraint firstItem="TXl-4e-T4M" firstAttribute="top" secondItem="zae-7H-bB5" secondAttribute="top" constant="20" id="zw9-dl-x9W"/>
-                                    <constraint firstItem="fWz-So-ehj" firstAttribute="width" secondItem="g9B-eH-9FH" secondAttribute="width" constant="-20" id="zzY-v1-QBt"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="87O-f2-54a"/>
-                                        <exclude reference="iS9-dt-A3J"/>
-                                        <exclude reference="N86-p3-7Yn"/>
                                         <exclude reference="shx-Z7-YCU"/>
                                         <exclude reference="5zr-IM-v5L"/>
                                         <exclude reference="WM7-lr-P2t"/>
@@ -1110,22 +1138,24 @@ Cg
                                 </variation>
                             </scrollView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n2d-Zh-wOX" firstAttribute="top" secondItem="x0z-yF-G1g" secondAttribute="bottom" constant="40" id="73B-Ce-EYX"/>
-                            <constraint firstItem="kzk-8i-YDa" firstAttribute="top" secondItem="x0z-yF-G1g" secondAttribute="bottom" constant="-20" id="AXR-dO-Zco"/>
-                            <constraint firstItem="g9B-eH-9FH" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" constant="20" id="DAH-i9-3ot"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kzk-8i-YDa" secondAttribute="trailing" constant="-20" id="QEt-mK-wtX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n2d-Zh-wOX" secondAttribute="trailing" constant="20" id="QW7-02-PMG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g9B-eH-9FH" secondAttribute="trailing" constant="20" id="QcZ-YQ-QwR"/>
-                            <constraint firstItem="YCN-dr-FiL" firstAttribute="top" secondItem="n2d-Zh-wOX" secondAttribute="bottom" constant="20" id="bbf-CZ-gjz"/>
-                            <constraint firstItem="YCN-dr-FiL" firstAttribute="top" secondItem="kzk-8i-YDa" secondAttribute="bottom" constant="-20" id="iJV-g1-9WE"/>
-                            <constraint firstItem="n2d-Zh-wOX" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" constant="20" id="k1I-UR-YHd"/>
-                            <constraint firstItem="kzk-8i-YDa" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" constant="-20" id="tdv-zh-H9b"/>
+                            <constraint firstItem="n2d-Zh-wOX" firstAttribute="top" secondItem="x0z-yF-G1g" secondAttribute="bottom" id="73B-Ce-EYX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xXq-qm-Iu1" secondAttribute="trailing" constant="40" id="9PC-dd-F1q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n2d-Zh-wOX" secondAttribute="trailing" id="QW7-02-PMG"/>
+                            <constraint firstItem="YCN-dr-FiL" firstAttribute="top" secondItem="gyf-tB-Iyn" secondAttribute="bottom" constant="8" id="Yj8-5W-BjI"/>
+                            <constraint firstItem="YCN-dr-FiL" firstAttribute="top" secondItem="n2d-Zh-wOX" secondAttribute="bottom" id="bbf-CZ-gjz"/>
+                            <constraint firstItem="xXq-qm-Iu1" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" constant="40" id="ggR-ae-Vc6"/>
+                            <constraint firstItem="n2d-Zh-wOX" firstAttribute="leading" secondItem="tCN-Ti-HvS" secondAttribute="leadingMargin" id="k1I-UR-YHd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Yj8-5W-BjI"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="backgroundView" destination="kzk-8i-YDa" id="tu4-zY-hem"/>
-                        <outlet property="cancelButton" destination="nzW-Qs-vSl" id="h96-eh-BKa"/>
                         <outlet property="cityTF" destination="jhZ-Vz-C26" id="ZfZ-Gx-QWs"/>
                         <outlet property="descriptionLabel" destination="xXq-qm-Iu1" id="10E-f6-ixU"/>
                         <outlet property="emailTF" destination="jzy-Se-DGe" id="ABh-Ao-6Ef"/>
@@ -1146,7 +1176,9 @@ Cg
         <scene sceneID="wZH-J2-TYc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OCt-5J-1fq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Miniklerimiz" image="menuChildrenIcon" id="CNJ-b4-ver"/>
+                    <tabBarItem key="tabBarItem" title="Miniklerimiz" image="menuChildrenIcon" selectedImage="menuChildrenIcon_selected" id="CNJ-b4-ver">
+                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIa-lh-o4Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1185,7 +1217,9 @@ Cg
         <scene sceneID="XCJ-Ad-P7R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kVx-bC-PDW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Leyla Kimdir?" image="menuLeylaIcon" id="Pvj-vh-Oix"/>
+                    <tabBarItem key="tabBarItem" title="Leyla Kimdir?" image="menuLeylaIcon" selectedImage="menuLeylaIcon_selected" id="Pvj-vh-Oix">
+                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="niW-9f-1yH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1204,7 +1238,9 @@ Cg
         <scene sceneID="5Zp-X4-Of2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XUM-dP-Xt4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Biz Kimiz?" image="menuUsIcon" id="h0j-y1-BSU"/>
+                    <tabBarItem key="tabBarItem" title="Biz Kimiz?" image="menuUsIcon" selectedImage="menuUsIcon_selected" id="h0j-y1-BSU">
+                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V2e-XV-JUD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1217,13 +1253,15 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qL8-Sf-1tg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="1551"/>
+            <point key="canvasLocation" x="2570" y="1783"/>
         </scene>
         <!--Ayarlar-->
         <scene sceneID="bgt-kb-Szr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TvS-lN-jgc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ayarlar" image="menuSettingIcon" id="UBL-3v-tVX"/>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="menuSettingIcon" selectedImage="menuSettingIcon_selected" id="UBL-3v-tVX">
+                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dYd-JS-Og0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1236,16 +1274,20 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZL-TA-MMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="2899"/>
+            <point key="canvasLocation" x="2650" y="3111"/>
         </scene>
     </scenes>
     <resources>
         <image name="enescakir_logo" width="500" height="255"/>
         <image name="folx_logo" width="500" height="255"/>
+        <image name="leyla-2" width="1000" height="800"/>
         <image name="menuChildrenIcon" width="32" height="32"/>
-        <image name="menuIcon" width="32" height="32"/>
+        <image name="menuChildrenIcon_selected" width="32" height="32"/>
         <image name="menuLeylaIcon" width="32" height="32"/>
+        <image name="menuLeylaIcon_selected" width="32" height="32"/>
         <image name="menuSettingIcon" width="32" height="32"/>
+        <image name="menuSettingIcon_selected" width="32" height="32"/>
         <image name="menuUsIcon" width="32" height="32"/>
+        <image name="menuUsIcon_selected" width="32" height="32"/>
     </resources>
 </document>

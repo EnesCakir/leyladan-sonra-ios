@@ -24,10 +24,10 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
     @IBOutlet weak var cityTF: SkyFloatingLabelTextField!
     @IBOutlet weak var messageTF: SkyFloatingLabelTextField!
     @IBOutlet weak var messageTV: UITextView!
-    @IBOutlet weak var cancelButton: LSButton!
+//    @IBOutlet weak var cancelButton: LSButton!
 
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var backgroundView: UIView!
+//    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollBottomConstraint: NSLayoutConstraint!
 
@@ -36,19 +36,16 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
         super.viewDidLoad()
         setupUI()
         setupForm()
-
+        self.title = "Hediye Başvuru Formu"
         // Do any additional setup after loading the view.
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if !isKeyboardShow{
-            dismissForm()
-        }
         dismissKeyboard()
     }
     
     func dismissForm(){
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
     // MARK: Setups
@@ -57,17 +54,18 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
         descriptionLabel.text = "\(child.name) için hediye almak mı istiyorsunuz? Formu doldurunuz"
         // Rounded view
         self.automaticallyAdjustsScrollViewInsets = false
-        scrollView.layer.cornerRadius = 6
+        
+//        scrollView.layer.cornerRadius = 6
         
         //Blur background
-        let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let blurView = UIVisualEffectView(effect: darkBlur)
-        blurView.frame = self.view.bounds
-        backgroundView.addSubview(blurView)
+//        let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.Light)
+//        let blurView = UIVisualEffectView(effect: darkBlur)
+//        blurView.frame = self.view.bounds
+//        backgroundView.addSubview(blurView)
         
         //Cancel button
-        cancelButton.buttonColor = UIColor.alizarinColor()
-        cancelButton.shadowColor = UIColor.pomegranateColor()
+//        cancelButton.buttonColor = UIColor.alizarinColor()
+//        cancelButton.shadowColor = UIColor.pomegranateColor()
 
     }
     
@@ -128,11 +126,6 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
         }
     }
     
-    
-    @IBAction func cancel(sender: AnyObject) {
-        dismissForm()
-    }
-
     override func keyboardWillShow(notification: NSNotification) {
         super.keyboardWillShow(notification)
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
@@ -142,11 +135,9 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
     
     override func keyboardWillHide(notification: NSNotification) {
         super.keyboardWillHide(notification)
-        scrollBottomConstraint.constant = 20
+        scrollBottomConstraint.constant = 0
     }
 
-
-    
 // MARK: - UITextView delegate methods
     func textViewDidEndEditing(textView: UITextView){
         messageTF.highlighted = false
@@ -165,9 +156,7 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
     // MARK: Validations
     
     var isSubmitButtonPressed = false
-    
     var showingTitleInProgress = false
-
 
 
     func showingTitleInAnimationComplete() {
@@ -205,6 +194,8 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
     }
     
     func sendForm(form:Form){
+        let notification_token = Constants.UserDefaults.objectForKey("token")
+        
         let parameters = [
             "id": String(child.id),
             "first_name": form.first_name,
@@ -212,6 +203,7 @@ class FormViewController: BaseViewController, UITextViewDelegate, UITextFieldDel
             "email": form.email,
             "mobile": form.mobile,
             "city": form.city,
+            "notification_token": notification_token as! String,
             "via": "iOS",
             "text": form.message]
         

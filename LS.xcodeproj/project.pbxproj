@@ -28,10 +28,12 @@
 		4F6211A91D0D87B200FB4CDF /* ChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6211A81D0D87B200FB4CDF /* ChildCollectionViewCell.swift */; };
 		4F6211AB1D0D95BF00FB4CDF /* LSLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */; };
 		4F8F79FF1D233586006420FD /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F79FE1D233586006420FD /* NSDateExtensions.swift */; };
+		4FA0221E1D37F8F80025C18E /* LeylaRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA0221D1D37F8F80025C18E /* LeylaRefresh.xib */; };
 		4FA5B9ED1CEA52DA002D16D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */; };
 		4FAA1F931D0DF85C00BF8FAA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAA1F921D0DF85C00BF8FAA /* StringExtension.swift */; };
 		4FAE13711D10B1090069FFF8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE13701D10B1090069FFF8 /* BaseViewController.swift */; };
 		4FAE13731D10B3E80069FFF8 /* SkyFloatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE13721D10B3E80069FFF8 /* SkyFloatingExtension.swift */; };
+		4FC2FF5E1D4A296C0080093D /* LSTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2FF5D1D4A296C0080093D /* LSTextView.swift */; };
 		4FEAE2B91D0EACBA00677344 /* LeylaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2B81D0EACBA00677344 /* LeylaViewController.swift */; };
 		4FEAE2BB1D0EACCE00677344 /* UsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2BA1D0EACCE00677344 /* UsViewController.swift */; };
 		4FEAE2BD1D0EACDE00677344 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEAE2BC1D0EACDE00677344 /* SettingsViewController.swift */; };
@@ -89,10 +91,12 @@
 		4F6211A81D0D87B200FB4CDF /* ChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSLayout.swift; sourceTree = "<group>"; };
 		4F8F79FE1D233586006420FD /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
+		4FA0221D1D37F8F80025C18E /* LeylaRefresh.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeylaRefresh.xib; sourceTree = "<group>"; };
 		4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4FAA1F921D0DF85C00BF8FAA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4FAE13701D10B1090069FFF8 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4FAE13721D10B3E80069FFF8 /* SkyFloatingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingExtension.swift; sourceTree = "<group>"; };
+		4FC2FF5D1D4A296C0080093D /* LSTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTextView.swift; sourceTree = "<group>"; };
 		4FEAE2B71D0E21B100677344 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		4FEAE2B81D0EACBA00677344 /* LeylaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeylaViewController.swift; sourceTree = "<group>"; };
 		4FEAE2BA1D0EACCE00677344 /* UsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsViewController.swift; sourceTree = "<group>"; };
@@ -166,9 +170,10 @@
 		4F0D8E281D0B1D650013FDA7 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
-				4F14DEA11D0F7E1F00465299 /* LSTextField.swift */,
 				4F0BD9C61D0ECD33009B6C50 /* LSButton.swift */,
+				4F14DEA11D0F7E1F00465299 /* LSTextField.swift */,
 				4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */,
+				4FC2FF5D1D4A296C0080093D /* LSTextView.swift */,
 			);
 			name = Subclasses;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				4F6211A81D0D87B200FB4CDF /* ChildCollectionViewCell.swift */,
 				4FEAE2C01D0EB48200677344 /* LeylaHeader.swift */,
 				4FEAE2C41D0EB86500677344 /* LeylaHeader.xib */,
+				4FA0221D1D37F8F80025C18E /* LeylaRefresh.xib */,
 			);
 			name = Partials;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 				4F23F51D1D0DEB3F0053B72B /* ChildDetailHeader.xib in Resources */,
 				4F32DEAB1CE9DA33007FE938 /* Assets.xcassets in Resources */,
 				4F32DEA91CE9DA33007FE938 /* Main.storyboard in Resources */,
+				4FA0221E1D37F8F80025C18E /* LeylaRefresh.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +605,7 @@
 				4F32DEA41CE9DA33007FE938 /* AppDelegate.swift in Sources */,
 				4FEAE2BF1D0EAD0D00677344 /* MediaViewController.swift in Sources */,
 				4F23F5201D0DEC160053B72B /* ChildDetailHeader.swift in Sources */,
+				4FC2FF5E1D4A296C0080093D /* LSTextView.swift in Sources */,
 				4FEAE2BB1D0EACCE00677344 /* UsViewController.swift in Sources */,
 				4F6211A11D0D847900FB4CDF /* Child.swift in Sources */,
 				4F14DEA21D0F7E1F00465299 /* LSTextField.swift in Sources */,

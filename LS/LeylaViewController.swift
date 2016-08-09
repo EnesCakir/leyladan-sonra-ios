@@ -36,7 +36,8 @@ class LeylaViewController: UIViewController {
     }
 
     @IBAction func showChildren(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        tabBarController?.selectedIndex = 0
+//        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     /*
     // MARK: - Navigation

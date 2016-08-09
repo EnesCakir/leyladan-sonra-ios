@@ -29,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ContextMenu.iOS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FlatUIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,12 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>484F4A81F64386835FE4721CE6BED57A</key>
+		<key>6AE71C861270ADCB7DD617ACEE4025D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6832B17DA199016980479CC8975A86B8</key>
+		<key>701249F440917EC482CE6F9AF567616E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,7 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABC046E9502AB7E3DAD8BDDCE434DC6F</key>
+		<key>A62AEE02E05CE3EDBB8B03D6C8145C34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,11 +128,6 @@
 			<true/>
 		</dict>
 		<key>AE58340C183B963C900C9FF91F7C3E95</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B73D876630BC26E91A09548400FB65C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

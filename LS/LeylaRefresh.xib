@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A239j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ls_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z0r-dq-NIY">
+                    <rect key="frame" x="270" y="10" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="z0r-dq-NIY" secondAttribute="height" multiplier="1:1" id="Imt-qR-Edg"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="z0r-dq-NIY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8vK-G4-PzX"/>
+                <constraint firstItem="z0r-dq-NIY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ecb-9M-hPz"/>
+                <constraint firstItem="z0r-dq-NIY" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-20" id="OPI-UO-kuz"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="368" y="389"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ls_logo" width="1000" height="1000"/>
+    </resources>
+</document>
