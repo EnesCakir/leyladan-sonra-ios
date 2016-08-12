@@ -13,8 +13,10 @@ class LSTextView: UITextView {
         {
             super.init(coder: aDecoder)
             let paragraphStyle = NSMutableParagraphStyle();
-            paragraphStyle.firstLineHeadIndent = 20.0
-            let font = UIFont.systemFontOfSize(16)
+            paragraphStyle.firstLineHeadIndent = 24.0
+            paragraphStyle.lineBreakMode = .ByWordWrapping
+            paragraphStyle.hyphenationFactor = 1.0
+            let font = UIFont.systemFontOfSize(18)
             
             var attributed = NSMutableAttributedString(string: self.text, attributes: [NSParagraphStyleAttributeName:paragraphStyle])
             attributed.addAttributes([NSFontAttributeName: font], range: NSRange(location: 0,length:attributed.length))

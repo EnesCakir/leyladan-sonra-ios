@@ -17,7 +17,7 @@ class UsViewController: UIViewController {
     
     var timer = NSTimer()
     var counter = 0
-    var images = ["us1","leyla-2"]
+    var images = ["us1","us2","us6","us3","us4","us5"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false

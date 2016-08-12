@@ -157,7 +157,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-vw-W41">
                                 <rect key="frame" x="0.0" y="44" width="600" height="1307"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-9f-chO" customClass="LSTextView" customModule="LS" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-9f-chO" customClass="LSTextView" customModule="LS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="8" width="560" height="574.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Biz kimiz? Şimdilik 3 kişiden oluşan tıbbiyeli bir ekibiz. Okulumuzun onkoloji servisini ziyaretlerimiz sırasında çocukların en büyük isteklerinin bile bizimkilere kıyasla ne denli küçük olduğunu gördük ve ‘1 çocuk 1 dilek’ temalı bir proje başlatmak istedik. Yani Latince deyimiyle mottomuz da olan ‘Unus puer Unum desiderum’ Amacımız asla bağış toplamak değil. Yalnızca bir çocuğa sorulduğunda ağzından ilk çıkan, son zamanlarda en çok düşlediği şeyin gerçekleşebilmesi için aracı olmak. Biz onları ziyaret ettikçe yenileniyoruz, öğreniyoruz, vermekten çok alıyoruz esasen. İstedik ki borcumuzu ödeyelim küçük arkadaşlarımıza. Bir fotoğrafla birlikte ufak da bir tıbbi hikaye ve o miniğin tek dileğini paylaşacağız sizinle. Mutluluğunu bizzat görmek isterseniz İstanbul Üniversitesi İstanbul (Çapa) Tıp Fakültesi’nde kendisini bulabileceğiniz yeri tarif edeceğiz size, böyle bir imkan yoksa da bize kargolamak isterseniz biz ulaştıracağız.
@@ -188,7 +188,7 @@ Olay bu kadar basit ve bir o kadar değerli iken biz isim, konsept vb hususları
                                             </mask>
                                         </variation>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="D8W-ag-AD8" customClass="LSTextView" customModule="LS" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8W-ag-AD8" customClass="LSTextView" customModule="LS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="798" width="557.5" height="403"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Ve bu kez çok kısa süren bir toplantının ardından ‘Daha fazla beklemek yok’ dedik. Daha fazla gözyaşı ve pişmanlık kalmamalı geride. Çünkü Leyla’nın bizden beklediği yalnızca bir bisikletti, camdan hergün annesine gösterdiği, evine kısacık gidebildiği zamanlarda da olsa sürmek istediği.. 6.5 aylıkken tanısı konan hastalığı oldukça kötü huylu bir tümördü, nefes borusuna yakın olması sebebiyle de oldukça kritikti. Kendisini koca koca ameliyatların beklediğinden habersiz ve öyle masumdu ki Leyla.
@@ -271,7 +271,7 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmH-LS-a7x">
                                 <rect key="frame" x="0.0" y="64" width="600" height="1087"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-bx-ylz" customClass="LSButton" customModule="LS" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-bx-ylz" customClass="LSButton" customModule="LS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="1432.5" width="560" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="gmg-da-x9u"/>
@@ -293,9 +293,16 @@ Bugün Leyla’nın haberiyle yeniden anladık ki, hayat hepimiz için yalnızca
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Onkoloji servisi ziyaretlerinden birinde tanıştıkları Leyla'nın minicik dileğini gerçekleştirmek ve daha nice çocuğun tebessümüne aracı olmak parolasıyla yola çıkan üç tıp öğrencisinin temel adımlarını attığı, Leyla’nın vefatıyla arkalarında daha fazla pişmanlık bırakmamak adına süreci hızlandırarak kurduğu, şimdi ise Türkiye’nin birçok yerindeki tıp fakültelerinde aktif olarak ziyaret yapan, kronik hastalıklı çocuklarla kaliteli vakit geçiren ve dileklerinin gerçekleşmesine aracı olmaya çalışan tıp öğrencilerinden oluşan bir ekibiz.
-Projemiz İstanbul (Çapa) Tıp Fakültesi'nde başlamış olup şu an 34 fakültede aktif olarak ilerlemekte, 22 tıp fakültesinde ise başlaması için çalışmalar devam etmektedir. Çocuklarımızın bizler için belki çok küçük ama onlara bir hayal dünyası ifade eden en büyük dileklerini öğrenip, bu dileklerini gerçekleştirmek isteyen gönüllülerimizle beraber miniklerimizin tebessümü için çalışmaktayız.</string>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Projemiz İstanbul (Çapa) Tıp Fakültesi'nde başlamış olup şu an 34 fakültede aktif olarak ilerlemekte, 22 tıp fakültesinde ise başlaması için çalışmalar devam etmektedir. Çocuklarımızın bizler için belki çok küçük ama onlara bir hayal dünyası ifade eden en büyük dileklerini öğrenip, bu dileklerini gerçekleştirmek isteyen gönüllülerimizle beraber miniklerimizin tebessümü için çalışmaktayız.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -333,18 +340,25 @@ Projemiz İstanbul (Çapa) Tıp Fakültesi'nde başlamış olup şu an 34 fakül
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-MP-czW" customClass="LSTextView" customModule="LS" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-MP-czW" customClass="LSTextView" customModule="LS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="886.5" width="560" height="596"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Tıp öğrencilerinden oluşan iki – üç kişilik ekipler oluşturuyor, düzenli olarak servislere gidip çocuklarımızı ziyaret ediyoruz. Sohbet ederken en sevdiği renk, izlediği filmler, hayalindeki meslek gibi çocuğumuzu daha iyi tanımamızı sağlayan sorularla arkadaşlığımızı ilerletmeyi ihmal etmiyoruz. Muhabbet sırasında hayatta gerçekleşmesini en çok istediği dileğini öğreniyoruz. Bu çok istenen bir oyuncak, öğrenme hayalleri kurulan bir enstruman ya da okunmayı bekleyen bir kitap olabildiği gibi bir ünlüyle tanışıp imzasını almak, bir gezi, bazen de sadece patates kızartması yemek gibi minik bir istek olabiliyor. Çocuğumuzu tanıtan ufak bir hikayeyle birlikte dileğini internet sitemiz ve sosyal medya hesaplarımız aracılığıyla, tabii ki cocuklarımız ve ailelerinden onay alarak yayımlıyoruz.
 
-Bu hayali gerçekleştirmeye istekli gönüllülerimiz paylaşılan yazıların altında belirtilen mail adresimize yazarak bizimle iletişime geçiyor. Arkadaşımızın dileğini bizzat ziyarete gelirken getirerek, ya da dileğine yolculuğunda ona eşlik ederek veya kargo yoluyla oyuncak, kitap ya da enstrümanını göndererek gerçekleştiriyor.
+Bu hayali gerçekleştirmeye istekli gönüllülerimiz paylaşılan yazıların altında bulunan linkten çıkan formu doldurarak bizimle iletişime geçiyor. Dileğini kargo yoluyla göndererek miniğimizi sevindiriyor.
 
-Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişimimiz sona ermiyor. Çocuğumuzla duygusal bir bağ kurmuş olup her fırsatta onu ziyaret ediyoruz. Birlikte oyun oynuyor, sohbet ediyor, doğum günleri gibi özel günlerini unutmuyor; onlara abi, abla veya arkadaş oluyoruz. Onların gözlerindeki mutluluğa şahit olmak ve bu iyilik halkasının bir parçası haline gelmek isterseniz sizleri de aramıza bekliyoruz.</string>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişimimiz sona ermiyor. Çocuğumuzla duygusal bir bağ kurmuş olup her fırsatta onu ziyaret ediyoruz. Birlikte oyun oynuyor, sohbet ediyor, doğum günleri gibi özel günlerini unutmuyor; onlara abi, abla veya arkadaş oluyoruz. Onların gözlerindeki mutluluğa şahit olmak ve bu iyilik halkasının bir parçası haline gelmek isterseniz sizleri de aramıza bekliyoruz.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -421,8 +435,8 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDn-w9-MTB">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDn-w9-MTB">
+                                <rect key="frame" x="0.0" y="44" width="600" height="907"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Çocuk Bildirimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsT-0c-5Cy">
                                         <rect key="frame" x="40" y="64" width="200" height="25"/>
@@ -561,7 +575,7 @@ Dileğin gerçekleştirilmesi ile bizim görevimiz ve çocuklarımızla iletişi
                                         </connections>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-vV-lqo">
-                                        <rect key="frame" x="40" y="405" width="520" height="65"/>
+                                        <rect key="frame" x="40" y="405" width="520" height="64.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Leyla'dan Sonra uygulamasını indirip miniklerimize destek olduğunuz için teşekkür ederiz. İyilikle kalın!">
@@ -603,7 +617,7 @@ Cg
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-ah-UMp">
-                                        <rect key="frame" x="40" y="480" width="250" height="133"/>
+                                        <rect key="frame" x="40" y="479.5" width="250" height="133"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2h6-ah-UMp" secondAttribute="height" multiplier="32:17" id="pPk-CX-KFh"/>
                                         </constraints>
@@ -624,7 +638,7 @@ Cg
                                         </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm1-SX-8id">
-                                        <rect key="frame" x="310" y="480" width="250" height="133"/>
+                                        <rect key="frame" x="310" y="479.5" width="250" height="133"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Rm1-SX-8id" secondAttribute="height" multiplier="32:17" id="arL-Fh-sxW"/>
                                         </constraints>
@@ -743,7 +757,7 @@ Cg
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOn-u3-xyS">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCl-vl-mph">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCl-vl-mph" customClass="LSTextView" customModule="LS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="138" width="560" height="295.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -1176,9 +1190,7 @@ Cg
         <scene sceneID="wZH-J2-TYc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OCt-5J-1fq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Miniklerimiz" image="menuChildrenIcon" selectedImage="menuChildrenIcon_selected" id="CNJ-b4-ver">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Miniklerimiz" image="menuChildrenIcon" selectedImage="menuChildrenIcon_selected" id="CNJ-b4-ver"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIa-lh-o4Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1217,9 +1229,7 @@ Cg
         <scene sceneID="XCJ-Ad-P7R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kVx-bC-PDW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Leyla Kimdir?" image="menuLeylaIcon" selectedImage="menuLeylaIcon_selected" id="Pvj-vh-Oix">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Leyla Kimdir?" image="menuLeylaIcon" selectedImage="menuLeylaIcon_selected" id="Pvj-vh-Oix"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="niW-9f-1yH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1238,9 +1248,7 @@ Cg
         <scene sceneID="5Zp-X4-Of2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XUM-dP-Xt4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Biz Kimiz?" image="menuUsIcon" selectedImage="menuUsIcon_selected" id="h0j-y1-BSU">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Biz Kimiz?" image="menuUsIcon" selectedImage="menuUsIcon_selected" id="h0j-y1-BSU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V2e-XV-JUD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1259,9 +1267,7 @@ Cg
         <scene sceneID="bgt-kb-Szr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TvS-lN-jgc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ayarlar" image="menuSettingIcon" selectedImage="menuSettingIcon_selected" id="UBL-3v-tVX">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="menuSettingIcon" selectedImage="menuSettingIcon_selected" id="UBL-3v-tVX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dYd-JS-Og0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1281,13 +1287,13 @@ Cg
         <image name="enescakir_logo" width="500" height="255"/>
         <image name="folx_logo" width="500" height="255"/>
         <image name="leyla-2" width="1000" height="800"/>
-        <image name="menuChildrenIcon" width="32" height="32"/>
-        <image name="menuChildrenIcon_selected" width="32" height="32"/>
-        <image name="menuLeylaIcon" width="32" height="32"/>
-        <image name="menuLeylaIcon_selected" width="32" height="32"/>
-        <image name="menuSettingIcon" width="32" height="32"/>
-        <image name="menuSettingIcon_selected" width="32" height="32"/>
-        <image name="menuUsIcon" width="32" height="32"/>
-        <image name="menuUsIcon_selected" width="32" height="32"/>
+        <image name="menuChildrenIcon" width="25" height="25"/>
+        <image name="menuChildrenIcon_selected" width="25" height="25"/>
+        <image name="menuLeylaIcon" width="25" height="25"/>
+        <image name="menuLeylaIcon_selected" width="25" height="25"/>
+        <image name="menuSettingIcon" width="25" height="25"/>
+        <image name="menuSettingIcon_selected" width="25" height="25"/>
+        <image name="menuUsIcon" width="25" height="25"/>
+        <image name="menuUsIcon_selected" width="25" height="25"/>
     </resources>
 </document>

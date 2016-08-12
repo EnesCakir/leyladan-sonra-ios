@@ -37,8 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var notification_token = deviceToken.description
         notification_token = notification_token.stringByReplacingOccurrencesOfString(" ", withString: "").stringByReplacingOccurrencesOfString(">", withString: "").stringByReplacingOccurrencesOfString("<", withString: "")
         print("Notification TOKEN = \(notification_token)")
-//        let device_token = UIDevice.currentDevice().identifierForVendor!.UUIDString.stringByReplacingOccurrencesOfString("-", withString: "")
-//        print("Device TOKEN = \(device_token)")
         
         let parameters = [
             "token": notification_token,
