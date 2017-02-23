@@ -14,14 +14,14 @@ class LSTextView: UITextView {
             super.init(coder: aDecoder)
             let paragraphStyle = NSMutableParagraphStyle();
             paragraphStyle.firstLineHeadIndent = 24.0
-            paragraphStyle.lineBreakMode = .ByWordWrapping
-            paragraphStyle.hyphenationFactor = 1.0
-            let font = UIFont.systemFontOfSize(18)
+            paragraphStyle.lineBreakMode = .byWordWrapping
+            paragraphStyle.hyphenationFactor = 0.5
+            let font = UIFont.systemFont(ofSize: 18)
             
-            var attributed = NSMutableAttributedString(string: self.text, attributes: [NSParagraphStyleAttributeName:paragraphStyle])
+            let attributed = NSMutableAttributedString(string: self.text, attributes: [NSParagraphStyleAttributeName:paragraphStyle])
             attributed.addAttributes([NSFontAttributeName: font], range: NSRange(location: 0,length:attributed.length))
             self.attributedText = attributed
-            self.textAlignment = NSTextAlignment.Justified
+            self.textAlignment = NSTextAlignment.left
         }
     
 

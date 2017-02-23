@@ -14,42 +14,42 @@ extension UIStoryboard
     class func childrenViewController() -> ChildrenViewController
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let childrenVC = storyboard.instantiateViewControllerWithIdentifier("ChildrenViewController") as! ChildrenViewController
+        let childrenVC = storyboard.instantiateViewController(withIdentifier: "ChildrenViewController") as! ChildrenViewController
         return childrenVC
     }
     
     class func detailViewController() -> DetailViewController
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailVC = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         return detailVC
     }
 
     class func formViewController() -> FormViewController
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let formVC = storyboard.instantiateViewControllerWithIdentifier("FormViewController") as! FormViewController
+        let formVC = storyboard.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
         return formVC
     }
 
     class func leylaViewController() -> LeylaViewController
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let leylaVC = storyboard.instantiateViewControllerWithIdentifier("LeylaViewController") as! LeylaViewController
+        let leylaVC = storyboard.instantiateViewController(withIdentifier: "LeylaViewController") as! LeylaViewController
         return leylaVC
     }
 
     class func usViewController() -> UsViewController
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let usVC = storyboard.instantiateViewControllerWithIdentifier("UsViewController") as! UsViewController
+        let usVC = storyboard.instantiateViewController(withIdentifier: "UsViewController") as! UsViewController
         return usVC
     }
 
     class func settingsViewController() -> SettingsViewController
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let settingsVC = storyboard.instantiateViewControllerWithIdentifier("SettingsViewController") as! SettingsViewController
+        let settingsVC = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
         return settingsVC
     }
 

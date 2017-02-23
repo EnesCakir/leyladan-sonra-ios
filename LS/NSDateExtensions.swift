@@ -8,22 +8,22 @@
 
 import Foundation
 
-extension NSDate
+extension Date
 {
-    class func dateToNSDate(date:String) -> NSDate {
-        let formatter = NSDateFormatter()
+    static func dateToNSDate(_ date:String) -> Date {
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        formatter.timeZone = NSTimeZone(name: "Europe/Istanbul")
-        formatter.locale = NSLocale(localeIdentifier: "tr_TR")
-        return formatter.dateFromString(date)!
+        formatter.timeZone = TimeZone(identifier: "Europe/Istanbul")
+        formatter.locale = Locale(identifier: "tr_TR")
+        return formatter.date(from: date)!
     }
     
     
     func toLabel() -> String{
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "d MMMM yyyy"
-        formatter.timeZone = NSTimeZone(name: "Europe/Istanbul")
-        formatter.locale = NSLocale(localeIdentifier: "tr_TR")
-        return formatter.stringFromDate(self)
+        formatter.timeZone = TimeZone(identifier: "Europe/Istanbul")
+        formatter.locale = Locale(identifier: "tr_TR")
+        return formatter.string(from: self)
     }
 }

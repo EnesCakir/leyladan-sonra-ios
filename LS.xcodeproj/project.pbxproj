@@ -90,6 +90,7 @@
 		4F6211A21D0D848F00FB4CDF /* Form.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		4F6211A81D0D87B200FB4CDF /* ChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F6211AA1D0D95BF00FB4CDF /* LSLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSLayout.swift; sourceTree = "<group>"; };
+		4F8878041DFF14EC005BCB46 /* LS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LS.entitlements; sourceTree = "<group>"; };
 		4F8F79FE1D233586006420FD /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
 		4FA0221D1D37F8F80025C18E /* LeylaRefresh.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeylaRefresh.xib; sourceTree = "<group>"; };
 		4FA5B9EC1CEA52DA002D16D1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +280,7 @@
 		4F32DEA21CE9DA33007FE938 /* LS */ = {
 			isa = PBXGroup;
 			children = (
+				4F8878041DFF14EC005BCB46 /* LS.entitlements */,
 				4F32DEA31CE9DA33007FE938 /* AppDelegate.swift */,
 				4F0D8E261D0B1D4F0013FDA7 /* WebServices */,
 				4F0D8E271D0B1D5C0013FDA7 /* Utility */,
@@ -329,12 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F32DEC81CE9DA33007FE938 /* Build configuration list for PBXNativeTarget "LS" */;
 			buildPhases = (
-				06E953EE637506A7F6BDC29D /* 📦 Check Pods Manifest.lock */,
+				06E953EE637506A7F6BDC29D /* [CP] Check Pods Manifest.lock */,
 				4F32DE9C1CE9DA33007FE938 /* Sources */,
 				4F32DE9D1CE9DA33007FE938 /* Frameworks */,
 				4F32DE9E1CE9DA33007FE938 /* Resources */,
-				FE15EFE0A32B358386BD50A0 /* 📦 Embed Pods Frameworks */,
-				68A9E7DDD0BF9A37323AFF65 /* 📦 Copy Pods Resources */,
+				FE15EFE0A32B358386BD50A0 /* [CP] Embed Pods Frameworks */,
+				68A9E7DDD0BF9A37323AFF65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -349,12 +351,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F32DECB1CE9DA33007FE938 /* Build configuration list for PBXNativeTarget "LSTests" */;
 			buildPhases = (
-				91D01003F1F346DE232FE4DA /* 📦 Check Pods Manifest.lock */,
+				91D01003F1F346DE232FE4DA /* [CP] Check Pods Manifest.lock */,
 				4F32DEB01CE9DA33007FE938 /* Sources */,
 				4F32DEB11CE9DA33007FE938 /* Frameworks */,
 				4F32DEB21CE9DA33007FE938 /* Resources */,
-				1AFED9941AF9BB48F4AD1BFD /* 📦 Embed Pods Frameworks */,
-				CD06354017F6BCBE7A543447 /* 📦 Copy Pods Resources */,
+				1AFED9941AF9BB48F4AD1BFD /* [CP] Embed Pods Frameworks */,
+				CD06354017F6BCBE7A543447 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,11 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F32DECE1CE9DA33007FE938 /* Build configuration list for PBXNativeTarget "LSUITests" */;
 			buildPhases = (
-				44EDF4F6D256B95BEB1982FD /* 📦 Check Pods Manifest.lock */,
+				44EDF4F6D256B95BEB1982FD /* [CP] Check Pods Manifest.lock */,
 				4F32DEBB1CE9DA33007FE938 /* Sources */,
 				4F32DEBC1CE9DA33007FE938 /* Frameworks */,
 				4F32DEBD1CE9DA33007FE938 /* Resources */,
-				DEFB13C4B0E12D5BBF98AF5C /* 📦 Copy Pods Resources */,
+				DEFB13C4B0E12D5BBF98AF5C /* [CP] Copy Pods Resources */,
+				ACC4B95217C894D61B213697 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,15 +396,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = EnesCakir;
 				TargetAttributes = {
 					4F32DE9F1CE9DA33007FE938 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = CU9SUZ54RA;
 						DevelopmentTeamName = "Murat Cakir";
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -409,10 +416,12 @@
 					};
 					4F32DEB31CE9DA33007FE938 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4F32DE9F1CE9DA33007FE938;
 					};
 					4F32DEBE1CE9DA33007FE938 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4F32DE9F1CE9DA33007FE938;
 					};
 				};
@@ -468,29 +477,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06E953EE637506A7F6BDC29D /* 📦 Check Pods Manifest.lock */ = {
+		06E953EE637506A7F6BDC29D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1AFED9941AF9BB48F4AD1BFD /* 📦 Embed Pods Frameworks */ = {
+		1AFED9941AF9BB48F4AD1BFD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,29 +507,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSTests/Pods-LSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		44EDF4F6D256B95BEB1982FD /* 📦 Check Pods Manifest.lock */ = {
+		44EDF4F6D256B95BEB1982FD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		68A9E7DDD0BF9A37323AFF65 /* 📦 Copy Pods Resources */ = {
+		68A9E7DDD0BF9A37323AFF65 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,29 +537,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LS/Pods-LS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91D01003F1F346DE232FE4DA /* 📦 Check Pods Manifest.lock */ = {
+		91D01003F1F346DE232FE4DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CD06354017F6BCBE7A543447 /* 📦 Copy Pods Resources */ = {
+		ACC4B95217C894D61B213697 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSUITests/Pods-LSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD06354017F6BCBE7A543447 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,14 +582,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSTests/Pods-LSTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEFB13C4B0E12D5BBF98AF5C /* 📦 Copy Pods Resources */ = {
+		DEFB13C4B0E12D5BBF98AF5C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,14 +597,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSUITests/Pods-LSUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FE15EFE0A32B358386BD50A0 /* 📦 Embed Pods Frameworks */ = {
+		FE15EFE0A32B358386BD50A0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,8 +711,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -732,8 +758,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -762,16 +790,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LS/LS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EnesCakir.LS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LS/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -781,10 +811,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LS/LS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.EnesCakir.LS;
@@ -792,6 +823,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LS/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -804,6 +836,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EnesCakir.LSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LS.app/LS";
 			};
 			name = Debug;
@@ -818,6 +851,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EnesCakir.LSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LS.app/LS";
 			};
 			name = Release;
@@ -830,6 +864,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EnesCakir.LSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LS;
 			};
 			name = Debug;
@@ -843,6 +878,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EnesCakir.LSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LS;
 			};
 			name = Release;

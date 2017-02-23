@@ -19,8 +19,8 @@ class LSButton: FUIButton
         shadowColor = UIColor.primaryShadowColor();
         shadowHeight = 3.0;
         cornerRadius = 6.0;
-        titleLabel!.font = UIFont.flatFontOfSize(16.0);
-        setTitleColor(UIColor.cloudsColor(), forState: .Normal)
-        setTitleColor(UIColor.cloudsColor(), forState: .Highlighted)
+        titleLabel!.font = UIFont.flatFont(ofSize: 16.0);
+        setTitleColor(UIColor.clouds(), for: UIControlState())
+        setTitleColor(UIColor.clouds(), for: .highlighted)
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 import FlatUIKit
-
+import OneSignal
 class SettingsViewController: BaseViewController, UITextFieldDelegate {
 
     @IBOutlet weak var firstnameTF: SkyFloatingLabelTextField!
@@ -32,32 +32,35 @@ class SettingsViewController: BaseViewController, UITextFieldDelegate {
     }
 
     func setupInfos(){
-        if let volunteer = Constants.UserDefaults.objectForKey("volunteer"){
+        if let v = Constants.UserDefaults.object(forKey: "volunteer"){
+          if let volunteer = v as? NSDictionary {
             firstnameTF.text = volunteer["first_name"] as? String
             lastnameTF.text = volunteer["last_name"] as? String
             emailTF.text = volunteer["email"] as? String
             mobileTF.text = volunteer["mobile"] as? String
             cityTF.text = volunteer["city"] as? String
+          }
         }
     }
     
     func setupSwitch() {
-        notifSwitch.onColor = UIColor.whiteColor();
-        notifSwitch.offColor = UIColor.cloudsColor();
+        notifSwitch.onColor = UIColor.white;
+        notifSwitch.offColor = UIColor.clouds();
         notifSwitch.onBackgroundColor = UIColor.primaryColor();
-        notifSwitch.offBackgroundColor = UIColor.silverColor();
-        notifSwitch.offLabel.font = UIFont.boldFlatFontOfSize(14);
-        notifSwitch.onLabel.font = UIFont.boldFlatFontOfSize(14);
+        notifSwitch.offBackgroundColor = UIColor.silver();
+        notifSwitch.offLabel.font = UIFont.boldFlatFont(ofSize: 14);
+        notifSwitch.onLabel.font = UIFont.boldFlatFont(ofSize: 14);
         notifSwitch.onLabel.text = "Açık"
         notifSwitch.offLabel.text = "Kapalı"
-        
-        if UIApplication.sharedApplication().isRegisteredForRemoteNotifications(){
-            notifSwitch.on = true
+      
+      OneSignal.idsAvailable({ (userId, pushToken) in
+        if (pushToken != nil) {
+          self.notifSwitch.isOn = true
         }
-        else{
-            notifSwitch.on = false
+        else {
+          self.notifSwitch.isOn = false
         }
-
+      })
     }
 
     
@@ -75,8 +78,8 @@ class SettingsViewController: BaseViewController, UITextFieldDelegate {
 
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        Constants.UserDefaults.setObject([
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        Constants.UserDefaults.set([
             "first_name": firstnameTF.text!,
             "last_name": lastnameTF.text!,
             "email": emailTF.text!,
@@ -88,31 +91,36 @@ class SettingsViewController: BaseViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func openEnesCakir(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://enescakir.com")!)
+    @IBAction func openEnesCakir(_ sender: AnyObject) {
+        UIApplication.shared.openURL(URL(string: "http://enescakir.com")!)
     }
     
-    @IBAction func openFolx(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://folx.com.tr")!)
+    @IBAction func openFolx(_ sender: AnyObject) {
+        UIApplication.shared.openURL(URL(string: "http://folx.com.tr")!)
     }
 
 
-    @IBAction func pushNotificationValueChanged(sender: UISwitch)
+    @IBAction func pushNotificationValueChanged(_ sender: UISwitch)
     {
-        if sender.on
+        if sender.isOn
         {
-            NSUserDefaults.standardUserDefaults().removeObjectForKey("token")
-            let pushNotificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-            UIApplication.sharedApplication().registerUserNotificationSettings(pushNotificationSettings)
-            UIApplication.sharedApplication().registerForRemoteNotifications()
+          OneSignal.setSubscription(true)
+          OneSignal.registerForPushNotifications()
+          print("opened")
+//            UserDefaults.standard.removeObject(forKey: "token")
+//            let pushNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+//            UIApplication.shared.registerUserNotificationSettings(pushNotificationSettings)
+//            UIApplication.shared.registerForRemoteNotifications()
 
 
         }
             
         else
         {
-            UIApplication.sharedApplication().unregisterForRemoteNotifications()
-            NSUserDefaults.standardUserDefaults().removeObjectForKey("token")
+          OneSignal.setSubscription(false)
+          print("removed")
+//            UIApplication.shared.unregisterForRemoteNotifications()
+//            UserDefaults.standard.removeObject(forKey: "token")
         }
     }
 

@@ -30,14 +30,14 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
         loadData()
         
         refreshControl = UIRefreshControl()
-        refreshControl!.addTarget(self, action: #selector(ChildrenViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl!.addTarget(self, action: #selector(ChildrenViewController.loadData), for: UIControlEvents.valueChanged)
         refreshControl?.backgroundColor = UIColor.primaryColor()
-        refreshControl?.tintColor = UIColor.whiteColor()
+        refreshControl?.tintColor = UIColor.white
         self.collectionView.addSubview(refreshControl!)
 
         loadCustomRefreshContents()
 
-        collectionView.backgroundColor = UIColor.clearColor()
+        collectionView.backgroundColor = UIColor.clear
         self.navigationItem.title = "Hediye Bekleyen Minikler"
         if let layout = collectionView?.collectionViewLayout as? LSLayout { layout.delegate = self }
         
@@ -45,7 +45,7 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    @IBAction func retry(sender: AnyObject) {
+    @IBAction func retry(_ sender: AnyObject) {
         loadData()
     }
     
@@ -53,20 +53,20 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     
 
     // MARK: CollectionViewDelegate
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
     }
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return children.count;
     }
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("reuseIdentifier", forIndexPath: indexPath) as! ChildCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reuseIdentifier", for: indexPath) as! ChildCollectionViewCell
         cell.setChild(children[indexPath.row])
         return cell
     }
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! ChildCollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as! ChildCollectionViewCell
         if cell.isActive {
             let detailVC = UIStoryboard.detailViewController()
             detailVC.child = children[indexPath.row]
@@ -78,9 +78,9 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     }
 
     // MARK: LSLayoutDelegate
-    func collectionView(collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath,
+    func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath,
                         withWidth width: CGFloat) -> CGFloat {
-        let columnWidth = UIScreen.mainScreen().bounds.width/2;
+        let columnWidth = UIScreen.main.bounds.width/2;
         
         if children[indexPath.row].isPortrait(){
             return  columnWidth * 3 / 2
@@ -92,7 +92,7 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     
     // MARK: ScrollViewDelegate
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y < -64 {
             if(!isAnimatingRefresh){
                 animateRefresh()
@@ -103,14 +103,14 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     // MARK: Helpers
     func animateRefresh(){
         isAnimatingRefresh = true
-        UIView.animateWithDuration(0.35, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: 0.35, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
             self.refreshImage.alpha = 0
             }, completion: { (finished) -> Void in
-                UIView.animateWithDuration(0.25, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+                UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
                     self.refreshImage.alpha = 1
                     
                     }, completion: { (finished) -> Void in
-                        if self.refreshControl!.refreshing {
+                        if self.refreshControl!.isRefreshing {
                             self.animateRefresh()
                         }
                         else{
@@ -120,10 +120,17 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
         })
         
     }
-    
+  
+  func showChild(childID:Int) {
+    let detailVC = UIStoryboard.detailViewController()
+    detailVC.child = nil
+    detailVC.childID = childID
+    self.navigationController?.pushViewController(detailVC, animated: true)
+  }
+
     func loadCustomRefreshContents() {
-        let refreshContents = NSBundle.mainBundle().loadNibNamed("LeylaRefresh", owner: self, options: nil)
-        leylaRefreshView = refreshContents[0] as! UIView
+        let refreshContents = Bundle.main.loadNibNamed("LeylaRefresh", owner: self, options: nil)
+        leylaRefreshView = refreshContents?[0] as! UIView
         leylaRefreshView.frame = refreshControl!.bounds
         leylaRefreshView.backgroundColor = UIColor.primaryColor()
         refreshImage = leylaRefreshView.viewWithTag(1) as! UIImageView
@@ -131,16 +138,20 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     }
     
     func loadData() {
-        retryButton.hidden = true
+//      self.children = []
+//      self.collectionView.reloadData()
+
+        retryButton.isHidden = true
         self.showHUD("Miniklerimiz yükleniyor")
-        Alamofire.request(.GET, Constants.URL.API + "/children").validate().responseJSON { response in
+        Alamofire.request(Constants.URL.API + "/children").validate().responseJSON { response in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
                     for (_,subJson):(String, JSON) in json["children"] {
                         let id = subJson["id"].intValue
                         let name = subJson["first_name"].stringValue
+                        let wish = subJson["wish"].stringValue
                         let facultyName = subJson["faculty"]["full_name"].stringValue
                         let facultyImage = subJson["faculty"]["slug"].stringValue
                         let facultyCity = subJson["faculty"]["city"].stringValue
@@ -148,7 +159,7 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
                         let post = subJson["meeting_posts"][0]["text"].stringValue
                         let imageURL = subJson["meeting_posts"][0]["images"][0]["name"].stringValue
                         let imageRatio = subJson["meeting_posts"][0]["images"][0]["ratio"].stringValue
-                        let child = Child(id: id, name: name, facultyName: facultyName, facultyImage: facultyImage, facultyCity: facultyCity, meetingDay: meetingDay, post: post, url: "", imageURL: imageURL, imageRatio: imageRatio)
+                      let child = Child(id: id, name: name, wish: wish, facultyName: facultyName, facultyImage: facultyImage, facultyCity: facultyCity, meetingDay: meetingDay, post: post, url: "", imageURL: imageURL, imageRatio: imageRatio)
                         self.children.append(child)
 
                     }
@@ -160,15 +171,17 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
                     self.collectionView.reloadData()
                     self.hideHUD()
                     self.refreshControl?.endRefreshing()
+                    self.isAnimatingRefresh = false
                 }
-            case .Failure(let error):
-                let alertController = UIAlertController(title: error.localizedFailureReason, message: error.localizedDescription , preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Tamam", style: UIAlertActionStyle.Default,handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+            case .failure(let error):
+                let alertController = UIAlertController(title: error.localizedDescription, message: error.localizedDescription , preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Tamam", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
                 self.collectionView.reloadData()
                 self.hideHUD()
                 self.refreshControl?.endRefreshing()
-                self.retryButton.hidden = false
+                self.isAnimatingRefresh = false
+                self.retryButton.isHidden = false
                 return
             }
         }

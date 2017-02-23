@@ -9,56 +9,58 @@
 import UIKit
 
 class ChildCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var childName: UILabel!
-    @IBOutlet weak var facultyName: UILabel!
-    @IBOutlet weak var childPhoto: UIImageView!
-    @IBOutlet weak var detailView:UIView?
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
-    var isActive = false
+  @IBOutlet weak var childName: UILabel!
+  @IBOutlet weak var facultyName: UILabel!
+  @IBOutlet weak var wishLabel: UILabel!
+  @IBOutlet weak var childPhoto: UIImageView!
+  @IBOutlet weak var detailView:UIView?
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  
+  var isActive = false
+  
+  // MARK: - Lifecycle
+  override func awakeFromNib()
+  {
+    super.awakeFromNib()
+    activityIndicator.transform = CGAffineTransform(scaleX: 2, y: 2);
+    activityIndicator.startAnimating();
+    setInActive()
+  }
+  
+  override func prepareForReuse(){
+    super.prepareForReuse()
+    setInActive()
+  }
+  
+  func getChildPhoto() -> UIImage {
+    return childPhoto.image!
+  }
+  
+  func setActive() {
+    UIView.animate(withDuration: 0.5, delay: 0, options:UIViewAnimationOptions.transitionCrossDissolve, animations: {() in
+      self.detailView?.alpha = 1.0;}, completion: {(Bool) in
+    })
+    isActive = true
+    Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(ChildCollectionViewCell.setInActive), userInfo: nil, repeats: false)
+  }
+  
+  func setInActive() {
+    isActive = false
+    UIView.animate(withDuration: 0.5, delay: 0, options:UIViewAnimationOptions.transitionCrossDissolve, animations: {() in
+      self.detailView?.alpha = 0.0;}, completion: {(Bool) in
+    })
     
-    // MARK: - Lifecycle
-    override func awakeFromNib()
-    {
-        super.awakeFromNib()
-        activityIndicator.transform = CGAffineTransformMakeScale(2, 2);
-        activityIndicator.startAnimating();
-        setInActive()
-    }
-
-    override func prepareForReuse(){
-        super.prepareForReuse()
-        setInActive()
-    }
-
-    func getChildPhoto() -> UIImage {
-        return childPhoto.image!
-    }
-    
-    func setActive() {
-        UIView.animateWithDuration(0.5, delay: 0, options:UIViewAnimationOptions.TransitionCrossDissolve, animations: {() in
-            self.detailView?.alpha = 1.0;}, completion: {(Bool) in
-        })
-        isActive = true
-        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(ChildCollectionViewCell.setInActive), userInfo: nil, repeats: false)
-    }
-    
-    func setInActive() {
-        isActive = false
-        UIView.animateWithDuration(0.5, delay: 0, options:UIViewAnimationOptions.TransitionCrossDissolve, animations: {() in
-            self.detailView?.alpha = 0.0;}, completion: {(Bool) in
-        })
-
-    }
-
-    func setChild(child:Child) {
-        childName.text = child.name
-        facultyName.text = child.faculty.name
-        activityIndicator.startAnimating();
-        childPhoto.af_setImageWithURL(
-            NSURL(string: Constants.URL.Child(child.image.URL))!,
-            placeholderImage: UIImage(named: "childNoPhoto"),
-            imageTransition: .CrossDissolve(0.2),
-            completion: { (_) -> Void in self.activityIndicator.stopAnimating()})
-    }
+  }
+  
+  func setChild(_ child:Child) {
+    childName.text = child.name
+    facultyName.text = child.faculty.name
+    wishLabel.text = child.wish
+    activityIndicator.startAnimating();
+    childPhoto.af_setImage(
+      withURL: URL(string: Constants.URL.Child(child.image.URL))!,
+      placeholderImage: UIImage(named: "childNoPhoto"),
+      imageTransition: .crossDissolve(0.2),
+      completion: { (_) -> Void in self.activityIndicator.stopAnimating()})
+  }
 }

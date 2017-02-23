@@ -13,29 +13,29 @@ import AlamofireImage
 
 
 class ChildDetailHeader: UIView, MXParallaxHeaderProtocol {
-    
-    @IBOutlet weak var childPhoto: UIImageView!
-    
-    class func instanciateFromNib() -> ChildDetailHeader {
-        return NSBundle.mainBundle().loadNibNamed("ChildDetailHeader", owner: nil, options: nil)[0] as! ChildDetailHeader
-    }
-    
-
-    func setChild(child:Child) {
-//        childName.text = child.name
-        childPhoto.af_setImageWithURL(
-            NSURL(string: Constants.URL.Child(child.image.URL))!,
-            placeholderImage: UIImage(named: "childNoPhoto"),
-            imageTransition: .CrossDissolve(0.2),
-            completion: { (_) -> Void in })
-    }
-
-    // MARK: - <MXParallaxHeader>
-    
-    func parallaxHeaderDidScroll(parallaxHeader: MXParallaxHeader) {
-//        let angle = parallaxHeader.progress * CGFloat(M_PI) * 2
-//        print(angle)
-//        self.childPhoto.transform = CGAffineTransformRotate(CGAffineTransformIdentity, angle/3)
-    }
-    
+  
+  @IBOutlet weak var childPhoto: UIImageView!
+  
+  class func instanciateFromNib() -> ChildDetailHeader {
+    return Bundle.main.loadNibNamed("ChildDetailHeader", owner: nil, options: nil)![0] as! ChildDetailHeader
+  }
+  
+  
+  func setChild(_ child:Child) {
+    //        childName.text = child.name
+    childPhoto.af_setImage(
+      withURL: URL(string: Constants.URL.Child(child.image.URL))!,
+      placeholderImage: UIImage(named: "childNoPhoto"),
+      imageTransition: .crossDissolve(0.2),
+      completion: { (_) -> Void in })
+  }
+  
+  // MARK: - <MXParallaxHeader>
+  
+  func parallaxHeaderDidScroll(_ parallaxHeader: MXParallaxHeader) {
+    //        let angle = parallaxHeader.progress * CGFloat(M_PI) * 2
+    //        print(angle)
+    //        self.childPhoto.transform = CGAffineTransformRotate(CGAffineTransformIdentity, angle/3)
+  }
+  
 }

@@ -28,14 +28,14 @@ class LeylaViewController: UIViewController {
 
     func setupHeader(){
         self.automaticallyAdjustsScrollViewInsets = false
-        let headerView = NSBundle.mainBundle().loadNibNamed("LeylaHeader", owner: self, options: nil).first as? LeylaHeader
+        let headerView = Bundle.main.loadNibNamed("LeylaHeader", owner: self, options: nil)?.first as? LeylaHeader
         self.scrollView.parallaxHeader.view = headerView
         self.scrollView.parallaxHeader.height = 400
-        self.scrollView.parallaxHeader.mode = MXParallaxHeaderMode.Fill
+        self.scrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill
         self.scrollView.parallaxHeader.minimumHeight = 0
     }
 
-    @IBAction func showChildren(sender: AnyObject) {
+    @IBAction func showChildren(_ sender: AnyObject) {
         tabBarController?.selectedIndex = 0
 //        self.navigationController?.popToRootViewControllerAnimated(true)
     }

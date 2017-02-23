@@ -15,7 +15,7 @@ class UsViewController: UIViewController {
     @IBOutlet weak var textTop: LSTextView!
     @IBOutlet weak var imageView: UIImageView!
     
-    var timer = NSTimer()
+    var timer = Timer()
     var counter = 0
     var images = ["us1","us2","us6","us3","us4","us5"]
     override func viewDidLoad() {
@@ -27,15 +27,15 @@ class UsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func showChildren(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+    @IBAction func showChildren(_ sender: AnyObject) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func tapImage(sender: AnyObject) {
+    @IBAction func tapImage(_ sender: AnyObject) {
         changeImage()
         resetTimer()
     }
@@ -44,13 +44,13 @@ class UsViewController: UIViewController {
 
     func changeImage(){
         counter += 1
-        UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
             self.imageView.image = UIImage(named: self.images[self.counter % self.images.count])
             }, completion: {_ in})
     }
     
     func startTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(UsViewController.changeImage), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(UsViewController.changeImage), userInfo: nil, repeats: true)
     }
     
     func resetTimer(){

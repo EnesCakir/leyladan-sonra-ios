@@ -39,7 +39,7 @@ class Form {
         print(message)
     }
     
-    func send(childId:Int){
+    func send(_ childId:Int){
 //        let parameters = [
 //            "id": String(100000),
 //            "first_name": first_name,

@@ -14,13 +14,13 @@ import MXParallaxHeader
 class LeylaHeader: UIView, MXParallaxHeaderProtocol {
         
     class func instanciateFromNib() -> LeylaHeader {
-        return NSBundle.mainBundle().loadNibNamed("LeylaHeader", owner: nil, options: nil)[0] as! LeylaHeader
+        return Bundle.main.loadNibNamed("LeylaHeader", owner: nil, options: nil)![0] as! LeylaHeader
     }
     
     
     // MARK: - <MXParallaxHeader>
     
-    func parallaxHeaderDidScroll(parallaxHeader: MXParallaxHeader) {
+    func parallaxHeaderDidScroll(_ parallaxHeader: MXParallaxHeader) {
         //        let angle = parallaxHeader.progress * CGFloat(M_PI) * 2
         //        print(angle)
         //        self.childPhoto.transform = CGAffineTransformRotate(CGAffineTransformIdentity, angle/3)

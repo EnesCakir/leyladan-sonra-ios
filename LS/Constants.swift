@@ -11,13 +11,13 @@ import UIKit
 
 class Constants
 {
-    static let UserDefaults = NSUserDefaults.standardUserDefaults()
+    static let UserDefaults = Foundation.UserDefaults.standard
     
     struct URL {
         static let Base = "http://www.leyladansonra.com"
         static let API = "http://www.leyladansonra.com/api"
         static let Uploads = "http://www.leyladansonra.com/resources/admin/uploads"
-        static func Child(imageUrl:String) -> String { return "http://www.leyladansonra.com/resources/admin/uploads/child_photos/\(imageUrl)" }
-        static func Faculty(imageUrl:String) -> String { return "http://www.leyladansonra.com/resources/admin/uploads/faculty_logos/\(imageUrl).png" }
+        static func Child(_ imageUrl:String) -> String { return "http://www.leyladansonra.com/resources/admin/uploads/child_photos/\(imageUrl)" }
+        static func Faculty(_ imageUrl:String) -> String { return "http://www.leyladansonra.com/resources/admin/uploads/faculty_logos/\(imageUrl).png" }
     }
 }

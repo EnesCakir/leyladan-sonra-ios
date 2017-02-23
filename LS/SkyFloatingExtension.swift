@@ -21,16 +21,16 @@ extension SkyFloatingLabelTextField {
         self.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
     }
     
-    func showError(text:String? = "Boş Bırakılamaz", animationCompletion: (())? = nil) {
+    func showError(_ text:String? = "Boş Bırakılamaz", animationCompletion: (())? = nil) {
         self.errorMessage = text
         self.setTitleVisible(true, animated: true)
-        self.highlighted = true
+        self.isHighlighted = true
     }
     
     func hideError() {
         self.setTitleVisible(false, animated: true)
         self.errorMessage = ""
-        self.highlighted = false
+        self.isHighlighted = false
     }
 
 }
