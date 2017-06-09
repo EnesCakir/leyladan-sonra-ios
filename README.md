@@ -4,4 +4,4 @@
 
 > We started this journey with a motto: one child, one wish.
 
-More information: [Turkish](www.leyladansonra.com), [English](www.afterleyla.com)
+More information: [Turkish](http://www.leyladansonra.com), [English](http://www.afterleyla.com)
