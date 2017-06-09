@@ -13,8 +13,9 @@ target 'LS' do
 	pod 'MBProgressHUD', '~> 0.9.2'
 	pod 'NVActivityIndicatorView'
 	pod 'CocoaLumberjack/Swift'
-        pod "Appirater"
+        pod 'Appirater'
 	pod 'OneSignal'
+	pod 'Hero'
   # Pods for LS
 
   target 'LSTests' do

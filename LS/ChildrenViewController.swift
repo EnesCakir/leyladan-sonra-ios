@@ -28,7 +28,6 @@ class ChildrenViewController: BaseViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        
         refreshControl = UIRefreshControl()
         refreshControl!.addTarget(self, action: #selector(ChildrenViewController.loadData), for: UIControlEvents.valueChanged)
         refreshControl?.backgroundColor = UIColor.primaryColor()
